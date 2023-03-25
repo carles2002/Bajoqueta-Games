@@ -71,3 +71,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Unity
+.vsconfig
