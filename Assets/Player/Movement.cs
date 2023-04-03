@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class Movement : MonoBehaviour
@@ -15,6 +17,8 @@ public class Movement : MonoBehaviour
     public LayerMask wallLayer;
     public Vector3 prismDimensions = new Vector3(1, 2, 1);
     public GameObject raycastOriginObject; // El GameObject desde donde se lanzará el raycast
+    public Text pts;
+    public int contador = 0;
 
 
     private void Awake()
@@ -25,6 +29,7 @@ public class Movement : MonoBehaviour
     //cuando se detecta una tecla, se invoca a roll
     void Initialize()
     {
+        pts.text = "Moneda = " + contador.ToString();
         InputManager.OnKeyDetected += Roll;
         isRolling = false;
     }
@@ -32,7 +37,7 @@ public class Movement : MonoBehaviour
     //Detecta si hay un pared en la dirección a la que vas a  moverte
     bool IsWallInDirection(Vector3 axis)
     {
-        Debug.Log("entro wall con direccion" +axis);
+        //Debug.Log("entro wall con direccion" +axis);
 
         RaycastHit hit;
         if (Physics.Raycast(raycastOriginObject.transform.position, axis, out hit, 1f, wallLayer))
@@ -43,12 +48,26 @@ public class Movement : MonoBehaviour
         }
         return false;
     }
+
+    //Detecta si hay una moneda y la suma
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("moneda"))
+        {
+            Debug.Log("Moneda tocada");
+            contador++;
+            pts.text = "Moneda = " + contador.ToString();
+            Destroy(other.gameObject);
+        }
+
+    }
+
     //Empieza una corutina para mover al personaje a ladirección de la flecha
     private void Roll(InputManager.Direction direction)
     {
         StartCoroutine(RollToDirection(direction));
         
-        Debug.Log("direction: " + direction);
+        //Debug.Log("direction: " + direction);
     }
 
     //Obtiene las direcciones necesarias, mueve y rota el objeto
