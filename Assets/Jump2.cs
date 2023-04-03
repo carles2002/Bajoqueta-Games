@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rampa_Inicial : MonoBehaviour
+public class Jump2 : MonoBehaviour
 {
     public float jumpForce = 10f;
 
@@ -14,14 +14,10 @@ public class Rampa_Inicial : MonoBehaviour
             if (playerRigidbody != null)
             {
                 playerRigidbody.constraints = RigidbodyConstraints.None;
-                playerRigidbody.constraints = RigidbodyConstraints.FreezePositionX;
+                playerRigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
                 playerRigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-
-
-
-                Vector3 force = new Vector3(0, 2f, 2f);
+                Vector3 force = new Vector3( 0, jumpForce, 3f);
                 playerRigidbody.AddForce(force, ForceMode.Impulse);
-
             }
         }
     }
