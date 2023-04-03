@@ -19,7 +19,7 @@ public class Rampa_Inicial : MonoBehaviour
 
 
 
-                Vector3 force = new Vector3(0, 2f, 2f);
+                Vector3 force = new Vector3(0, 2f, 2.3f);
                 playerRigidbody.AddForce(force, ForceMode.Impulse);
 
             }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    public float jumpForce = 10f;
-
+    public float jumpForceY = 10f;
+    public float jumpForceX = -3.5f;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -16,7 +16,7 @@ public class Jump : MonoBehaviour
                 playerRigidbody.constraints = RigidbodyConstraints.None;
                 playerRigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
                 playerRigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-                Vector3 force = new Vector3(-3f, jumpForce, 0f);
+                Vector3 force = new Vector3(jumpForceX, jumpForceY, 0f);
                 playerRigidbody.AddForce(force, ForceMode.Impulse);
             }
         }

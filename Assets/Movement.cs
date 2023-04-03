@@ -12,7 +12,9 @@ public class Movement : MonoBehaviour
 
     public InputManager InputManager;
     public LayerMask contactWallLayer;
-    public ObjectDetector ObjectDetector;
+    public LayerMask wallLayer;
+    public Vector3 prismDimensions = new Vector3(1, 2, 1);
+    public GameObject raycastOriginObject; // El GameObject desde donde se lanzará el raycast
 
 
     private void Awake()
@@ -27,30 +29,48 @@ public class Movement : MonoBehaviour
         isRolling = false;
     }
 
+    //Detecta si hay un pared en la dirección a la que vas a  moverte
+    bool IsWallInDirection(Vector3 axis)
+    {
+        Debug.Log("entro wall con direccion" +axis);
 
+        RaycastHit hit;
+        if (Physics.Raycast(raycastOriginObject.transform.position, axis, out hit, 1f, wallLayer))
+        {
+            Debug.Log("Wall Detected");
+            return true;
+
+        }
+        return false;
+    }
     //Empieza una corutina para mover al personaje a ladirección de la flecha
     private void Roll(InputManager.Direction direction)
     {
         StartCoroutine(RollToDirection(direction));
+        
         Debug.Log("direction: " + direction);
     }
 
     //Obtiene las direcciones necesarias, mueve y rota el objeto
     private IEnumerator RollToDirection(InputManager.Direction KeyDirection)
     {
-        if (!isRolling)
+        // Actualiza la posición del pivote.
+        Vector3 axis = GetAxis(KeyDirection);
+        Vector3 directionVector = GetDirectionVector(KeyDirection);
+        Vector2 pivotOffset = GetPivotOffset(KeyDirection);
+
+        if (IsWallInDirection(directionVector))
+        {
+            isRolling = false;
+        }
+        if (!isRolling && IsWallInDirection(directionVector)==false)
         {
             isRolling = true;
 
             float angle = 90f;
 
-            // Actualiza la posición del pivote.
-            Vector3 axis = GetAxis(KeyDirection);
-            Vector3 directionVector = GetDirectionVector(KeyDirection);
-            Vector2 pivotOffset = GetPivotOffset(KeyDirection);
-
             //Relocate the pivot according to offset.
-           pivot.position = transform.position + (directionVector * pivotOffset.x) + (Vector3.down * pivotOffset.y);
+            pivot.position = transform.position + (directionVector * pivotOffset.x) + (Vector3.down * pivotOffset.y);
 
             //simulate before the action in order to get an ideal result
             CopyTransformData(transform, ghostPlayer);

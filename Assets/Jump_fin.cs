@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jump1 : MonoBehaviour
+public class Jump_fin : MonoBehaviour
 {
-    public float jumpForce = 10f;
+    public float jumpForceY = 10f;
+    public float jumpForceX = 0.5f;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -16,7 +17,7 @@ public class Jump1 : MonoBehaviour
                 playerRigidbody.constraints = RigidbodyConstraints.None;
                 playerRigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
                 playerRigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-                Vector3 force = new Vector3(-1f, 0f, 0f);
+                Vector3 force = new Vector3(jumpForceX, 0f, 0f);
                 playerRigidbody.AddForce(force, ForceMode.Impulse);
             }
         }
