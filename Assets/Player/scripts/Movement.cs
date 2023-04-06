@@ -16,9 +16,10 @@ public class Movement : MonoBehaviour
     public LayerMask contactWallLayer;
     public LayerMask wallLayer;
     public Vector3 prismDimensions = new Vector3(1, 2, 1);
-    public GameObject raycastOriginObject; // El GameObject desde donde se lanzará el raycast
+    public GameObject raycastOriginObject; // El GameObject desde donde se lanzarï¿½ el raycast
     public Text pts;
     public int contador = 0;
+    public GameControl gameControl;
 
 
     private void Awake()
@@ -32,9 +33,10 @@ public class Movement : MonoBehaviour
         pts.text = "Moneda = " + contador.ToString();
         InputManager.OnKeyDetected += Roll;
         isRolling = false;
+        gameControl = FindObjectOfType<GameControl>();
     }
 
-    //Detecta si hay un pared en la dirección a la que vas a  moverte
+    //Detecta si hay un pared en la direcciï¿½n a la que vas a  moverte
     bool IsWallInDirection(Vector3 axis)
     {
         //Debug.Log("entro wall con direccion" +axis);
@@ -62,10 +64,14 @@ public class Movement : MonoBehaviour
 
     }
 
-    //Empieza una corutina para mover al personaje a ladirección de la flecha
+    //Empieza una corutina para mover al personaje a la direcciÃ³n de la flecha
     private void Roll(InputManager.Direction direction)
     {
-        StartCoroutine(RollToDirection(direction));
+        if(gameControl.IsGameRunning())
+        {
+            StartCoroutine(RollToDirection(direction));
+        }
+        
         
         //Debug.Log("direction: " + direction);
     }
@@ -73,7 +79,7 @@ public class Movement : MonoBehaviour
     //Obtiene las direcciones necesarias, mueve y rota el objeto
     private IEnumerator RollToDirection(InputManager.Direction KeyDirection)
     {
-        // Actualiza la posición del pivote.
+        // Actualiza la posiciÃ³n del pivote.
         Vector3 axis = GetAxis(KeyDirection);
         Vector3 directionVector = GetDirectionVector(KeyDirection);
         Vector2 pivotOffset = GetPivotOffset(KeyDirection);
@@ -129,7 +135,7 @@ public class Movement : MonoBehaviour
         }
     }
     
-    //Obtiene la direción vector del raycast
+    //Obtiene la direciï¿½n vector del raycast
     private Vector3 GetDirectionVector(InputManager.Direction direction)
     {
         switch (direction)
@@ -143,7 +149,7 @@ public class Movement : MonoBehaviour
             case InputManager.Direction.Down:
                 return Vector3.back;
             default:
-                Debug.Log("Dirección ha fallado");
+                Debug.Log("Direcciï¿½n ha fallado");
                 return Vector3.zero;
         }
     }
