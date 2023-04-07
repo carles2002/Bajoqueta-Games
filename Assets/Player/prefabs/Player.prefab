@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rollDuration: 0.5
   pivot: {fileID: 5163123270184775133}
-  ghostPlayer: {fileID: 0}
+  ghostPlayer: {fileID: 5163123270602586027}
   InputManager: {fileID: 0}
   contactWallLayer:
     serializedVersion: 2
@@ -92,6 +92,7 @@ MonoBehaviour:
   raycastOriginObject: {fileID: 5163123269291762108}
   pts: {fileID: 0}
   contador: 0
+  gameControl: {fileID: 0}
 --- !u!114 &7751992130614607858
 MonoBehaviour:
   m_ObjectHideFlags: 0

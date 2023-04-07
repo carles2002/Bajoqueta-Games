@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38532d7f2b871de449fcf18a3866a26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneLoad: 0
+  nextSceneLoad: 2
 --- !u!1 &7726215712922029101
 GameObject:
   m_ObjectHideFlags: 0
