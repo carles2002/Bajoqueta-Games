@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     public LayerMask wallLayer;
     public Vector3 prismDimensions = new Vector3(1, 2, 1);
     public GameObject raycastOriginObject; // El GameObject desde donde se lanzar� el raycast
+    public GameObject raycastrampa; // El GameObject desde donde se lanzar� el raycast para detectar rampa
     public Text pts;
     public int contador = 0;
     public GameControl gameControl;
@@ -73,7 +74,6 @@ public class Movement : MonoBehaviour
             pts.text = "Moneda = " + contador.ToString();
             Destroy(other.gameObject);
         }
-
     }
 
     //Empieza una corutina para mover al personaje a la dirección de la flecha
