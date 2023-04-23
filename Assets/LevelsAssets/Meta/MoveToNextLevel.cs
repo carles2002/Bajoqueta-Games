@@ -7,9 +7,11 @@ public class MoveToNextLevel : MonoBehaviour
 {
     public int nextSceneLoad;
     private Movement movimientoPlayer;
+    private GameObject levelTransition;
 
     void Start()
     {
+        levelTransition = GameObject.FindGameObjectWithTag("levelTransition");
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
 
         movimientoPlayer = FindObjectOfType<Movement>();
@@ -23,7 +25,7 @@ public class MoveToNextLevel : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex == 4) /* El numero es el último
                                                                  que tengas en Build Settings */
             {
-                movimientoPlayer.gameControl.ChangeGameRunningState();
+                //movimientoPlayer.gameControl.ChangeGameRunningState();
                 Debug.Log("Has completado todos los niveles");
 
                 //Mostrar pantalla de "Has ganado :D"
@@ -49,14 +51,17 @@ public class MoveToNextLevel : MonoBehaviour
     IEnumerator CargarEscena(){
 
         movimientoPlayer.gameControl.ChangeGameRunningState();
-        yield return new WaitForSeconds(1f);
+        levelTransition.GetComponentInChildren<Animator>().SetTrigger("Start");
+        yield return new WaitForSeconds(1.2f);
+
         SceneManager.LoadScene(nextSceneLoad);
     }
 
     IEnumerator CargarVueltaAlMenu(){
 
         movimientoPlayer.gameControl.ChangeGameRunningState();
-        yield return new WaitForSeconds(1f);
+        levelTransition.GetComponentInChildren<Animator>().SetTrigger("Start");
+        yield return new WaitForSeconds(1.2f);
         SceneManager.LoadScene(0);
     }
 }

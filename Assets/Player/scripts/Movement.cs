@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     private bool isRolling;
     public Transform pivot;
     public Transform ghostPlayer;
+    public char Position;
 
     public InputManager InputManager;
     public LayerMask contactWallLayer;
@@ -39,11 +40,22 @@ public class Movement : MonoBehaviour
     //Detecta si hay un pared en la direcci�n a la que vas a  moverte
     bool IsWallInDirection(Vector3 axis)
     {
+        RaycastHit hit;
+        Debug.Log("Position"+ Position);
         //Debug.Log("entro wall con direccion" +axis);
 
-        RaycastHit hit;
-        if (Physics.Raycast(raycastOriginObject.transform.position, axis, out hit, 1f, wallLayer))
-        {
+         //Debug.DrawRay(transform.position, transform.up* 100f, Color.red);
+
+        //Si está de pie y detecta que hay una pared a más de dos casillas, no se mueve para evitar el clipeo con la pared
+         if (Physics.Raycast(raycastOriginObject.transform.position, axis, out hit, 1f, wallLayer)== false && Physics.Raycast(raycastOriginObject.transform.position, axis, out hit, 2f, wallLayer) == true&& Position=='Y')
+         {
+                Debug.Log("Wall Detected_Pie");
+                return true;
+         }  
+
+        if(Physics.Raycast(raycastOriginObject.transform.position, axis, out hit, 1f, wallLayer)) { 
+
+           
             Debug.Log("Wall Detected");
             return true;
 
@@ -82,7 +94,7 @@ public class Movement : MonoBehaviour
         // Actualiza la posición del pivote.
         Vector3 axis = GetAxis(KeyDirection);
         Vector3 directionVector = GetDirectionVector(KeyDirection);
-        Vector2 pivotOffset = GetPivotOffset(KeyDirection);
+        Vector2 pivotOffset = GetPivotOffset(KeyDirection, ref Position);
 
         if (IsWallInDirection(directionVector))
         {
@@ -155,7 +167,7 @@ public class Movement : MonoBehaviour
     }
 
     //Obtiene el desplazamiento del pivot con un raycast a las paredes del mapa
-    private Vector2 GetPivotOffset(InputManager.Direction direction)
+    private Vector2 GetPivotOffset(InputManager.Direction direction, ref char Position)
     {
         Vector2 pivotOffset = Vector2.zero;
         Vector2 center = transform.GetComponent<BoxCollider>().size / 2f;
@@ -171,22 +183,27 @@ public class Movement : MonoBehaviour
                     {
                         pivotOffset = new Vector2(center.y, center.x);
                         Debug.Log("X");
+                        Position = 'X';
                     }
                     else
                         pivotOffset = Vector2.one * center.x;
+                        Position = 'X';
                     break;
                 case "Y":
                     Debug.Log("Y");
                     pivotOffset = center;
+                    Position = 'Y';
                     break;
                 case "Z":
                     Debug.Log("Z");
                     if (direction == InputManager.Direction.Up || direction == InputManager.Direction.Down)
                     {
                         pivotOffset = new Vector2(center.y, center.x);
+                        Position = 'Z';
                     }
                     else
                         pivotOffset = Vector2.one * center.x;
+                        Position = 'Z';
                     break;
                 default:
                     Debug.Log("Raycast hit: " + hit.collider.name);
