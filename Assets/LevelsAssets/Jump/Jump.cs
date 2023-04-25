@@ -4,32 +4,24 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    public float jumpForceY = 10f;
-    public float jumpForceX = -3.5f;
-    private Animator animator;
+    public GameObject player; // Agrega una variable pública para el objeto "Player"
 
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            Rigidbody playerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
-            Animator playerAnimator = collision.gameObject.GetComponent<Animator>(); // Obtén el Animator del objeto "Player"
-            if (playerRigidbody != null)
-            {
-                animator = GetComponent<Animator>();
-                animator.SetTrigger("jump");
 
-                
-                playerRigidbody.constraints = RigidbodyConstraints.None;
-                playerRigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
-                playerRigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-                Vector3 force = new Vector3(jumpForceX, jumpForceY, 0f);
-                playerRigidbody.AddForce(force, ForceMode.Impulse);
-                
+            Animator playerAnimator = player.GetComponent<Animator>(); // Obtén el Animator del objeto "Player"
 
+            Debug.Log("Entrado________________________");
 
-            }
+        
+                playerAnimator.SetTrigger("jump"); // Usa el Animator del objeto "Player"
+            
         }
     }
-
 }
+
+
+
