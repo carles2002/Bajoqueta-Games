@@ -65,6 +65,7 @@ public class Movement : MonoBehaviour
     }
 
     //Detecta si hay una moneda y la suma
+    
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("moneda"))
@@ -72,10 +73,10 @@ public class Movement : MonoBehaviour
             Debug.Log("Moneda tocada");
             contador++;
             pts.text = "Moneda = " + contador.ToString();
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
         }
     }
-
+    
     //Empieza una corutina para mover al personaje a la dirección de la flecha
     private void Roll(InputManager.Direction direction)
     {
