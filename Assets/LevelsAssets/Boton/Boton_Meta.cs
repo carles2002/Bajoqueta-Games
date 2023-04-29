@@ -41,7 +41,7 @@ public class Boton_Meta : MonoBehaviour
                 {
                     lista[i].SetActive(true);
                     i++;
-                    timer = 2;
+                    timer = 1;
                 }
             }
         }
@@ -54,4 +54,5 @@ public class Boton_Meta : MonoBehaviour
             animator.SetBool("activado", false);
         }
     }
+    
 }
