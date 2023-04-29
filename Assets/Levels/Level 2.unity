@@ -2007,6 +2007,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4763324787355683301, guid: c898ca1f9b7b3114badeb277781e9891, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 464dbbdc523d69b40a632f266e72f493, type: 2}
+    - target: {fileID: 4763324787355683301, guid: c898ca1f9b7b3114badeb277781e9891, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5163123269291762104, guid: c898ca1f9b7b3114badeb277781e9891, type: 3}
       propertyPath: pts
       value: 
@@ -2127,6 +2135,10 @@ PrefabInstance:
     - target: {fileID: 7638050513806862295, guid: 076bd0c76eeb77f4c9e3b6d6e9da34d6, type: 3}
       propertyPath: m_Name
       value: GhostPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7638050513806862295, guid: 076bd0c76eeb77f4c9e3b6d6e9da34d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 076bd0c76eeb77f4c9e3b6d6e9da34d6, type: 3}
