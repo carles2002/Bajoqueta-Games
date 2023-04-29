@@ -237,6 +237,7 @@ MonoBehaviour:
   newAnimatorController: {fileID: 9100000, guid: 464dbbdc523d69b40a632f266e72f493, type: 2}
   yOffset: 1
   platformYOffset: -1
+  movimientoPlayer: {fileID: 1995987833}
 --- !u!1 &27646594
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,6 +735,7 @@ MonoBehaviour:
   objectToMove: {fileID: 6319297}
   objectMoveDistance: 1
   newAnimatorController: {fileID: 9100000, guid: a77d57c1caa6e3d448661dccb1e8e36c, type: 2}
+  movimientoPlayer: {fileID: 1995987833}
 --- !u!65 &98725899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1509,8 +1511,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421108501}
   m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -5.89, y: 0.2, z: -0.40407872}
-  m_LocalScale: {x: 0.33455, y: 1, z: 0.98481107}
+  m_LocalPosition: {x: -5.922, y: 0.22, z: -0.40407872}
+  m_LocalScale: {x: 0.29642949, y: 1, z: 0.98481107}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1165645905}
@@ -1736,8 +1738,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.000002, y: 0, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.000002, y: 0.05, z: 10}
+  m_Center: {x: 0, y: -0.02, z: 0}
 --- !u!64 &476268875
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1811,7 +1813,7 @@ Transform:
   m_GameObject: {fileID: 476268873}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -1.21, y: 0.007590711, z: -5.4340787}
-  m_LocalScale: {x: 0.33454996, y: 1, z: 0.98481107}
+  m_LocalScale: {x: 0.33454996, y: 1, z: 1.0022422}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1165645905}
@@ -1991,6 +1993,7 @@ MonoBehaviour:
   newAnimatorController: {fileID: 9100000, guid: 464dbbdc523d69b40a632f266e72f493, type: 2}
   yOffset: 1
   platformYOffset: -1
+  movimientoPlayer: {fileID: 1995987833}
 --- !u!65 &528578443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2337,7 +2340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665665621}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -55.97, y: -32.649, z: -37.11}
+  m_LocalPosition: {x: -56.095, y: -32.649, z: -37.11}
   m_LocalScale: {x: 0.6466976, y: 1, z: 0.6399203}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2360,6 +2363,7 @@ MonoBehaviour:
   newAnimatorController: {fileID: 9100000, guid: 464dbbdc523d69b40a632f266e72f493, type: 2}
   yOffset: 1
   platformYOffset: -1
+  movimientoPlayer: {fileID: 1995987833}
 --- !u!65 &665665624
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3466,6 +3470,7 @@ MonoBehaviour:
   objectToMove: {fileID: 665665621}
   objectMoveDistance: 1
   newAnimatorController: {fileID: 9100000, guid: 4d0d07221cd528d469fde091d97c42c3, type: 2}
+  movimientoPlayer: {fileID: 1995987833}
 --- !u!1 &1133924529
 GameObject:
   m_ObjectHideFlags: 0
@@ -3825,6 +3830,7 @@ MonoBehaviour:
   objectToMove: {fileID: 528578440}
   objectMoveDistance: 1
   newAnimatorController: {fileID: 9100000, guid: 897c3bb9522a51541bc6d601737cbdea, type: 2}
+  movimientoPlayer: {fileID: 1995987833}
 --- !u!65 &1352553583
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4059,8 +4065,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 42157545}
   - {fileID: 80758347}
+  - {fileID: 42157545}
   - {fileID: 418347531}
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -4817,6 +4823,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1995987833 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5163123269291762104, guid: c898ca1f9b7b3114badeb277781e9891, type: 3}
+  m_PrefabInstance: {fileID: 1967138952}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995987831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230db2f4f4ff7ef4e9026da963e052dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2021615233
 GameObject:
   m_ObjectHideFlags: 0

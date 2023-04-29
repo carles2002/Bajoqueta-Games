@@ -8,11 +8,15 @@ public class Jump : MonoBehaviour
     public GameObject objectToMove; // Agrega una variable pública para el objeto que quieres mover
     public float objectMoveDistance = 1f; // Agrega una variable pública para la distancia que se moverá el objeto
     public RuntimeAnimatorController newAnimatorController; // Agrega una variable pública para el nuevo AnimatorController
+    public Movement movimientoPlayer;
+
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))
         {
+            movimientoPlayer.gameControl.ChangeGameRunningState();
+
             Rigidbody playerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             Animator playerAnimator = player.GetComponent<Animator>(); // Obtén el Animator del objeto "Player"
 

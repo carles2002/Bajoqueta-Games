@@ -8,11 +8,15 @@ public class Jump2 : MonoBehaviour
     public RuntimeAnimatorController newAnimatorController; // Agrega una variable pública para el nuevo AnimatorController
     public float yOffset = 2f; // Agrega una variable pública para la cantidad de unidades que el personaje se moverá hacia arriba
     public float platformYOffset = -1f; // Agrega una variable pública para la cantidad de unidades que la plataforma se moverá hacia abajo
+    public Movement movimientoPlayer;
+
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))
+
         {
+            movimientoPlayer.gameControl.ChangeGameRunningState();
             Rigidbody playerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             Animator playerAnimator = player.GetComponent<Animator>(); // Obtén el Animator del objeto "Player"
 
