@@ -43,7 +43,9 @@ public class Jump2 : MonoBehaviour
         Vector3 newPosition = transform.position;
         newPosition.y += yOffset;
         playerTransform.position = newPosition;
+        playerTransform.rotation = Quaternion.Euler(0, 0, 0); // Establece la rotación del jugador en (0, 0, 0)
     }
+
 
     private void MovePlatformDown(Transform platformTransform, float platformYOffset)
     {

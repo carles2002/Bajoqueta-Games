@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class respawnPlain : MonoBehaviour
 {
     public Transform cube;
@@ -11,7 +10,9 @@ public class respawnPlain : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.transform.position = cube.position;
+            Transform playerTransform = other.transform; // Obtén el componente Transform del objeto "Player"
+            playerTransform.position = cube.position;
+            playerTransform.rotation = Quaternion.Euler(0, 0, 0); // Establece la rotación del jugador en (0, 0, 0)
         }
     }
 }
