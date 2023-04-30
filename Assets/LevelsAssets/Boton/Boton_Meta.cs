@@ -6,14 +6,16 @@ public class Boton_Meta : MonoBehaviour
 {
     //Variables iniciales
     public GameObject[] lista;
-    public float timer = 2;
-    public bool puedeactivar = false;
+    public float timer;
+    public bool puedeactivar;
     public Animator animator;
-    public int i = 0;
+    public int i;
     // Start is called before the first frame update
     void Start()
     {
-        
+        timer = 0.2f;
+        i = 0;
+        puedeactivar = false;
     }
 
     // Update is called once per frame
@@ -41,7 +43,7 @@ public class Boton_Meta : MonoBehaviour
                 {
                     lista[i].SetActive(true);
                     i++;
-                    timer = 1;
+                    timer = 0.5f;
                 }
             }
         }
