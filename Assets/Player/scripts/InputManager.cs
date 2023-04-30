@@ -42,20 +42,20 @@ public class InputManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             //A swipe is detected
-            return Direction.Up;
+            return Direction.Down;
         }   
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            return Direction.Down;
+            return Direction.Up;
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            return Direction.Left;
+            return Direction.Right;
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
 
-            return Direction.Right;
+            return Direction.Left;
         }
         else
         {
