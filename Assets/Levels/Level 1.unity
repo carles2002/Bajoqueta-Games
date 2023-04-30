@@ -4096,6 +4096,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1573181386
 GameObject:
   m_ObjectHideFlags: 0
@@ -4785,6 +4786,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 7751992130614607858, guid: c898ca1f9b7b3114badeb277781e9891, type: 3}
+      propertyPath: gameRunning
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7751992130614607858, guid: c898ca1f9b7b3114badeb277781e9891, type: 3}
       propertyPath: pauseSceneName
       value: Pause Menu
       objectReference: {fileID: 0}
@@ -4819,7 +4824,7 @@ Animator:
   m_GameObject: {fileID: 1995987831}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 464dbbdc523d69b40a632f266e72f493, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 2
   m_ApplyRootMotion: 0
@@ -4829,6 +4834,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1995987833 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5163123269291762104, guid: c898ca1f9b7b3114badeb277781e9891, type: 3}

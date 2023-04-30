@@ -5,20 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
-    [SerializeField]
-    private bool gameRunning;
-    public string pauseSceneName = "PauseScene";
 
+    private bool gameRunning = true;
+    public string pauseSceneName = "Pause Menu";
+    
     private void SaveGame()
     {
         PlayerPrefs.SetInt("GameRunning", gameRunning ? 1 : 0);
         // Guarda aquí cualquier otra información del juego que necesites
+        gameRunning= false;
     }
 
     private void LoadGame()
     {
         gameRunning = PlayerPrefs.GetInt("GameRunning", 0) == 1;
         // Carga aquí cualquier otra información del juego que necesites
+        gameRunning = true;
     }
 
     public void ChangeGameRunningState()
@@ -43,7 +45,7 @@ public class GameControl : MonoBehaviour
     {
         LoadGame(); // Carga la información del juego al inicio
     }
-
+   
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
