@@ -2455,7 +2455,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.9708928, b: 0.8915094, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -4096,7 +4096,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1573181386
 GameObject:
   m_ObjectHideFlags: 0
@@ -4785,6 +4784,14 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 7751992130614607858, guid: c898ca1f9b7b3114badeb277781e9891, type: 3}
+      propertyPath: pauseSceneName
+      value: Pause Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7751992130614607858, guid: c898ca1f9b7b3114badeb277781e9891, type: 3}
+      propertyPath: sceneNameToLoad
+      value: Pause Menu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c898ca1f9b7b3114badeb277781e9891, type: 3}
 --- !u!224 &1980703075 stripped
@@ -4822,7 +4829,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1995987833 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5163123269291762104, guid: c898ca1f9b7b3114badeb277781e9891, type: 3}
