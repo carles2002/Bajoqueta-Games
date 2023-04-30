@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour
     //cuando se detecta una tecla, se invoca a roll
     void Initialize()
     {
-        pts.text = "Moneda = " + contador.ToString();
+        pts.text = contador.ToString();
         InputManager.OnKeyDetected += Roll;
         isRolling = false;
         gameControl = FindObjectOfType<GameControl>();
@@ -72,7 +72,7 @@ public class Movement : MonoBehaviour
         {
             Debug.Log("Moneda tocada");
             contador++;
-            pts.text = "Moneda = " + contador.ToString();
+            pts.text = contador.ToString();
             //Destroy(other.gameObject);
         }
     }
