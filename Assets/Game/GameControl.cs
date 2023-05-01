@@ -46,17 +46,5 @@ public class GameControl : MonoBehaviour
         LoadGame(); // Carga la información del juego al inicio
     }
    
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SaveGame(); // Guarda la información del juego antes de cambiar de escena
-
-            // Almacena el índice de la escena actual antes de cargar la escena de pausa
-            PauseScript.previousSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-            // Cambia a la escena de pausa
-            SceneManager.LoadScene(pauseSceneName);
-        }
-    }
+    
 }
