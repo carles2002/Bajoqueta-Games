@@ -7,7 +7,7 @@ public class GameControl : MonoBehaviour
 {
 
     private bool gameRunning = true;
-    public string pauseSceneName = "Pause Menu";
+    
     
     private void SaveGame()
     {
@@ -48,15 +48,6 @@ public class GameControl : MonoBehaviour
    
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SaveGame(); // Guarda la información del juego antes de cambiar de escena
-
-            // Almacena el índice de la escena actual antes de cargar la escena de pausa
-            PauseScript.previousSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-            // Cambia a la escena de pausa
-            SceneManager.LoadScene(pauseSceneName);
-        }
+        
     }
 }
