@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class PauseMenu : MonoBehaviour
     public GameObject homeObject;
 
     private bool isPaused = false;
+
+    private int menuSceneName = 0; //Escena menu
+
+
 
     void Start()
     {
@@ -25,7 +30,7 @@ public class PauseMenu : MonoBehaviour
         }
 
         // Detección de clic en el objeto 3D
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isPaused)
         {
             Ray ray = camera2.ScreenPointToRay(Input.mousePosition); // Usa la cámara1 en lugar de la cámara principal
             RaycastHit hit;
@@ -79,11 +84,16 @@ public class PauseMenu : MonoBehaviour
     public void reset()
     {
         Debug.Log("RESET");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        TogglePause();
+       
     }
 
     public void menu()
     {
         Debug.Log("MENU");
+        SceneManager.LoadScene(menuSceneName);
+        TogglePause();
     }
 
 }

@@ -7,7 +7,7 @@ public class GameControl : MonoBehaviour
 {
 
     private bool gameRunning = true;
-    public string pauseSceneName = "Pause Menu";
+    
     
     private void SaveGame()
     {
@@ -46,5 +46,8 @@ public class GameControl : MonoBehaviour
         LoadGame(); // Carga la información del juego al inicio
     }
    
-    
+    private void Update()
+    {
+        
+    }
 }
