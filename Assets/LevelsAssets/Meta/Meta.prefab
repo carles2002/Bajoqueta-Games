@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuienLoEmite: {fileID: 7495636575999775142}
-  Sonido: {fileID: 8300000, guid: 3f6b083ace2eab2448035375da39f9c3, type: 3}
+  JukeBox: {fileID: 7513854944321338286, guid: cb91dbcf4cf2dfc46847f065ba41bd66, type: 3}
   volumen: 1
 --- !u!1 &7726215712922029101
 GameObject:
