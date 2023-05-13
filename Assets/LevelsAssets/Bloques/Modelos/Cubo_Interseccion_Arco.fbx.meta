@@ -5,10 +5,17 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects: {}
   materials:
+<<<<<<< HEAD
     materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
+=======
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+>>>>>>> Nivel_1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
