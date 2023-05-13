@@ -5,20 +5,19 @@ using UnityEngine;
 public class Sound : MonoBehaviour
 {
     public AudioSource QuienLoEmite;
-    public AudioClip Sonido;
-    public float volumen = 1f;
-
+    private AudioClip Sonido;
+    public GameObject JukeBox;
+    public float volumen = 5f;
+//-----------------------------------------------------------------------------------------
     private void OnTriggerEnter(Collider other) {
-        if(gameObject.tag.Equals("moneda")) StartCoroutine("EmitirSonidoYDestruir");
-        else EmitirSonido();
+        Debug.Log("Quien lo emite: "+QuienLoEmite);
+        Sonido = QuienLoEmite.clip;
+        Debug.Log("Sonido: "+Sonido);
+        EmitirSonido();
     }
-
+//-----------------------------------------------------------------------------------------
     private void EmitirSonido(){
-        QuienLoEmite.PlayOneShot(Sonido, volumen);
+        AudioSource.PlayClipAtPoint(Sonido, JukeBox.transform.position);
     }
-    IEnumerator EmitirSonidoYDestruir(){
-        QuienLoEmite.PlayOneShot(Sonido, volumen);
-        yield return new WaitForSeconds(Sonido.length); //Me espero a que termine para destruir el objeto
-        Destroy(gameObject);
-    }
+    
 }

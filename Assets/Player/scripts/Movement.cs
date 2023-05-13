@@ -73,7 +73,7 @@ public class Movement : MonoBehaviour
             Debug.Log("Moneda tocada");
             contador++;
             pts.text = contador.ToString();
-            //Destroy(other.gameObject);
+            Destroy(other.gameObject);
         }
     }
     
