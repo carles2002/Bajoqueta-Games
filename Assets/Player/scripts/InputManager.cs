@@ -25,8 +25,6 @@ public class InputManager : MonoBehaviour
         if (direction != Direction.None)
         {
             OnKeyDetected.Invoke(direction);
-            // Do something with this direction data.
-            Debug.Log("direction: " + direction);
            
         }
         if (Input.GetKeyDown(KeyCode.R))
