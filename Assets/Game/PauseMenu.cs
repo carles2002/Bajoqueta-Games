@@ -15,7 +15,7 @@ public class PauseMenu : MonoBehaviour
 
     private bool isPaused = false;
 
-    private int menuSceneName = 0; //Escena menu
+    private int menuSceneName = 0; //Escena menu numero
 
 
 
@@ -72,7 +72,7 @@ public class PauseMenu : MonoBehaviour
             
         }
 
-       
+        isPaused = !isPaused;
 
         if (isPaused)
         {
@@ -97,7 +97,7 @@ public class PauseMenu : MonoBehaviour
             homeObject.SetActive(false);    
            
         }
-        isPaused = !isPaused;
+       
     }
 
     public void reset()

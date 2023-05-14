@@ -9,6 +9,7 @@ public class VolumeControl : MonoBehaviour
 
 
 
+
     public void OnScrollbarValueChanged(float value)
     {
         if (!audioSource.isPlaying)
@@ -22,6 +23,7 @@ public class VolumeControl : MonoBehaviour
     {
         float volume = Mathf.Lerp(-20, 0, sliderValue);
         mixer.SetFloat("MusicVol", volume);
-    }
 
+        
+    }
 }
