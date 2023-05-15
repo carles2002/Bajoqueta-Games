@@ -547,6 +547,7 @@ MonoBehaviour:
   - {fileID: 1195431694}
   - {fileID: 985748310}
   volumeBar: {fileID: 43562061}
+  scrollbar: {fileID: 43562065}
 --- !u!114 &43562065
 MonoBehaviour:
   m_ObjectHideFlags: 0

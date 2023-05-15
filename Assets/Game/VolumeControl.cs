@@ -9,6 +9,7 @@ public class VolumeControl : MonoBehaviour
     public AudioSource audioSource;
     public List<Sound> soundScripts;
     public GameObject volumeBar;
+    public Scrollbar scrollbar;
     // La clave que usaremos para almacenar y recuperar el valor del volumen en PlayerPrefs.
     private const string VolumeKey = "volume";
 
@@ -18,6 +19,7 @@ public class VolumeControl : MonoBehaviour
         // Al inicio, recuperamos el valor del volumen de PlayerPrefs y lo ajustamos.
         float storedVolume = PlayerPrefs.GetFloat(VolumeKey, 0.75f); // Usamos 0.75 como valor predeterminado.
         SetLevel(storedVolume);
+        scrollbar.value = storedVolume;
     }
 
     public void OnScrollbarValueChanged(float value)
