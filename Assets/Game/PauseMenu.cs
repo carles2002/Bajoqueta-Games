@@ -23,11 +23,15 @@ public class PauseMenu : MonoBehaviour
     {
         camera1.enabled = true;
         camera2.enabled = false;
+        volumeBar.SetActive(true);
+
 
     }
+    
 
     void Update()
     {
+       
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
@@ -105,6 +109,7 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("RESET");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         TogglePause();
+
        
     }
 

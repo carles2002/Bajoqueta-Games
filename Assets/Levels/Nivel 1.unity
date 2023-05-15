@@ -546,6 +546,7 @@ MonoBehaviour:
   - {fileID: 1201984466}
   - {fileID: 1195431694}
   - {fileID: 985748310}
+  volumeBar: {fileID: 43562061}
 --- !u!114 &43562065
 MonoBehaviour:
   m_ObjectHideFlags: 0
