@@ -6,6 +6,7 @@ TagManager:
   tags:
   - moneda
   - rampa
+  - levelTransition
   layers:
   - Default
   - TransparentFX
