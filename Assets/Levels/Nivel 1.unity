@@ -1452,6 +1452,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: arbol
       objectReference: {fileID: 0}
+    - target: {fileID: 6411966711900930084, guid: 9ee6eee5c66763e43b971fc4ca9457cb, type: 3}
+      propertyPath: m_Size.x
+      value: 1.508713
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411966711900930084, guid: 9ee6eee5c66763e43b971fc4ca9457cb, type: 3}
+      propertyPath: m_Size.z
+      value: 1.5983187
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411966711900930084, guid: 9ee6eee5c66763e43b971fc4ca9457cb, type: 3}
+      propertyPath: m_Center.x
+      value: -0.15408862
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411966711900930084, guid: 9ee6eee5c66763e43b971fc4ca9457cb, type: 3}
+      propertyPath: m_Center.z
+      value: -0.03564304
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ee6eee5c66763e43b971fc4ca9457cb, type: 3}
 --- !u!1001 &362200960
