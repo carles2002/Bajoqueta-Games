@@ -3755,9 +3755,21 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 24300002, guid: 57cf9d9f7d418cc4a9e1cf0aa8916a4c, type: 2}
+    - target: {fileID: 7596546777569043721, guid: 744b1525687ff5c4da3de04ad51b7d18, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7596546777569043721, guid: 744b1525687ff5c4da3de04ad51b7d18, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8245149168592192732, guid: 744b1525687ff5c4da3de04ad51b7d18, type: 3}
       propertyPath: m_Name
       value: Gema1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245149168592192732, guid: 744b1525687ff5c4da3de04ad51b7d18, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8730078169739812454, guid: 744b1525687ff5c4da3de04ad51b7d18, type: 3}
       propertyPath: m_RootOrder
