@@ -10,6 +10,9 @@ public class VolumeControl : MonoBehaviour
     public List<Sound> soundScripts;
     public GameObject volumeBar;
     public Scrollbar scrollbar;
+
+    public AudioSource audioSourceMusic; // Para la música de fondo.
+
     // La clave que usaremos para almacenar y recuperar el valor del volumen en PlayerPrefs.
     private const string VolumeKey = "volume";
 
@@ -42,6 +45,11 @@ public class VolumeControl : MonoBehaviour
                 Debug.Log(volume);
                 soundScript.volumen = Mathf.Pow(10, volume / 20);
             }
+        }
+
+        if (audioSourceMusic != null)
+        {
+            audioSourceMusic.volume = sliderValue-0.3f;
         }
 
         // Guardamos el valor del volumen en PlayerPrefs para que podamos recuperarlo más tarde.

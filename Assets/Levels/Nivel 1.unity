@@ -548,6 +548,7 @@ MonoBehaviour:
   - {fileID: 985748310}
   volumeBar: {fileID: 43562061}
   scrollbar: {fileID: 43562065}
+  audioSourceMusic: {fileID: 639893421}
 --- !u!114 &43562065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1835,6 +1836,11 @@ Transform:
   m_Father: {fileID: 2132266673}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &639893421 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 333607177534684080, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
+  m_PrefabInstance: {fileID: 960699960378530659}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &649759684
 GameObject:
   m_ObjectHideFlags: 0
@@ -6110,6 +6116,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 333607177534684080, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 333607177534684080, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8a95d6d607b976a42bc234556926a564, type: 3}
+    - target: {fileID: 333607177534684080, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 57cf9d9f7d418cc4a9e1cf0aa8916a4c, type: 2}
     - target: {fileID: 649417853516193511, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
       propertyPath: Priority
       value: 128
