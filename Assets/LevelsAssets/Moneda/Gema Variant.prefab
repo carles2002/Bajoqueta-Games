@@ -43,9 +43,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.9056604, g: 0.3033108, b: 0.87022805, a: 1}
-  m_Intensity: 0.8
-  m_Range: 4
+  m_Color: {r: 0.90890217, g: 0.20617655, b: 0.9339623, a: 1}
+  m_Intensity: 8
+  m_Range: 0.65
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -159,7 +159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: aaa390f06d41c314f91dbcc6057a9d40, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: aaa390f06d41c314f91dbcc6057a9d40, type: 3}
       propertyPath: m_ReceiveShadows
