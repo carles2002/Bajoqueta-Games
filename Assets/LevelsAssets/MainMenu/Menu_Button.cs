@@ -8,8 +8,10 @@ public class Menu_Button : MonoBehaviour
     public UnityEvent unityEvent = new UnityEvent();
     public bool isStart = false;
 
-    public GameObject objectToAnimate; // El objeto que quieres animar
+    public GameObject PolyAnimate;
+    public GameObject ButtonAnimate;
     private Animator animator;
+   
 
     // Asegúrate de que tu Trigger se llama "PolyJump" en tu Animator Controller
     private readonly string polyJumpTrigger = "PolyJump";
@@ -17,9 +19,9 @@ public class Menu_Button : MonoBehaviour
     private void Start()
     {
         // Recupera el componente Animator del objeto que quieres animar
-        if (objectToAnimate != null)
+        if (PolyAnimate != null)
         {
-            animator = objectToAnimate.GetComponent<Animator>();
+            animator = PolyAnimate.GetComponent<Animator>();
             
         }
         
@@ -49,5 +51,6 @@ public class Menu_Button : MonoBehaviour
         // Después de la espera, invoca el evento
         unityEvent.Invoke();
     }
+
 
 }
