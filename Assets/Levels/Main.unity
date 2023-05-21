@@ -263,23 +263,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6083444808415514119, guid: 6a9ae2ae0825b7a45816606abc9c393d, type: 3}
   m_PrefabInstance: {fileID: 8047848863345976081}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &98500211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 98500209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 191cbaef14bdd7644b92d97f9ebe4288, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LightObject: {fileID: 0}
-  defaultIntensity: 3
-  hoverIntensity: 1
-  clickIntensity: 8
-  fadeSpeed: 0.1
 --- !u!1 &289134813
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,6 +662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191cbaef14bdd7644b92d97f9ebe4288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  raycastCamera: {fileID: 2010089935}
   LightObject: {fileID: 423786044}
   defaultIntensity: 0
   hoverIntensity: 3
@@ -894,6 +878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191cbaef14bdd7644b92d97f9ebe4288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  raycastCamera: {fileID: 2010089935}
   LightObject: {fileID: 1456913736}
   defaultIntensity: 0
   hoverIntensity: 3
@@ -916,6 +901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191cbaef14bdd7644b92d97f9ebe4288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  raycastCamera: {fileID: 2010089935}
   LightObject: {fileID: 2012568170}
   defaultIntensity: 0
   hoverIntensity: 3
@@ -938,6 +924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191cbaef14bdd7644b92d97f9ebe4288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  raycastCamera: {fileID: 2010089935}
   LightObject: {fileID: 1294088604}
   defaultIntensity: 0
   hoverIntensity: 3

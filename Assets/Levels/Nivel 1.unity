@@ -16439,9 +16439,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3061935783903050384, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 238.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061935783903050384, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 138.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061935783903050384, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -385.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061935783903050384, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999405
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061935783903050384, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0044739875
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061935783903050384, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0099457055
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061935783903050384, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00042600353
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061935783903050384, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061935783903050384, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061935783903050384, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.054
+      objectReference: {fileID: 0}
     - target: {fileID: 3061935783903050391, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
       propertyPath: m_ClearFlags
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3061935783903050391, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
       propertyPath: m_BackGroundColor.b

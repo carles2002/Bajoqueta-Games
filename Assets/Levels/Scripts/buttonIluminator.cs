@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class buttonIluminator : MonoBehaviour
 {
+    public Camera raycastCamera; // La cámara que quieres usar para el raycast
     public GameObject LightObject; // El objeto que contiene el componente Light
 
     private Light light; // La luz del objeto
 
-    public float defaultIntensity =0f; // Intensidad de luz por defecto
+    public float defaultIntensity = 0f; // Intensidad de luz por defecto
     public float hoverIntensity = 3f; // Intensidad de luz cuando se hace hover en el botón
     public float clickIntensity = 8f; // Intensidad de luz cuando se hace clic en el botón
 
@@ -35,7 +36,14 @@ public class buttonIluminator : MonoBehaviour
 
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        // Comprueba que la cámara está asignada
+        if (raycastCamera == null)
+        {
+            Debug.LogError("No se ha asignado ninguna cámara para el raycast.");
+            return;
+        }
+
+        Ray ray = raycastCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))
