@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject homeObject;
 
     public GameObject volumeBar;
+
+    public GameObject sceneLight;
     
 
 
@@ -86,6 +88,7 @@ public class PauseMenu : MonoBehaviour
             pauseObject.SetActive(true);
             resetObject.SetActive(true);
             homeObject.SetActive(true);
+            sceneLight.SetActive(false);
         }
         else
         {
@@ -98,8 +101,9 @@ public class PauseMenu : MonoBehaviour
 
             pauseObject.SetActive(false);
             resetObject.SetActive(false);
-            homeObject.SetActive(false);    
-           
+            homeObject.SetActive(false);
+            sceneLight.SetActive(true);
+
         }
        
     }
