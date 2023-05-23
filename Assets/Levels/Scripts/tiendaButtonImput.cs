@@ -9,8 +9,9 @@ public class tiendaButtonImput : MonoBehaviour
     public GameObject c3;
     public GameObject c4;
     public GameObject c5;
+    public GameObject salida;
 
-                         
+
     public Animator animator; // El animator que va a ejecutar el trigger
     private readonly string triggerName = "Rotate"; // El nombre del trigger que quieres ejecutar
 
@@ -51,6 +52,14 @@ public class tiendaButtonImput : MonoBehaviour
                         animator.SetTrigger(triggerName);
                     }
                     
+                }
+                if (hit.collider.gameObject == salida)
+                {
+                    Debug.Log("SALIDA");
+
+                    SceneManager.LoadScene(0);
+
+
                 }
             }
         }
