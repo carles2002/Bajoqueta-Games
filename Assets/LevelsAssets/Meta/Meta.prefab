@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eedf2c39fcf2d34bb4eec391099aae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QuienLoEmite: {fileID: 0}
+  QuienLoEmite: {fileID: 3533573521377606287}
   JukeBox: {fileID: 7513854944321338286, guid: cb91dbcf4cf2dfc46847f065ba41bd66, type: 3}
   volumen: 1
 --- !u!4 &3130249398567514264 stripped

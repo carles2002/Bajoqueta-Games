@@ -22,7 +22,7 @@ public class MoveToNextLevel : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (SceneManager.GetActiveScene().buildIndex == 2) /* El numero es el último
+            if (SceneManager.GetActiveScene().buildIndex == 4) /* El numero es el último
                                                                  que tengas en Build Settings */
             {
                 //movimientoPlayer.gameControl.ChangeGameRunningState();
@@ -38,11 +38,13 @@ public class MoveToNextLevel : MonoBehaviour
                 
                 StartCoroutine("CargarEscena");
 
+                /*
                 //Setting Int for Index
                 if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
                 {
                     PlayerPrefs.SetInt("levelAt", nextSceneLoad);
                 }
+                */
             }
         }
     }
@@ -54,6 +56,7 @@ public class MoveToNextLevel : MonoBehaviour
         levelTransition.GetComponentInChildren<Animator>().SetTrigger("Start");
         yield return new WaitForSeconds(1.2f);
 
+        LevelSelection.instancia.AumentarNiveles();
         SceneManager.LoadScene(nextSceneLoad);
     }
 
