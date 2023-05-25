@@ -36,6 +36,8 @@ public class buttonIluminator : MonoBehaviour
 
     void Update()
     {
+        Screen.SetResolution(1920, 1080, true);
+
         // Comprueba que la cámara está asignada
         if (raycastCamera == null)
         {

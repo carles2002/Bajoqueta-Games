@@ -6629,7 +6629,7 @@ GameObject:
   - component: {fileID: 537342450}
   - component: {fileID: 537342449}
   m_Layer: 9
-  m_Name: Cylinder
+  m_Name: Nubes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
