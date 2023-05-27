@@ -16,7 +16,7 @@ public class Jump2 : MonoBehaviour
         if (collision.CompareTag("Player"))
 
         {
-            movimientoPlayer.gameControl.ChangeGameRunningState();
+            movimientoPlayer.gameControl.ChangeGameRunningState(true);
             Rigidbody playerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             Animator playerAnimator = player.GetComponent<Animator>(); // Obtén el Animator del objeto "Player"
 

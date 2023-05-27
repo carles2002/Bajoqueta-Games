@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1826943, g: 0.22840182, b: 0.30710775, a: 1}
+  m_IndirectSpecularColor: {r: 0.18269454, g: 0.22840214, b: 0.30710834, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8469,6 +8469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cube: {fileID: 1724624558}
+  playerMovementScript: {fileID: 1564285399}
 --- !u!64 &1044804446
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10146,6 +10147,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3c1847a30ece6b47b94494f87c9ae5c, type: 3}
+--- !u!114 &1564285399 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5163123269291762104, guid: f3c1847a30ece6b47b94494f87c9ae5c, type: 3}
+  m_PrefabInstance: {fileID: 1564285398}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230db2f4f4ff7ef4e9026da963e052dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1570463122
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -57,7 +57,7 @@ public class Jump : MonoBehaviour
         Debug.Log("MANDADO" + isPlayerTouching);
         if (isPlayerTouching)
         {
-            movimientoPlayer.gameControl.ChangeGameRunningState();
+            movimientoPlayer.gameControl.ChangeGameRunningState(false);
 
             Rigidbody playerRigidbody = player.GetComponent<Rigidbody>();
             Animator playerAnimator = player.GetComponent<Animator>();

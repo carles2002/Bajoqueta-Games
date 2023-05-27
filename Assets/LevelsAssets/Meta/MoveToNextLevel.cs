@@ -16,7 +16,7 @@ public class MoveToNextLevel : MonoBehaviour
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
 
         movimientoPlayer = FindObjectOfType<Movement>();
-        if(movimientoPlayer.gameControl.IsGameRunning() == false){movimientoPlayer.gameControl.ChangeGameRunningState();}
+        if(movimientoPlayer.gameControl.IsGameRunning() == false){movimientoPlayer.gameControl.ChangeGameRunningState(true);}
     }
 
     public void OnTriggerEnter(Collider other)
@@ -55,7 +55,7 @@ public class MoveToNextLevel : MonoBehaviour
      a Poly de que termine de rotar antes de cargar*/
     IEnumerator CargarEscena(){
 
-        movimientoPlayer.gameControl.ChangeGameRunningState();
+        movimientoPlayer.gameControl.ChangeGameRunningState(true);
         levelTransition.GetComponentInChildren<Animator>().SetTrigger("Start");
         yield return new WaitForSeconds(1.2f);
 
@@ -65,7 +65,7 @@ public class MoveToNextLevel : MonoBehaviour
 
     IEnumerator CargarVueltaAlMenu(){
 
-        movimientoPlayer.gameControl.ChangeGameRunningState();
+        movimientoPlayer.gameControl.ChangeGameRunningState(true);
         levelTransition.GetComponentInChildren<Animator>().SetTrigger("Start");
         yield return new WaitForSeconds(1.2f);
         SceneManager.LoadScene(0);
