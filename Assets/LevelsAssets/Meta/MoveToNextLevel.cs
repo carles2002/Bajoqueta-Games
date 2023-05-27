@@ -39,7 +39,7 @@ public class MoveToNextLevel : MonoBehaviour
                
                 animator.SetBool("pulsado", true);
 
-                //StartCoroutine("CargarEscena");
+                StartCoroutine("CargarEscena");
 
                 /*
                 //Setting Int for Index
