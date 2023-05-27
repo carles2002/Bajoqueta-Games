@@ -8,6 +8,7 @@ public class MoveToNextLevel : MonoBehaviour
     public int nextSceneLoad;
     private Movement movimientoPlayer;
     private GameObject levelTransition;
+    public Animator animator;
 
     void Start()
     {
@@ -29,14 +30,16 @@ public class MoveToNextLevel : MonoBehaviour
                 Debug.Log("Has completado todos los niveles");
 
                 //Mostrar pantalla de "Has ganado :D"
-
+                animator.SetBool("pulsado", true);
                 StartCoroutine("CargarVueltaAlMenu");
             }
             else
             {
                 //Ir al siguiente nivel
-                
-                StartCoroutine("CargarEscena");
+               
+                animator.SetBool("pulsado", true);
+
+                //StartCoroutine("CargarEscena");
 
                 /*
                 //Setting Int for Index

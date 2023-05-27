@@ -7106,7 +7106,7 @@ PrefabInstance:
     - target: {fileID: 2209393428579852148, guid: f5889a5bb453c4449a8609592b950aa1, type: 3}
       propertyPath: QuienLoEmite
       value: 
-      objectReference: {fileID: 1330060784}
+      objectReference: {fileID: 0}
     - target: {fileID: 5086304967842859288, guid: f5889a5bb453c4449a8609592b950aa1, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -9262,11 +9262,6 @@ Transform:
   m_Father: {fileID: 832988375}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1330060784 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 3533573521377606287, guid: f5889a5bb453c4449a8609592b950aa1, type: 3}
-  m_PrefabInstance: {fileID: 716057146}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1369983436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5903735056092722290, guid: a166a782ed8d91a4c9f2379c5823c825, type: 3}
