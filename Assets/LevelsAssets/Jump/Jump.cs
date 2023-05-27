@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Jump : MonoBehaviour
 {
@@ -10,27 +11,37 @@ public class Jump : MonoBehaviour
     public RuntimeAnimatorController newAnimatorController;
     public Movement movimientoPlayer;
 
-    public bool isPlayerTouching = false;
+    private bool isPlayerTouching = false;
+
+    public GameObject detector;
 
     void OnTriggerEnter(Collider collision)
     {
         Debug.Log("COLISION");
+        StartCoroutine(activateDetector(0.5f));
         // Verifica si el objeto en colisión es el Player
         if (collision.gameObject == player)
         {
             isPlayerTouching = true;
             Debug.Log(isPlayerTouching);
+
+            // Guarda la rotación cuando el jugador entra en colisión
+           
         }
     }
 
     void OnTriggerExit(Collider collision)
     {
         Debug.Log("DES COLISION");
+        detector.SetActive(false);
         // Verifica si el objeto que dejó de estar en colisión es el Player
         if (collision.gameObject == player)
         {
             isPlayerTouching = false;
             Debug.Log(isPlayerTouching);
+
+            // Carga la rotación cuando el jugador deja de estar en colisión
+            
         }
     }
 
@@ -41,7 +52,7 @@ public class Jump : MonoBehaviour
 
     public void PlayerDetected()
     {
-        Debug.Log("MANDADO"+ isPlayerTouching);
+        Debug.Log("MANDADO" + isPlayerTouching);
         if (isPlayerTouching)
         {
             movimientoPlayer.gameControl.ChangeGameRunningState();
@@ -60,6 +71,7 @@ public class Jump : MonoBehaviour
     {
         if (newAnimatorController != null)
         {
+            SaveRotation();
             animator.runtimeAnimatorController = newAnimatorController;
         }
         else
@@ -79,4 +91,36 @@ public class Jump : MonoBehaviour
             Debug.LogWarning("No se ha asignado un objeto para mover. Por favor, asigna uno en el Inspector.");
         }
     }
+
+    private void SaveRotation()
+    {
+        Quaternion rotation = player.transform.rotation;
+        PlayerPrefs.SetFloat("PlayerRotationX", rotation.x);
+        PlayerPrefs.SetFloat("PlayerRotationY", rotation.y);
+        PlayerPrefs.SetFloat("PlayerRotationZ", rotation.z);
+        PlayerPrefs.SetFloat("PlayerRotationW", rotation.w);
+        PlayerPrefs.Save();
+        Debug.Log(PlayerPrefs.GetFloat("PlayerRotationX").ToString());
+    }
+
+    private void LoadRotation()
+    {
+        float x = PlayerPrefs.GetFloat("PlayerRotationX");
+        float y = PlayerPrefs.GetFloat("PlayerRotationY");
+        float z = PlayerPrefs.GetFloat("PlayerRotationZ");
+        float w = PlayerPrefs.GetFloat("PlayerRotationW");
+
+        player.transform.rotation = new Quaternion(x, y, z, w);
+    }
+    
+    IEnumerator activateDetector(float delay)
+    {
+        // Espera el número especificado de segundos
+        yield return new WaitForSeconds(delay);
+
+        // Después de la espera, invoca el evento
+        detector.SetActive(true);
+    }
+
+
 }
