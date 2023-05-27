@@ -15,10 +15,12 @@ public class Jump : MonoBehaviour
 
     public GameObject detector;
 
+    public float timeDetection = 1f;
+
     void OnTriggerEnter(Collider collision)
     {
         Debug.Log("COLISION");
-        StartCoroutine(activateDetector(0.5f));
+        StartCoroutine(activateDetector(timeDetection));
         // Verifica si el objeto en colisión es el Player
         if (collision.gameObject == player)
         {
