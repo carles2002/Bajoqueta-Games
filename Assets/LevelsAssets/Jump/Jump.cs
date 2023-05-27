@@ -4,29 +4,23 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    public GameObject player; // Agrega una variable pública para el objeto "Player"
-    public GameObject objectToMove; // Agrega una variable pública para el objeto que quieres mover
-    public float objectMoveDistance = 1f; // Agrega una variable pública para la distancia que se moverá el objeto
-    public RuntimeAnimatorController newAnimatorController; // Agrega una variable pública para el nuevo AnimatorController
+    public GameObject player;
+    public GameObject objectToMove;
+    public float objectMoveDistance = 1f;
+    public RuntimeAnimatorController newAnimatorController;
     public Movement movimientoPlayer;
 
-
-    private void OnTriggerEnter(Collider collision)
+    public void PlayerDetected()
     {
-        if (collision.CompareTag("Player"))
-        {
-            movimientoPlayer.gameControl.ChangeGameRunningState();
+        movimientoPlayer.gameControl.ChangeGameRunningState();
 
-            Rigidbody playerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
-            Animator playerAnimator = player.GetComponent<Animator>(); // Obtén el Animator del objeto "Player"
+        Rigidbody playerRigidbody = player.GetComponent<Rigidbody>();
+        Animator playerAnimator = player.GetComponent<Animator>();
 
-            Debug.Log("Entrado________________________");
+        Debug.Log("Entrado________________________");
 
-            ChangeAnimatorController(playerAnimator);
-            MoveObjectUp(objectToMove, objectMoveDistance);
-
-            // playerAnimator.SetTrigger("jump"); // Usa el Animator del objeto "Player"
-        }
+        ChangeAnimatorController(playerAnimator);
+        MoveObjectUp(objectToMove, objectMoveDistance);
     }
 
     private void ChangeAnimatorController(Animator animator)
