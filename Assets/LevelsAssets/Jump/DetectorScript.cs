@@ -6,7 +6,7 @@ public class DetectorScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Comprueba si el objeto en colisión es el player
+        // Comprueba si el objeto en colisión es el player Y si player está tocando 'Jump'
         if (other.gameObject == jumpScript.player)
         {
             jumpScript.PlayerDetected();

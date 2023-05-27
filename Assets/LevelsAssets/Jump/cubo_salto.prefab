@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2495139400714325998}
   - component: {fileID: 1517536628219281483}
   - component: {fileID: 3669211915562218625}
+  - component: {fileID: 5235201910186893853}
   m_Layer: 0
   m_Name: cubo_salto
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5235201910186893853
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3020601142420231508}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.53270864, y: 0.99999994, z: 0.57286453}
+  m_Center: {x: 0.03472519, y: -0.000000029802322, z: -0.012805462}

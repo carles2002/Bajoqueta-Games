@@ -44,11 +44,18 @@ public class Jump2 : MonoBehaviour
 
     private void MovePlayerAboveObject(Transform playerTransform, float yOffset)
     {
+        LoadRotation();
         Vector3 newPosition = transform.position;
         newPosition.y += yOffset;
         playerTransform.position = newPosition;
-        playerTransform.rotation = Quaternion.Euler(0, 0, 0); // Establece la rotación del jugador en (0, 0, 0)
+
+        // Obtiene la rotación actual
+        Vector3 currentRotation = playerTransform.rotation.eulerAngles;
+
+        // Corrige solo la posición z a 0, manteniendo las otras dos
+        //playerTransform.rotation = Quaternion.Euler(currentRotation.x, currentRotation.y, 0);
     }
+
 
 
     private void MovePlatformDown(Transform platformTransform, float platformYOffset)
@@ -56,5 +63,14 @@ public class Jump2 : MonoBehaviour
         Vector3 newPosition = platformTransform.position;
         newPosition.y += platformYOffset;
         platformTransform.position = newPosition;
+    }
+    private void LoadRotation()
+    {
+        float x = PlayerPrefs.GetFloat("PlayerRotationX");
+        float y = PlayerPrefs.GetFloat("PlayerRotationY");
+        float z = PlayerPrefs.GetFloat("PlayerRotationZ");
+        float w = PlayerPrefs.GetFloat("PlayerRotationW");
+
+        player.transform.rotation = new Quaternion(x, y, z, w);
     }
 }
