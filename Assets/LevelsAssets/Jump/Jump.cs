@@ -10,17 +10,50 @@ public class Jump : MonoBehaviour
     public RuntimeAnimatorController newAnimatorController;
     public Movement movimientoPlayer;
 
+    public bool isPlayerTouching = false;
+
+    void OnTriggerEnter(Collider collision)
+    {
+        Debug.Log("COLISION");
+        // Verifica si el objeto en colisión es el Player
+        if (collision.gameObject == player)
+        {
+            isPlayerTouching = true;
+            Debug.Log(isPlayerTouching);
+        }
+    }
+
+    void OnTriggerExit(Collider collision)
+    {
+        Debug.Log("DES COLISION");
+        // Verifica si el objeto que dejó de estar en colisión es el Player
+        if (collision.gameObject == player)
+        {
+            isPlayerTouching = false;
+            Debug.Log(isPlayerTouching);
+        }
+    }
+
+    public bool IsPlayerTouching()
+    {
+        return isPlayerTouching;
+    }
+
     public void PlayerDetected()
     {
-        movimientoPlayer.gameControl.ChangeGameRunningState();
+        Debug.Log("MANDADO"+ isPlayerTouching);
+        if (isPlayerTouching)
+        {
+            movimientoPlayer.gameControl.ChangeGameRunningState();
 
-        Rigidbody playerRigidbody = player.GetComponent<Rigidbody>();
-        Animator playerAnimator = player.GetComponent<Animator>();
+            Rigidbody playerRigidbody = player.GetComponent<Rigidbody>();
+            Animator playerAnimator = player.GetComponent<Animator>();
 
-        Debug.Log("Entrado________________________");
+            Debug.Log("Entrado________________________");
 
-        ChangeAnimatorController(playerAnimator);
-        MoveObjectUp(objectToMove, objectMoveDistance);
+            ChangeAnimatorController(playerAnimator);
+            MoveObjectUp(objectToMove, objectMoveDistance);
+        }
     }
 
     private void ChangeAnimatorController(Animator animator)
