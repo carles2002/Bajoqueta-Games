@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18114784, g: 0.22255787, b: 0.28312084, a: 1}
+  m_IndirectSpecularColor: {r: 0.18114796, g: 0.22255814, b: 0.28312165, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3878,6 +3878,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 471b10855150cc44fabfa492b33a9838, type: 3}
+--- !u!114 &386820355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3061935784010685283, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
+  m_PrefabInstance: {fileID: 23023234}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2b9266a277f054a9ea13a679ee4e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &393100409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5903735056092722290, guid: 471b10855150cc44fabfa492b33a9838, type: 3}
@@ -7283,7 +7294,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 386820355}
           m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
           m_MethodName: TogglePause
           m_Mode: 1
