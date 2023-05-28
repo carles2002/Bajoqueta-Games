@@ -13,7 +13,7 @@ public class resumeMovement : MonoBehaviour
         if (other.gameObject == player)
         {
             Debug.Log("SE HA ACTIVADO");
-            // ... desactiva su script de movimiento
+            
             
             playerMovementScript.gameControl.ChangeGameRunningState(true);
         }

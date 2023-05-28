@@ -6,6 +6,7 @@ public class movmentBlock : MonoBehaviour
 {
     public GameObject player; // El objeto del jugador
     public Movement playerMovementScript; // El script de movimiento del jugador
+    
 
     void OnTriggerEnter(Collider other)
     {
@@ -18,4 +19,5 @@ public class movmentBlock : MonoBehaviour
             playerMovementScript.gameControl.ChangeGameRunningState(false);
         }
     }
+   
 }

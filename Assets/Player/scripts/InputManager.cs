@@ -12,36 +12,44 @@ public class InputManager : MonoBehaviour
 
     Direction direction;
 
+    private float timer = 0f;
+    public float delay = 0.5f; // retraso antes de que se procese la entrada
+
     private void Awake()
     {
         direction = Direction.None;
     }
 
-    //Cada vez que se pulsa una tecla, se obtiene su dirección
     private void Update()
     {
-        direction = GetKeyboardDirection();
-       
-        if (direction != Direction.None)
+        // incrementar el contador de tiempo
+        timer += Time.deltaTime;
+
+        // si ha pasado suficiente tiempo, procesar las entradas
+        if (timer >= delay)
         {
-            OnKeyDetected.Invoke(direction);
-           
+            direction = GetKeyboardDirection();
+
+            if (direction != Direction.None)
+            {
+                OnKeyDetected.Invoke(direction);
+                timer = 0f; // resetea el temporizador después de que se detecta una entrada
+            }
         }
-        if (Input.GetKeyDown(KeyCode.R))
+
+        if (Input.GetKeyDown(KeyCode.R) && timer >= delay)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            timer = 0f; // resetea el temporizador después de que se detecta una entrada
         }
-
     }
 
-    //obtiene la dirección de la flecha pulsada
     private Direction GetKeyboardDirection()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            //A swipe is detected
             return Direction.Down;
-        }   
+        }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             return Direction.Up;
@@ -52,7 +60,6 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-
             return Direction.Left;
         }
         else
@@ -60,5 +67,4 @@ public class InputManager : MonoBehaviour
             return Direction.None;
         }
     }
- 
 }
