@@ -87,42 +87,42 @@ public class tiendaButtonImput : MonoBehaviour
                         break;
                 }
 
-                if (polySelected.skinBuy == true)
+            }
+            if (polySelected.skinBuy == true)
+            {
+
+                c5.transform.GetChild(0).gameObject.SetActive(true);
+                c5.transform.GetChild(1).gameObject.SetActive(false);
+                c5.transform.GetChild(2).gameObject.SetActive(false);
+
+
+                switch (polySelected.skinID)
                 {
-
-                    c5.transform.GetChild(0).gameObject.SetActive(true);
-                    c5.transform.GetChild(1).gameObject.SetActive(false);
-                    c5.transform.GetChild(2).gameObject.SetActive(false);
-
-
-                    switch (polySelected.skinID)
-                    {
-                        case 0:
-                            c1.transform.GetChild(0).gameObject.SetActive(true);
-                            c1.transform.GetChild(1).gameObject.SetActive(false);
-                            c1.transform.GetChild(2).gameObject.SetActive(false);
-                            break;
-                        case 1:
-                            c2.transform.GetChild(0).gameObject.SetActive(true);
-                            c2.transform.GetChild(1).gameObject.SetActive(false);
-                            c2.transform.GetChild(2).gameObject.SetActive(false);
-                            break;
-                        case 2:
-                            c3.transform.GetChild(0).gameObject.SetActive(true);
-                            c3.transform.GetChild(1).gameObject.SetActive(false);
-                            c3.transform.GetChild(2).gameObject.SetActive(false);
-                            break;
-                        case 3:
-                            c4.transform.GetChild(0).gameObject.SetActive(true);
-                            c4.transform.GetChild(1).gameObject.SetActive(false);
-                            c4.transform.GetChild(2).gameObject.SetActive(false);
-                            break;
-                        default:
-                            c2.transform.GetChild(0).gameObject.SetActive(true);
-                            c2.transform.GetChild(1).gameObject.SetActive(false);
-                            c2.transform.GetChild(2).gameObject.SetActive(false);
-                            break;
-                    }
+                    case 0:
+                        c1.transform.GetChild(0).gameObject.SetActive(true);
+                        c1.transform.GetChild(1).gameObject.SetActive(false);
+                        c1.transform.GetChild(2).gameObject.SetActive(false);
+                        break;
+                    case 1:
+                        c2.transform.GetChild(0).gameObject.SetActive(true);
+                        c2.transform.GetChild(1).gameObject.SetActive(false);
+                        c2.transform.GetChild(2).gameObject.SetActive(false);
+                        break;
+                    case 2:
+                        c3.transform.GetChild(0).gameObject.SetActive(true);
+                        c3.transform.GetChild(1).gameObject.SetActive(false);
+                        c3.transform.GetChild(2).gameObject.SetActive(false);
+                        break;
+                    case 3:
+                        c4.transform.GetChild(0).gameObject.SetActive(true);
+                        c4.transform.GetChild(1).gameObject.SetActive(false);
+                        c4.transform.GetChild(2).gameObject.SetActive(false);
+                        break;
+                    default:
+                        c2.transform.GetChild(0).gameObject.SetActive(true);
+                        c2.transform.GetChild(1).gameObject.SetActive(false);
+                        c2.transform.GetChild(2).gameObject.SetActive(false);
+                        break;
                 }
             }
         }
