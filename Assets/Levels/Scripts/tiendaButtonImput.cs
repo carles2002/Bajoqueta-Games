@@ -42,6 +42,23 @@ public class tiendaButtonImput : MonoBehaviour
         for (int i = 0; i < PolyDatabase.polysCount; i++)
         {
             polySelected = PolyDatabase.GetPoly(i);
+            switch (polySelected.skinID)
+            {
+                case 0:
+                    c1.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
+                    break;
+                case 1:
+                    c2.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
+                    break;
+                case 2:
+                    c3.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
+                    break;
+                case 3:
+                    c4.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
+                    break;
+                default:
+                    break;
+            }
             if (polySelected.skinSelected == true)
             {
                 actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinName;
@@ -144,6 +161,8 @@ public class tiendaButtonImput : MonoBehaviour
                     polySelected = PolyDatabase.GetPoly(0);
                     actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinName;
                     actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinDescription;
+                    GameObject actualPrice = actual.transform.GetChild(2).gameObject;
+                    actualPrice.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
                     polyPrefabs.transform.GetChild(0).gameObject.SetActive(true);
                     polyPrefabs.transform.GetChild(1).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(2).gameObject.SetActive(false);
@@ -172,19 +191,6 @@ public class tiendaButtonImput : MonoBehaviour
                         c5.transform.GetChild(2).gameObject.SetActive(true);
                         b5.GetComponent<MeshRenderer>().material = greyMaterial;
                     }
-
-
-
-                    /*
-                    if (contador > int.Parse(c1.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text))
-                    {
-                        Debug.Log("Hay monedas suficientes para comprar");
-                    }
-                    else
-                    {
-                        Debug.Log("No hay monedas suficientes para comprar");
-                    }
-                    */
                 }
                 if (hit.collider.gameObject == b2)
                 {
@@ -192,6 +198,8 @@ public class tiendaButtonImput : MonoBehaviour
                     polySelected = PolyDatabase.GetPoly(1);
                     actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinName;
                     actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinDescription;
+                    GameObject actualPrice = actual.transform.GetChild(2).gameObject;
+                    actualPrice.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
                     polyPrefabs.transform.GetChild(0).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(1).gameObject.SetActive(true);
                     polyPrefabs.transform.GetChild(2).gameObject.SetActive(false);
@@ -220,16 +228,6 @@ public class tiendaButtonImput : MonoBehaviour
                         c5.transform.GetChild(2).gameObject.SetActive(true);
                         b5.GetComponent<MeshRenderer>().material = greyMaterial;
                     }
-                    /*
-                    if (contador > int.Parse(c2.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text)) 
-                    {
-                        Debug.Log("Hay monedas suficientes para comprar");
-                    }
-                    else
-                    {
-                        Debug.Log("No hay monedas suficientes para comprar");
-                    }
-                    */
                 }
                 if (hit.collider.gameObject == b3)
                 {
@@ -237,6 +235,8 @@ public class tiendaButtonImput : MonoBehaviour
                     polySelected = PolyDatabase.GetPoly(2);
                     actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinName;
                     actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinDescription;
+                    GameObject actualPrice = actual.transform.GetChild(2).gameObject;
+                    actualPrice.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
                     polyPrefabs.transform.GetChild(0).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(1).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(2).gameObject.SetActive(true);
@@ -252,7 +252,7 @@ public class tiendaButtonImput : MonoBehaviour
                             b5.GetComponent<MeshRenderer>().material = greenMaterial;
                             c5.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "EQUIPADO";
                         }
-                        else 
+                        else
                         {
                             b5.GetComponent<MeshRenderer>().material = greyMaterial;
                             c5.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "Click para equipar";
@@ -265,16 +265,6 @@ public class tiendaButtonImput : MonoBehaviour
                         c5.transform.GetChild(2).gameObject.SetActive(true);
                         b5.GetComponent<MeshRenderer>().material = greyMaterial;
                     }
-                    /*
-                    if (contador > int.Parse(c3.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text)) 
-                    {
-                        Debug.Log("Hay monedas suficientes para comprar");
-                    }
-                    else
-                    {
-                        Debug.Log("No hay monedas suficientes para comprar");
-                    }
-                    */
                 }
                 if (hit.collider.gameObject == b4)
                 {
@@ -282,6 +272,8 @@ public class tiendaButtonImput : MonoBehaviour
                     polySelected = PolyDatabase.GetPoly(3);
                     actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinName;
                     actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinDescription;
+                    GameObject actualPrice = actual.transform.GetChild(2).gameObject;
+                    actualPrice.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
                     polyPrefabs.transform.GetChild(0).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(1).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(2).gameObject.SetActive(false);
@@ -310,16 +302,6 @@ public class tiendaButtonImput : MonoBehaviour
                         c5.transform.GetChild(2).gameObject.SetActive(true);
                         b5.GetComponent<MeshRenderer>().material = greyMaterial;
                     }
-                    /*
-                    if (contador > int.Parse(c4.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text)) 
-                    {
-                        Debug.Log("Hay monedas suficientes para comprar");
-                    }
-                    else
-                    {
-                        Debug.Log("No hay monedas suficientes para comprar");
-                    }
-                    */
                 }
                 if (hit.collider.gameObject == b5)
                 {
@@ -329,6 +311,91 @@ public class tiendaButtonImput : MonoBehaviour
                     if (animator != null)
                     {
                         animator.SetTrigger(triggerName);
+                    }
+
+                    if (polySelected.skinBuy == false)
+                    {
+                        if (contador > int.Parse(c5.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text))
+                        {
+                            contador -= int.Parse(c5.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text); //Usar polySelected.skinPrice al terminar las pruebas
+                            pts.text = contador.ToString();
+
+                            PlayerPrefs.SetInt("Gems", contador);
+
+                            PolyDatabase.GetPoly(polySelected.skinID).skinBuy = true;
+
+                            for (int i = 0; i < PolyDatabase.polysCount; i++)
+                            {
+                                if (PolyDatabase.GetPoly(i).skinSelected)
+                                {
+                                    PolyDatabase.GetPoly(i).skinSelected = false;
+                                    switch (PolyDatabase.GetPoly(i).skinID)
+                                    {
+                                        case 0:
+                                            b1.GetComponent<MeshRenderer>().material = greyMaterial;
+                                            break;
+
+                                        case 1:
+                                            b2.GetComponent<MeshRenderer>().material = greyMaterial;
+                                            break;
+
+                                        case 2:
+                                            b3.GetComponent<MeshRenderer>().material = greyMaterial;
+                                            break;
+
+                                        case 3:
+                                            b4.GetComponent<MeshRenderer>().material = greyMaterial;
+                                            break;
+
+                                        default:
+                                            break;
+                                    }
+                                }
+                            }
+                            PolyDatabase.GetPoly(polySelected.skinID).skinSelected = true;
+                            switch (polySelected.skinID)
+                            {
+                                case 0:
+                                    c1.transform.GetChild(0).gameObject.SetActive(true);
+                                    c1.transform.GetChild(1).gameObject.SetActive(false);
+                                    c1.transform.GetChild(2).gameObject.SetActive(false);
+                                    b1.GetComponent<MeshRenderer>().material = greenMaterial;
+                                    break;
+
+                                case 1:
+                                    c2.transform.GetChild(0).gameObject.SetActive(true);
+                                    c2.transform.GetChild(1).gameObject.SetActive(false);
+                                    c2.transform.GetChild(2).gameObject.SetActive(false);
+                                    b2.GetComponent<MeshRenderer>().material = greenMaterial;
+                                    break;
+
+                                case 2:
+                                    c3.transform.GetChild(0).gameObject.SetActive(true);
+                                    c3.transform.GetChild(1).gameObject.SetActive(false);
+                                    c3.transform.GetChild(2).gameObject.SetActive(false);
+                                    b3.GetComponent<MeshRenderer>().material = greenMaterial;
+                                    break;
+
+                                case 3:
+                                    c4.transform.GetChild(0).gameObject.SetActive(true);
+                                    c4.transform.GetChild(1).gameObject.SetActive(false);
+                                    c4.transform.GetChild(2).gameObject.SetActive(false);
+                                    b4.GetComponent<MeshRenderer>().material = greenMaterial;
+                                    break;
+
+                                default:
+                                    break;
+                            }
+                            actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = "Enhorabuena por tu compra, a disfrutar";
+                            c5.transform.GetChild(0).gameObject.SetActive(true);
+                            c5.transform.GetChild(1).gameObject.SetActive(false);
+                            c5.transform.GetChild(2).gameObject.SetActive(false);
+
+                        }
+                        else
+                        {
+                            actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = "No hay suficientes gemas. ";
+                        }
                     }
                 }
                 if (hit.collider.gameObject == salida)
