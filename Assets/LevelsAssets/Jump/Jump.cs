@@ -15,7 +15,7 @@ public class Jump : MonoBehaviour
 
     public GameObject detector;
 
-    public float timeDetection = 1f;
+    public float timeDetection = 1.5f;
 
     void OnTriggerEnter(Collider collision)
     {
