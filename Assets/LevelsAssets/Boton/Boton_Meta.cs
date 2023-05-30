@@ -39,7 +39,7 @@ public class Boton_Meta : MonoBehaviour
             }
             if (puedeactivar == true)
             {
-                if (i <= 3)
+                if (i <= 1)
                 {
                     lista[i].SetActive(true);
                     i++;

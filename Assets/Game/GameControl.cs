@@ -23,17 +23,10 @@ public class GameControl : MonoBehaviour
         gameRunning = true;
     }
 
-    public void ChangeGameRunningState()
+    public void ChangeGameRunningState(bool game)
     {
-        gameRunning = !gameRunning;
-        if (gameRunning)
-        {
-            //El juego está en curso --> Running
-        }
-        else
-        {
-            //El juego está pausado --> No Running
-        }
+        gameRunning = game;
+        
     }
 
     public bool IsGameRunning()

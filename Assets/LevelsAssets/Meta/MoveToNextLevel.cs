@@ -8,6 +8,7 @@ public class MoveToNextLevel : MonoBehaviour
     public int nextSceneLoad;
     private Movement movimientoPlayer;
     private GameObject levelTransition;
+    public Animator animator;
 
     void Start()
     {
@@ -15,7 +16,7 @@ public class MoveToNextLevel : MonoBehaviour
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
 
         movimientoPlayer = FindObjectOfType<Movement>();
-        if(movimientoPlayer.gameControl.IsGameRunning() == false){movimientoPlayer.gameControl.ChangeGameRunningState();}
+        if(movimientoPlayer.gameControl.IsGameRunning() == false){movimientoPlayer.gameControl.ChangeGameRunningState(true);}
     }
 
     public void OnTriggerEnter(Collider other)
@@ -29,20 +30,24 @@ public class MoveToNextLevel : MonoBehaviour
                 Debug.Log("Has completado todos los niveles");
 
                 //Mostrar pantalla de "Has ganado :D"
-
+                animator.SetBool("pulsado", true);
                 StartCoroutine("CargarVueltaAlMenu");
             }
             else
             {
                 //Ir al siguiente nivel
-                
+               
+                animator.SetBool("pulsado", true);
+
                 StartCoroutine("CargarEscena");
 
+                /*
                 //Setting Int for Index
                 if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
                 {
                     PlayerPrefs.SetInt("levelAt", nextSceneLoad);
                 }
+                */
             }
         }
     }
@@ -50,16 +55,17 @@ public class MoveToNextLevel : MonoBehaviour
      a Poly de que termine de rotar antes de cargar*/
     IEnumerator CargarEscena(){
 
-        movimientoPlayer.gameControl.ChangeGameRunningState();
+        movimientoPlayer.gameControl.ChangeGameRunningState(true);
         levelTransition.GetComponentInChildren<Animator>().SetTrigger("Start");
         yield return new WaitForSeconds(1.2f);
 
+        LevelSelection.instancia.AumentarNiveles();
         SceneManager.LoadScene(nextSceneLoad);
     }
 
     IEnumerator CargarVueltaAlMenu(){
 
-        movimientoPlayer.gameControl.ChangeGameRunningState();
+        movimientoPlayer.gameControl.ChangeGameRunningState(true);
         levelTransition.GetComponentInChildren<Animator>().SetTrigger("Start");
         yield return new WaitForSeconds(1.2f);
         SceneManager.LoadScene(0);

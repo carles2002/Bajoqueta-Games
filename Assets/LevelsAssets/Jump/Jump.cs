@@ -1,31 +1,71 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Jump : MonoBehaviour
 {
-    public GameObject player; // Agrega una variable pública para el objeto "Player"
-    public GameObject objectToMove; // Agrega una variable pública para el objeto que quieres mover
-    public float objectMoveDistance = 1f; // Agrega una variable pública para la distancia que se moverá el objeto
-    public RuntimeAnimatorController newAnimatorController; // Agrega una variable pública para el nuevo AnimatorController
+    public GameObject player;
+    public GameObject objectToMove;
+    public float objectMoveDistance = 1f;
+    public RuntimeAnimatorController newAnimatorController;
     public Movement movimientoPlayer;
 
+    private bool isPlayerTouching = false;
 
-    private void OnTriggerEnter(Collider collision)
+    public GameObject detector;
+
+    public float timeDetection = 1.5f;
+
+    void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Player"))
+        Debug.Log("COLISION");
+        StartCoroutine(activateDetector(timeDetection));
+        // Verifica si el objeto en colisión es el Player
+        if (collision.gameObject == player)
         {
-            movimientoPlayer.gameControl.ChangeGameRunningState();
+            isPlayerTouching = true;
+            Debug.Log(isPlayerTouching);
 
-            Rigidbody playerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
-            Animator playerAnimator = player.GetComponent<Animator>(); // Obtén el Animator del objeto "Player"
+            // Guarda la rotación cuando el jugador entra en colisión
+           
+        }
+    }
+
+    void OnTriggerExit(Collider collision)
+    {
+        Debug.Log("DES COLISION");
+        detector.SetActive(false);
+        // Verifica si el objeto que dejó de estar en colisión es el Player
+        if (collision.gameObject == player)
+        {
+            isPlayerTouching = false;
+            Debug.Log(isPlayerTouching);
+
+            // Carga la rotación cuando el jugador deja de estar en colisión
+            
+        }
+    }
+
+    public bool IsPlayerTouching()
+    {
+        return isPlayerTouching;
+    }
+
+    public void PlayerDetected()
+    {
+        Debug.Log("MANDADO" + isPlayerTouching);
+        if (isPlayerTouching)
+        {
+            movimientoPlayer.gameControl.ChangeGameRunningState(false);
+
+            Rigidbody playerRigidbody = player.GetComponent<Rigidbody>();
+            Animator playerAnimator = player.GetComponent<Animator>();
 
             Debug.Log("Entrado________________________");
 
             ChangeAnimatorController(playerAnimator);
             MoveObjectUp(objectToMove, objectMoveDistance);
-
-            // playerAnimator.SetTrigger("jump"); // Usa el Animator del objeto "Player"
         }
     }
 
@@ -33,6 +73,7 @@ public class Jump : MonoBehaviour
     {
         if (newAnimatorController != null)
         {
+            SaveRotation();
             animator.runtimeAnimatorController = newAnimatorController;
         }
         else
@@ -52,4 +93,36 @@ public class Jump : MonoBehaviour
             Debug.LogWarning("No se ha asignado un objeto para mover. Por favor, asigna uno en el Inspector.");
         }
     }
+
+    private void SaveRotation()
+    {
+        Quaternion rotation = player.transform.rotation;
+        PlayerPrefs.SetFloat("PlayerRotationX", rotation.x);
+        PlayerPrefs.SetFloat("PlayerRotationY", rotation.y);
+        PlayerPrefs.SetFloat("PlayerRotationZ", rotation.z);
+        PlayerPrefs.SetFloat("PlayerRotationW", rotation.w);
+        PlayerPrefs.Save();
+        Debug.Log(PlayerPrefs.GetFloat("PlayerRotationX").ToString());
+    }
+
+    private void LoadRotation()
+    {
+        float x = PlayerPrefs.GetFloat("PlayerRotationX");
+        float y = PlayerPrefs.GetFloat("PlayerRotationY");
+        float z = PlayerPrefs.GetFloat("PlayerRotationZ");
+        float w = PlayerPrefs.GetFloat("PlayerRotationW");
+
+        player.transform.rotation = new Quaternion(x, y, z, w);
+    }
+    
+    IEnumerator activateDetector(float delay)
+    {
+        // Espera el número especificado de segundos
+        yield return new WaitForSeconds(delay);
+
+        // Después de la espera, invoca el evento
+        detector.SetActive(true);
+    }
+
+
 }

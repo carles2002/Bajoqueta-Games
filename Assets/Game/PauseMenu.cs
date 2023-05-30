@@ -9,9 +9,15 @@ public class PauseMenu : MonoBehaviour
     public GameObject resetObject;
     public GameObject homeObject;
 
+    public GameObject volumeBar;
+
+    public GameObject sceneLight;
+    
+
+
     private bool isPaused = false;
 
-    private int menuSceneName = 0; //Escena menu
+    private int menuSceneName = 0; //Escena menu numero
 
 
 
@@ -19,11 +25,15 @@ public class PauseMenu : MonoBehaviour
     {
         camera1.enabled = true;
         camera2.enabled = false;
+        volumeBar.SetActive(true);
+
 
     }
+    
 
     void Update()
     {
+       
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
@@ -58,11 +68,14 @@ public class PauseMenu : MonoBehaviour
         {
             camera1.enabled = false;
             camera2.enabled = true;
+            
         }
         else
         {
             camera1.enabled = true;
             camera2.enabled = false;
+           
+            
         }
 
         isPaused = !isPaused;
@@ -71,6 +84,11 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 0;
             Debug.Log("PAUSE");
+            volumeBar.SetActive(true);
+            pauseObject.SetActive(true);
+            resetObject.SetActive(true);
+            homeObject.SetActive(true);
+            sceneLight.SetActive(false);
         }
         else
         {
@@ -78,7 +96,16 @@ public class PauseMenu : MonoBehaviour
             Debug.Log("RESUME");
             camera1.enabled = true;
             camera2.enabled = false;
+
+            volumeBar.SetActive(false);
+
+            pauseObject.SetActive(false);
+            resetObject.SetActive(false);
+            homeObject.SetActive(false);
+            sceneLight.SetActive(true);
+
         }
+       
     }
 
     public void reset()
@@ -86,6 +113,7 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("RESET");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         TogglePause();
+
        
     }
 

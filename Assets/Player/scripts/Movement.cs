@@ -42,7 +42,7 @@ public class Movement : MonoBehaviour
     bool IsWallInDirection(Vector3 axis)
     {
         RaycastHit hit;
-        Debug.Log("Position"+ Position);
+        //Debug.Log("Position"+ Position);
         //Debug.Log("entro wall con direccion" +axis);
 
          //Debug.DrawRay(transform.position, transform.up* 100f, Color.red);
@@ -73,7 +73,7 @@ public class Movement : MonoBehaviour
             Debug.Log("Moneda tocada");
             contador++;
             pts.text = contador.ToString();
-            //Destroy(other.gameObject);
+            Destroy(other.gameObject);
         }
     }
     
@@ -183,7 +183,7 @@ public class Movement : MonoBehaviour
                     if (direction == InputManager.Direction.Left || direction == InputManager.Direction.Right)
                     {
                         pivotOffset = new Vector2(center.y, center.x);
-                        Debug.Log("X");
+                        //Debug.Log("X");
                         Position = 'X';
                     }
                     else
@@ -191,12 +191,12 @@ public class Movement : MonoBehaviour
                         Position = 'X';
                     break;
                 case "Y":
-                    Debug.Log("Y");
+                    //Debug.Log("Y");
                     pivotOffset = center;
                     Position = 'Y';
                     break;
                 case "Z":
-                    Debug.Log("Z");
+                    //Debug.Log("Z");
                     if (direction == InputManager.Direction.Up || direction == InputManager.Direction.Down)
                     {
                         pivotOffset = new Vector2(center.y, center.x);
