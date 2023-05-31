@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class buttonIluminator : MonoBehaviour
 {
-    public Camera raycastCamera; // La cámara que quieres usar para el raycast
+    public Camera raycastCamera; // La cï¿½mara que quieres usar para el raycast
     public GameObject LightObject; // El objeto que contiene el componente Light
 
-    private Light light; // La luz del objeto
+    private Light luz; // La luz del objeto
 
     public float defaultIntensity = 0f; // Intensidad de luz por defecto
-    public float hoverIntensity = 3f; // Intensidad de luz cuando se hace hover en el botón
-    public float clickIntensity = 8f; // Intensidad de luz cuando se hace clic en el botón
+    public float hoverIntensity = 3f; // Intensidad de luz cuando se hace hover en el botï¿½n
+    public float clickIntensity = 8f; // Intensidad de luz cuando se hace clic en el botï¿½n
 
     public float fadeSpeed = 0.3f; // Velocidad de cambio de intensidad de luz
 
@@ -19,17 +19,17 @@ public class buttonIluminator : MonoBehaviour
 
     void Start()
     {
-        // Asegúrate de que el objeto está inicialmente desactivado
+        // Asegï¿½rate de que el objeto estï¿½ inicialmente desactivado
         if (LightObject != null)
         {
             LightObject.SetActive(false);
 
             // Obtiene el componente de luz del objeto
-            light = LightObject.GetComponent<Light>();
-            if (light != null)
+            luz = LightObject.GetComponent<Light>();
+            if (luz != null)
             {
                 // Configura la intensidad de la luz al valor por defecto
-                light.intensity = defaultIntensity;
+                luz.intensity = defaultIntensity;
             }
         }
     }
@@ -38,10 +38,10 @@ public class buttonIluminator : MonoBehaviour
     {
         Screen.SetResolution(1920, 1080, true);
 
-        // Comprueba que la cámara está asignada
+        // Comprueba que la cï¿½mara estï¿½ asignada
         if (raycastCamera == null)
         {
-            Debug.LogError("No se ha asignado ninguna cámara para el raycast.");
+            Debug.LogError("No se ha asignado ninguna cï¿½mara para el raycast.");
             return;
         }
 
@@ -50,7 +50,7 @@ public class buttonIluminator : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            // Cuando el ratón está sobre el objeto, activa el objeto
+            // Cuando el ratï¿½n estï¿½ sobre el objeto, activa el objeto
             if (hit.collider.gameObject == gameObject)
             {
                 if (LightObject != null && !isOver)
@@ -63,7 +63,7 @@ public class buttonIluminator : MonoBehaviour
             }
             else
             {
-                // Cuando el ratón no está sobre el objeto, desactiva el objeto
+                // Cuando el ratï¿½n no estï¿½ sobre el objeto, desactiva el objeto
                 if (LightObject != null && isOver)
                 {
                     isOver = false;
@@ -74,7 +74,7 @@ public class buttonIluminator : MonoBehaviour
         }
         else
         {
-            // Cuando el ratón no está sobre ningún objeto, desactiva el objeto
+            // Cuando el ratï¿½n no estï¿½ sobre ningï¿½n objeto, desactiva el objeto
             if (LightObject != null && isOver)
             {
                 isOver = false;
@@ -83,10 +83,10 @@ public class buttonIluminator : MonoBehaviour
             }
         }
 
-        // Cuando se hace clic en el objeto y el ratón está sobre él, aumenta la intensidad de la luz
+        // Cuando se hace clic en el objeto y el ratï¿½n estï¿½ sobre ï¿½l, aumenta la intensidad de la luz
         if (Input.GetMouseButtonDown(0) && isOver)
         {
-            if (light != null)
+            if (luz != null)
             {
                 StopAllCoroutines();
                 StartCoroutine(ChangeIntensity(clickIntensity));
@@ -96,7 +96,7 @@ public class buttonIluminator : MonoBehaviour
         // Cuando se libera el clic del mouse, vuelve la intensidad de la luz al valor por defecto
         if (Input.GetMouseButtonUp(0) && isOver)
         {
-            if (light != null)
+            if (luz != null)
             {
                 StopAllCoroutines();
                 StartCoroutine(ChangeIntensity(hoverIntensity));
@@ -106,11 +106,11 @@ public class buttonIluminator : MonoBehaviour
 
     IEnumerator ChangeIntensity(float targetIntensity)
     {
-        while (Mathf.Abs(light.intensity - targetIntensity) > 0.01f)
+        while (Mathf.Abs(luz.intensity - targetIntensity) > 0.01f)
         {
-            light.intensity = Mathf.Lerp(light.intensity, targetIntensity, fadeSpeed);
+            luz.intensity = Mathf.Lerp(luz.intensity, targetIntensity, fadeSpeed);
             yield return null;
         }
-        light.intensity = targetIntensity;
+        luz.intensity = targetIntensity;
     }
 }
