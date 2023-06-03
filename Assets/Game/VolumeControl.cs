@@ -20,7 +20,7 @@ public class VolumeControl : MonoBehaviour
     {
         volumeBar.SetActive(false);
         // Al inicio, recuperamos el valor del volumen de PlayerPrefs y lo ajustamos.
-        float storedVolume = PlayerPrefs.GetFloat(VolumeKey, 0.75f); // Usamos 0.75 como valor predeterminado.
+        float storedVolume = PlayerPrefs.GetFloat(VolumeKey, 0.5f); // Usamos 0.5 como valor predeterminado.
         SetLevel(storedVolume);
         scrollbar.value = storedVolume;
     }
@@ -35,7 +35,7 @@ public class VolumeControl : MonoBehaviour
 
     public void SetLevel(float sliderValue)
     {
-        float volume = Mathf.Lerp(-25, 0, sliderValue);
+        float volume = Mathf.Lerp(0f, 0.8f, sliderValue);
         mixer.SetFloat("MusicVol", volume);
 
         foreach (Sound soundScript in soundScripts)
@@ -43,13 +43,14 @@ public class VolumeControl : MonoBehaviour
             if (soundScript != null)
             {
                 Debug.Log(volume);
-                soundScript.volumen = Mathf.Pow(10, volume / 20);
+                //soundScript.volumen = Mathf.Pow(10, volume / 20) + 0.2f;
+                soundScript.volumen = volume+0.1f;
             }
         }
 
         if (audioSourceMusic != null)
         {
-            audioSourceMusic.volume = sliderValue-0.3f;
+            audioSourceMusic.volume = volume-0.3f;
         }
 
         // Guardamos el valor del volumen en PlayerPrefs para que podamos recuperarlo más tarde.
