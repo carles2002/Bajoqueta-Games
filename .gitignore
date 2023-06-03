@@ -72,3 +72,13 @@ crashlytics-build.properties
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Unity
 .vsconfig
+
+Save Cuby.exe
+
+UnityCrashHandler64.exe
+
+UnityPlayer.dll
+
+Save Cuby_Data/
+
+MonoBleedingEdge/
