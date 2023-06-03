@@ -6,8 +6,12 @@ public class Sound : MonoBehaviour
 {
     public AudioSource QuienLoEmite;
     private AudioClip Sonido;
-    public GameObject JukeBox;
+    private GameObject JukeBox;
     public float volumen = 0.7f;
+
+    private void Start() {
+        JukeBox = GameObject.Find("JukeBox");
+    }
 //-----------------------------------------------------------------------------------------
     private void OnTriggerEnter(Collider other) {
         Debug.Log("Quien lo emite: "+QuienLoEmite);
