@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42ca9d9f2a4b81408c4015604f59324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameRunning: 1
+  polys: {fileID: 0}
 --- !u!95 &4763324787355683301
 Animator:
   serializedVersion: 5
@@ -119,16 +119,17 @@ Animator:
   m_GameObject: {fileID: 5163123269291762108}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4d0d07221cd528d469fde091d97c42c3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_Controller: {fileID: 9100000, guid: ac75442218caa6145852f1eb88ca8b89, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5163123269696050168
 GameObject:
   m_ObjectHideFlags: 0

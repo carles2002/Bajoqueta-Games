@@ -3981,7 +3981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cube: {fileID: 1724624558}
-  playerMovementScript: {fileID: 1564285399}
+  runningState: {fileID: 1384044513}
 --- !u!64 &1044804446
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5188,7 +5188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42ca9d9f2a4b81408c4015604f59324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PolyDatabase: {fileID: 11400000, guid: bb3095fb10afbd8458864609dd60bb94, type: 2}
   polys: {fileID: 1384044512}
 --- !u!4 &1384044514
 Transform:
@@ -5732,7 +5731,7 @@ PrefabInstance:
     - target: {fileID: 4763324787355683301, guid: f3c1847a30ece6b47b94494f87c9ae5c, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 464dbbdc523d69b40a632f266e72f493, type: 2}
+      objectReference: {fileID: 9100000, guid: ac75442218caa6145852f1eb88ca8b89, type: 2}
     - target: {fileID: 4763324787355683301, guid: f3c1847a30ece6b47b94494f87c9ae5c, type: 3}
       propertyPath: m_UpdateMode
       value: 2
@@ -5812,17 +5811,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7751992130614607858, guid: f3c1847a30ece6b47b94494f87c9ae5c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f3c1847a30ece6b47b94494f87c9ae5c, type: 3}
---- !u!114 &1564285399 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5163123269291762104, guid: f3c1847a30ece6b47b94494f87c9ae5c, type: 3}
-  m_PrefabInstance: {fileID: 1564285398}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 230db2f4f4ff7ef4e9026da963e052dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1564285400 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5163123269291762107, guid: f3c1847a30ece6b47b94494f87c9ae5c, type: 3}
