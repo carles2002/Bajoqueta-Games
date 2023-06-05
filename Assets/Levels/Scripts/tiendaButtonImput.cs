@@ -3,6 +3,7 @@ using QuickType;
 using System.Collections.Generic;
 using System.IO;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -29,7 +30,8 @@ public class tiendaButtonImput : MonoBehaviour
     public Text pts;
 
     private List<PolySkinElement> PolyDatabase;
-    public PolySkinElement polySelected;
+    private PolySkin PolyJSON;
+    private PolySkinElement polySelected;
     public Animator animator; // El animator que va a ejecutar el trigger
     private readonly string triggerName = "Rotate"; // El nombre del trigger que quieres ejecutar
 
@@ -37,13 +39,19 @@ public class tiendaButtonImput : MonoBehaviour
     {
         Initialize();
     }
+    private void OnDestroy()
+    {
+        PolyJSON.PolyDatabase = PolyDatabase;
+        File.WriteAllText("Assets/Player/skins.json", PolyJSON.ToJson()); 
+    }
 
     private void Initialize()
     {
         contador = PlayerPrefs.GetInt("Gems", 0);
         pts.text = contador.ToString();
         //PolyDatabase = JsonConvert.DeserializeObject<Root>().polySkin; 
-        PolyDatabase = PolySkin.FromJson(File.ReadAllText("Assets/Player/skins.json")).PolyDatabase;
+        PolyJSON = PolySkin.FromJson(File.ReadAllText("Assets/Player/skins.json"));
+        PolyDatabase = PolyJSON.PolyDatabase;
 
         for (int i = 0; i < PolyDatabase.Count; i++)
         {
@@ -319,7 +327,7 @@ public class tiendaButtonImput : MonoBehaviour
                         animator.SetTrigger(triggerName);
                     }
 
-                    if (polySelected.SkinBuy == 1)
+                    if (polySelected.SkinBuy == 0)
                     {
                         if (contador >= int.Parse(c5.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text))
                         {
@@ -405,7 +413,7 @@ public class tiendaButtonImput : MonoBehaviour
                     }
                     else if (polySelected.SkinSelected == 0)
                     {
-                        PolyDatabase[(int)polySelected.SkinId].SkinBuy = 1;
+                        PolyDatabase[(int)polySelected.SkinId].SkinSelected = 1;
 
                         for (int i = 0; i < PolyDatabase.Count; i++)
                         {
