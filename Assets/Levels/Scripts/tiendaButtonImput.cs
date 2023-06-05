@@ -1,4 +1,7 @@
-using System;
+using Newtonsoft.Json;
+using QuickType;
+using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -24,9 +27,9 @@ public class tiendaButtonImput : MonoBehaviour
     public Material greyMaterial;
     private int contador = 0;
     public Text pts;
-    public PolyDatabase PolyDatabase;
-    public Poly polySelected;
 
+    private List<PolySkinElement> PolyDatabase;
+    public PolySkinElement polySelected;
     public Animator animator; // El animator que va a ejecutar el trigger
     private readonly string triggerName = "Rotate"; // El nombre del trigger que quieres ejecutar
 
@@ -39,33 +42,37 @@ public class tiendaButtonImput : MonoBehaviour
     {
         contador = PlayerPrefs.GetInt("Gems", 0);
         pts.text = contador.ToString();
-        for (int i = 0; i < PolyDatabase.polysCount; i++)
+        //PolyDatabase = JsonConvert.DeserializeObject<Root>().polySkin; 
+        var polySkin = PolySkin.FromJson(File.ReadAllText("Assets/Player/skins.json"));
+        PolyDatabase = polySkin.PolyDatabase;
+
+        for (int i = 0; i < polySkin.PolyDatabase.Count; i++)
         {
-            polySelected = PolyDatabase.GetPoly(i);
-            switch (polySelected.skinID)
+            polySelected = PolyDatabase[i];
+            switch (polySelected.SkinId)
             {
                 case 0:
-                    c1.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
+                    c1.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinPrice.ToString();
                     break;
                 case 1:
-                    c2.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
+                    c2.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinPrice.ToString();
                     break;
                 case 2:
-                    c3.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
+                    c3.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinPrice.ToString();
                     break;
                 case 3:
-                    c4.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
+                    c4.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinPrice.ToString();
                     break;
                 default:
                     break;
             }
-            if (polySelected.skinSelected == true)
+            if (polySelected.SkinSelected == 1)
             {
-                actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinName;
-                actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinDescription;
+                actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinName;
+                actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinDescription;
                 b5.GetComponent<MeshRenderer>().material = greenMaterial;
 
-                switch (polySelected.skinID)
+                switch (polySelected.SkinId)
                 {
                     case 0:
                         b1.GetComponent<MeshRenderer>().material = greenMaterial;
@@ -105,7 +112,7 @@ public class tiendaButtonImput : MonoBehaviour
                 }
 
             }
-            if (polySelected.skinBuy == true)
+            if (polySelected.SkinBuy == 1)
             {
 
                 c5.transform.GetChild(0).gameObject.SetActive(true);
@@ -113,7 +120,7 @@ public class tiendaButtonImput : MonoBehaviour
                 c5.transform.GetChild(2).gameObject.SetActive(false);
 
 
-                switch (polySelected.skinID)
+                switch (polySelected.SkinId)
                 {
                     case 0:
                         c1.transform.GetChild(0).gameObject.SetActive(true);
@@ -158,22 +165,22 @@ public class tiendaButtonImput : MonoBehaviour
                 if (hit.collider.gameObject == b1)
                 {
                     Debug.Log("AQUI SE EJECUTA CÓDIGO PARA 1");
-                    polySelected = PolyDatabase.GetPoly(0);
-                    actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinName;
-                    actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinDescription;
+                    polySelected = PolyDatabase[0];
+                    actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinName;
+                    actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinDescription;
                     GameObject actualPrice = actual.transform.GetChild(2).gameObject;
-                    actualPrice.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
+                    actualPrice.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = polySelected.SkinPrice.ToString();
                     polyPrefabs.transform.GetChild(0).gameObject.SetActive(true);
                     polyPrefabs.transform.GetChild(1).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(2).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(3).gameObject.SetActive(false);
 
-                    if (polySelected.skinBuy)
+                    if (polySelected.SkinBuy == 1)
                     {
                         c5.transform.GetChild(0).gameObject.SetActive(true);
                         c5.transform.GetChild(1).gameObject.SetActive(false);
                         c5.transform.GetChild(2).gameObject.SetActive(false);
-                        if (polySelected.skinSelected)
+                        if (polySelected.SkinSelected == 1)
                         {
                             b5.GetComponent<MeshRenderer>().material = greenMaterial;
                             c5.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "EQUIPADO";
@@ -195,22 +202,22 @@ public class tiendaButtonImput : MonoBehaviour
                 if (hit.collider.gameObject == b2)
                 {
                     Debug.Log("AQUI SE EJECUTA CÓDIGO PARA 2");
-                    polySelected = PolyDatabase.GetPoly(1);
-                    actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinName;
-                    actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinDescription;
+                    polySelected = PolyDatabase[1];
+                    actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinName;
+                    actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinDescription;
                     GameObject actualPrice = actual.transform.GetChild(2).gameObject;
-                    actualPrice.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
+                    actualPrice.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = polySelected.SkinPrice.ToString();
                     polyPrefabs.transform.GetChild(0).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(1).gameObject.SetActive(true);
                     polyPrefabs.transform.GetChild(2).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(3).gameObject.SetActive(false);
 
-                    if (polySelected.skinBuy)
+                    if (polySelected.SkinBuy == 1)
                     {
                         c5.transform.GetChild(0).gameObject.SetActive(true);
                         c5.transform.GetChild(1).gameObject.SetActive(false);
                         c5.transform.GetChild(2).gameObject.SetActive(false);
-                        if (polySelected.skinSelected)
+                        if (polySelected.SkinSelected == 1)
                         {
                             b5.GetComponent<MeshRenderer>().material = greenMaterial;
                             c5.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "EQUIPADO";
@@ -232,22 +239,22 @@ public class tiendaButtonImput : MonoBehaviour
                 if (hit.collider.gameObject == b3)
                 {
                     Debug.Log("AQUI SE EJECUTA CÓDIGO PARA 3");
-                    polySelected = PolyDatabase.GetPoly(2);
-                    actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinName;
-                    actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinDescription;
+                    polySelected = PolyDatabase[2];
+                    actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinName;
+                    actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinDescription;
                     GameObject actualPrice = actual.transform.GetChild(2).gameObject;
-                    actualPrice.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
+                    actualPrice.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = polySelected.SkinPrice.ToString();
                     polyPrefabs.transform.GetChild(0).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(1).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(2).gameObject.SetActive(true);
                     polyPrefabs.transform.GetChild(3).gameObject.SetActive(false);
 
-                    if (polySelected.skinBuy)
+                    if (polySelected.SkinBuy == 1)
                     {
                         c5.transform.GetChild(0).gameObject.SetActive(true);
                         c5.transform.GetChild(1).gameObject.SetActive(false);
                         c5.transform.GetChild(2).gameObject.SetActive(false);
-                        if (polySelected.skinSelected)
+                        if (polySelected.SkinSelected == 1)
                         {
                             b5.GetComponent<MeshRenderer>().material = greenMaterial;
                             c5.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "EQUIPADO";
@@ -269,22 +276,22 @@ public class tiendaButtonImput : MonoBehaviour
                 if (hit.collider.gameObject == b4)
                 {
                     Debug.Log("AQUI SE EJECUTA CÓDIGO PARA 4");
-                    polySelected = PolyDatabase.GetPoly(3);
-                    actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinName;
-                    actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.skinDescription;
+                    polySelected = PolyDatabase[3];
+                    actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinName;
+                    actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinDescription;
                     GameObject actualPrice = actual.transform.GetChild(2).gameObject;
-                    actualPrice.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = polySelected.skinPrice.ToString();
+                    actualPrice.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = polySelected.SkinPrice.ToString();
                     polyPrefabs.transform.GetChild(0).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(1).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(2).gameObject.SetActive(false);
                     polyPrefabs.transform.GetChild(3).gameObject.SetActive(true);
 
-                    if (polySelected.skinBuy)
+                    if (polySelected.SkinBuy == 1)
                     {
                         c5.transform.GetChild(0).gameObject.SetActive(true);
                         c5.transform.GetChild(1).gameObject.SetActive(false);
                         c5.transform.GetChild(2).gameObject.SetActive(false);
-                        if (polySelected.skinSelected)
+                        if (polySelected.SkinSelected == 1)
                         {
                             b5.GetComponent<MeshRenderer>().material = greenMaterial;
                             c5.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "EQUIPADO";
@@ -313,23 +320,23 @@ public class tiendaButtonImput : MonoBehaviour
                         animator.SetTrigger(triggerName);
                     }
 
-                    if (polySelected.skinBuy == false)
+                    if (polySelected.SkinBuy == 1)
                     {
                         if (contador >= int.Parse(c5.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text))
                         {
-                            contador -= int.Parse(c5.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text); //Usar polySelected.skinPrice al terminar las pruebas
+                            contador -= int.Parse(c5.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text); //Usar polySelected.SkinPrice al terminar las pruebas
                             pts.text = contador.ToString();
 
                             PlayerPrefs.SetInt("Gems", contador);
 
-                            PolyDatabase.GetPoly(polySelected.skinID).skinBuy = true;
+                            PolyDatabase[(int)polySelected.SkinId].SkinBuy = 1;
 
-                            for (int i = 0; i < PolyDatabase.polysCount; i++)
+                            for (int i = 0; i < PolyDatabase.Count; i++)
                             {
-                                if (PolyDatabase.GetPoly(i).skinSelected)
+                                if (PolyDatabase[i].SkinSelected == 1)
                                 {
-                                    PolyDatabase.GetPoly(i).skinSelected = false;
-                                    switch (PolyDatabase.GetPoly(i).skinID)
+                                    PolyDatabase[i].SkinSelected = 0;
+                                    switch (PolyDatabase[i].SkinId)
                                     {
                                         case 0:
                                             b1.GetComponent<MeshRenderer>().material = greyMaterial;
@@ -352,8 +359,8 @@ public class tiendaButtonImput : MonoBehaviour
                                     }
                                 }
                             }
-                            PolyDatabase.GetPoly(polySelected.skinID).skinSelected = true;
-                            switch (polySelected.skinID)
+                            PolyDatabase[(int)polySelected.SkinId].SkinSelected = 1;
+                            switch (polySelected.SkinId)
                             {
                                 case 0:
                                     c1.transform.GetChild(0).gameObject.SetActive(true);
@@ -397,16 +404,16 @@ public class tiendaButtonImput : MonoBehaviour
                             actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = "No hay suficientes gemas. ";
                         }
                     }
-                    else if (polySelected.skinSelected == false)
+                    else if (polySelected.SkinSelected == 0)
                     {
-                        PolyDatabase.GetPoly(polySelected.skinID).skinBuy = true;
+                        PolyDatabase[(int)polySelected.SkinId].SkinBuy = 1;
 
-                        for (int i = 0; i < PolyDatabase.polysCount; i++)
+                        for (int i = 0; i < PolyDatabase.Count; i++)
                         {
-                            if (PolyDatabase.GetPoly(i).skinSelected)
+                            if (PolyDatabase[i].SkinSelected == 1)
                             {
-                                PolyDatabase.GetPoly(i).skinSelected = false;
-                                switch (PolyDatabase.GetPoly(i).skinID)
+                                PolyDatabase[i].SkinSelected = 0;
+                                switch (PolyDatabase[i].SkinId)
                                 {
                                     case 0:
                                         b1.GetComponent<MeshRenderer>().material = greyMaterial;
@@ -429,8 +436,8 @@ public class tiendaButtonImput : MonoBehaviour
                                 }
                             }
                         }
-                        PolyDatabase.GetPoly(polySelected.skinID).skinSelected = true;
-                        switch (polySelected.skinID)
+                        PolyDatabase[(int)polySelected.SkinId].SkinSelected = 1;
+                        switch (polySelected.SkinId)
                         {
                             case 0:
                                 c1.transform.GetChild(0).gameObject.SetActive(true);
