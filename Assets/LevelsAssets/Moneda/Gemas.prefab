@@ -4910,6 +4910,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 4181144156964021855}
     m_Modifications:
     - target: {fileID: 308932843, guid: 744b1525687ff5c4da3de04ad51b7d18, type: 3}
+      propertyPath: volumen
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 308932843, guid: 744b1525687ff5c4da3de04ad51b7d18, type: 3}
       propertyPath: QuienLoEmite
       value: 
       objectReference: {fileID: 4948232094188920147}
