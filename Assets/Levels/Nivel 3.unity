@@ -4925,7 +4925,7 @@ MonoBehaviour:
   - {fileID: 0}
   volumeBar: {fileID: 457544105}
   scrollbar: {fileID: 457544110}
-  audioSourceMusic: {fileID: 0}
+  audioSourceMusic: {fileID: 1213140577}
 --- !u!114 &457544110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12318,6 +12318,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5903735056092722290, guid: d17526ad76ce7f4439b851a96a6ed6c1, type: 3}
   m_PrefabInstance: {fileID: 635386616}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1213140577 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 333607177534684080, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
+  m_PrefabInstance: {fileID: 1946133293}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1221310226 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5903735056092722290, guid: d17526ad76ce7f4439b851a96a6ed6c1, type: 3}
@@ -18248,7 +18253,7 @@ PrefabInstance:
     - target: {fileID: 333607177534684080, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 8a95d6d607b976a42bc234556926a564, type: 3}
+      objectReference: {fileID: 8300000, guid: 634cd98bc3d777a47822e859c55e4b3e, type: 3}
     - target: {fileID: 333607177534684080, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 

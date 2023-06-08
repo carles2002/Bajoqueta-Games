@@ -44,7 +44,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.90890217, g: 0.20617655, b: 0.9339623, a: 1}
-  m_Intensity: 8
+  m_Intensity: 2
   m_Range: 0.65
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -314,7 +314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuienLoEmite: {fileID: 308932844}
-  JukeBox: {fileID: 7513854944321338286, guid: cb91dbcf4cf2dfc46847f065ba41bd66, type: 3}
   volumen: 1
 --- !u!4 &8730078169739812454 stripped
 Transform:

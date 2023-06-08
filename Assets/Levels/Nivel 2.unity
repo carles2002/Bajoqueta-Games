@@ -5452,7 +5452,7 @@ MonoBehaviour:
   - {fileID: 1602683425}
   volumeBar: {fileID: 457544105}
   scrollbar: {fileID: 457544110}
-  audioSourceMusic: {fileID: 0}
+  audioSourceMusic: {fileID: 1721851123}
 --- !u!114 &457544110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16868,6 +16868,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5903735056092722290, guid: 471b10855150cc44fabfa492b33a9838, type: 3}
   m_PrefabInstance: {fileID: 769731803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1721851123 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 333607177534684080, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
+  m_PrefabInstance: {fileID: 1946133293}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1727212389
 PrefabInstance:
