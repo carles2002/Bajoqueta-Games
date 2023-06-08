@@ -107,15 +107,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aaa390f06d41c314f91dbcc6057a9d40, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.68154174
+      value: 0.68
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aaa390f06d41c314f91dbcc6057a9d40, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.68154174
+      value: 0.68
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aaa390f06d41c314f91dbcc6057a9d40, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.68154174
+      value: 0.68
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aaa390f06d41c314f91dbcc6057a9d40, type: 3}
       propertyPath: m_LocalPosition.x
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eedf2c39fcf2d34bb4eec391099aae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QuienLoEmite: {fileID: 0}
+  QuienLoEmite: {fileID: 308932844}
   JukeBox: {fileID: 7513854944321338286, guid: cb91dbcf4cf2dfc46847f065ba41bd66, type: 3}
   volumen: 1
 --- !u!4 &8730078169739812454 stripped

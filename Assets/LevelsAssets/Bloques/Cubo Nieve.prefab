@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5903735056092722290}
   m_Layer: 8
-  m_Name: Cubo Desierto
+  m_Name: Cubo Nieve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,11 +94,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4b75ee85f48c5e947a978559b62e6355, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d9273618b32179f48b51b61b48674793, type: 2}
+      objectReference: {fileID: 2100000, guid: f833708973d2b9b4aaffe49a6cacba05, type: 2}
     - target: {fileID: -7511558181221131132, guid: 4b75ee85f48c5e947a978559b62e6355, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: a5023b5999ac3204cbbfb85b924f9c05, type: 2}
+      objectReference: {fileID: 2100000, guid: 1f055162a616c584aa00f3552be9a431, type: 2}
     - target: {fileID: 919132149155446097, guid: 4b75ee85f48c5e947a978559b62e6355, type: 3}
       propertyPath: m_Name
       value: Cubo_1x1x1

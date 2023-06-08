@@ -45,9 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb8ddeb37b41e84eb44ab5b7eb45052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlButtons:
-  - {fileID: 0}
-  - {fileID: 0}
+  lvlButtons: []
   desbloquearNiveles: 0
   indicePrimerNivel: 1
 --- !u!114 &6432884741886274309

@@ -52,4 +52,7 @@ public class PlatformController : MonoBehaviour
         yield return new WaitForSeconds(time);
         moveToTheNext= true;
     }
+    //----------------------------------------------------------------------------------------------------------------
+    //Métodos para controlar si el jugador accede o no a la Plataforma con tal de llevarselo consigo
+    
 }
