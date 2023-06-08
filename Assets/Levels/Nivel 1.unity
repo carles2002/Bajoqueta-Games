@@ -616,6 +616,7 @@ MonoBehaviour:
   - {fileID: 1780057330}
   volumeBar: {fileID: 43562061}
   scrollbar: {fileID: 43562065}
+  difmusica: 0.3
   audioSourceMusic: {fileID: 639893421}
 --- !u!114 &43562065
 MonoBehaviour:
@@ -8572,11 +8573,15 @@ PrefabInstance:
     - target: {fileID: 333607177534684080, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 6762209a2b3171f489740e34695d092d, type: 3}
+      objectReference: {fileID: 8300000, guid: 8a95d6d607b976a42bc234556926a564, type: 3}
     - target: {fileID: 333607177534684080, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 24300002, guid: 57cf9d9f7d418cc4a9e1cf0aa8916a4c, type: 2}
+    - target: {fileID: 333607177534684080, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 333607177534684080, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 0
@@ -8835,7 +8840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8816403812712396133, guid: deb5e1a0d03c32348bd6542ac8385780, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.2
+      value: 2.86
       objectReference: {fileID: 0}
     - target: {fileID: 8816403812712396133, guid: deb5e1a0d03c32348bd6542ac8385780, type: 3}
       propertyPath: m_LocalRotation.w

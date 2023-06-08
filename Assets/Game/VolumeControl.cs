@@ -10,6 +10,7 @@ public class VolumeControl : MonoBehaviour
     public List<Sound> soundScripts;
     public GameObject volumeBar;
     public Scrollbar scrollbar;
+    public float difmusica = 0.2f;
 
     public AudioSource audioSourceMusic; // Para la música de fondo.
 
@@ -31,6 +32,7 @@ public class VolumeControl : MonoBehaviour
         {
             audioSource.Play();
         }
+        
     }
 
     public void SetLevel(float sliderValue)
@@ -48,10 +50,10 @@ public class VolumeControl : MonoBehaviour
             }
         }
 
-        if (audioSourceMusic != null)
-        {
-            audioSourceMusic.volume = volume-0.3f;
-        }
+        
+
+            audioSourceMusic.volume = (volume - difmusica);
+        
 
         // Guardamos el valor del volumen en PlayerPrefs para que podamos recuperarlo más tarde.
         PlayerPrefs.SetFloat(VolumeKey, sliderValue);

@@ -5452,6 +5452,7 @@ MonoBehaviour:
   - {fileID: 1602683425}
   volumeBar: {fileID: 457544105}
   scrollbar: {fileID: 457544110}
+  difmusica: 0.1
   audioSourceMusic: {fileID: 1721851123}
 --- !u!114 &457544110
 MonoBehaviour:
@@ -18821,7 +18822,7 @@ PrefabInstance:
     - target: {fileID: 333607177534684080, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 1aa888ff6132a1c48a0abd21deafb192, type: 3}
+      objectReference: {fileID: 8300000, guid: 7e0006e273b036f46adecc2619c259d3, type: 3}
     - target: {fileID: 333607177534684080, guid: e3bb2bec74bc4194bbc8a77d9e4a2488, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
