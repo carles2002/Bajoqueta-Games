@@ -10,18 +10,26 @@ public class zoomOutCam : MonoBehaviour
 
     private Camera cam;
     public float initialOrthoSize = 1;
+    private bool iniciado = false;
 
     // Start is called before the first frame update
     void Start()
     {
         cam = GetComponent<Camera>();
-       
-        cam.transform.LookAt(player);
-        StartCoroutine(ZoomOutAndRotate());
+    }
+    private void Update()
+    {
+        if (tutorialScript.camZoom)
+        {
+ 
+            cam.transform.LookAt(player);
+            StartCoroutine(ZoomOutAndRotate());
+        }
     }
 
     IEnumerator ZoomOutAndRotate()
     {
+        iniciado = true;
         float elapsedTime = 0f;
         Vector3 initialPosition = transform.position;
         Quaternion initialRotation = transform.rotation;
