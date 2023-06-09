@@ -40,6 +40,8 @@ public class InputManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && timer >= delay)
         {
             PlayerPrefs.SetInt("TutorialCompleted1", 0);
+            PlayerPrefs.SetInt("TutorialCompleted2", 0);
+            PlayerPrefs.SetInt("TutorialCompleted3", 0);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             
             timer = 0f; // resetea el temporizador después de que se detecta una entrada

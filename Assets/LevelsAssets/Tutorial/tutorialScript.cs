@@ -5,6 +5,11 @@ using UnityEngine;
 public class tutorialScript : MonoBehaviour
 {
     public static bool camZoom = false;
+    public float tiempoTutorial = 5f;
+    public string tutorial = "";
+
+    // Indicar si se ha presionado la tecla de espacio
+    private bool spacePressed = false;
 
     void Start()
     {
@@ -12,6 +17,7 @@ public class tutorialScript : MonoBehaviour
         // Comprueba si ya se ha ejecutado el tutorial antes
         if (PlayerPrefs.GetInt("TutorialCompleted1", 0) == 0)
         {
+            camZoom= false;
             SetActiveAllChildren(true);
             StartCoroutine(StartLevel());
         }
@@ -19,10 +25,17 @@ public class tutorialScript : MonoBehaviour
 
     IEnumerator StartLevel()
     {
-        yield return new WaitForSeconds(5f);
+        float elapsedTime = 0;
+
+        while (elapsedTime < tiempoTutorial && !spacePressed)
+        {
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        
         camZoom = true;
         SetActiveAllChildren(false); // Desactivar todos los hijos
-        PlayerPrefs.SetInt("TutorialCompleted1", 1); // Marcar el tutorial como completado
+        PlayerPrefs.SetInt(tutorial, 1); // Marcar el tutorial como completado
     }
 
     void SetActiveAllChildren(bool value)
@@ -35,6 +48,9 @@ public class tutorialScript : MonoBehaviour
 
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            spacePressed = true;
+        }
     }
 }
