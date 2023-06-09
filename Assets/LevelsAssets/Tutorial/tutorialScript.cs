@@ -8,14 +8,29 @@ public class tutorialScript : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(StartLevel());
+        SetActiveAllChildren(false);
+        // Comprueba si ya se ha ejecutado el tutorial antes
+        if (PlayerPrefs.GetInt("TutorialCompleted1", 0) == 0)
+        {
+            SetActiveAllChildren(true);
+            StartCoroutine(StartLevel());
+        }
     }
 
     IEnumerator StartLevel()
     {
         yield return new WaitForSeconds(5f);
         camZoom = true;
-        gameObject.SetActive(false); // Desactivar este objeto
+        SetActiveAllChildren(false); // Desactivar todos los hijos
+        PlayerPrefs.SetInt("TutorialCompleted1", 1); // Marcar el tutorial como completado
+    }
+
+    void SetActiveAllChildren(bool value)
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(value);
+        }
     }
 
     void Update()
