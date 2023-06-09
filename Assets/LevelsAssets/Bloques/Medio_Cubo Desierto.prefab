@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5903735056092722290}
   m_Layer: 8
-  m_Name: Medio_Cubo Desierto 1
+  m_Name: Medio_Cubo Desierto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

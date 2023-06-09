@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 8300190873054668118}
   - component: {fileID: 7011617503745233683}
   - component: {fileID: 106743009215125791}
+  - component: {fileID: 8175017279550923690}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -246,6 +247,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3568965364352873136}
   m_Enabled: 1
+--- !u!114 &8175017279550923690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3568965364352873136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c74c2be79e42a4fa221c64eb7947a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4978664734646121367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -301,6 +314,10 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7513854944321338286, guid: cb91dbcf4cf2dfc46847f065ba41bd66, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 7513854944321338286, guid: cb91dbcf4cf2dfc46847f065ba41bd66, type: 3}
       propertyPath: m_Name
       value: JukeBox
