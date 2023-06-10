@@ -15,7 +15,7 @@ public class tutorialScript : MonoBehaviour
     {
         SetActiveAllChildren(false);
         // Comprueba si ya se ha ejecutado el tutorial antes
-        if (PlayerPrefs.GetInt("TutorialCompleted1", 0) == 0)
+        if (PlayerPrefs.GetInt(tutorial, 0) == 0)
         {
             camZoom= false;
             SetActiveAllChildren(true);
