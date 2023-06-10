@@ -38,7 +38,7 @@ public class VolumeControl : MonoBehaviour
     public void SetLevel(float sliderValue)
     {
         float volume = Mathf.Lerp(0f, 0.8f, sliderValue);
-        mixer.SetFloat("MusicVol", volume);
+        //mixer.SetFloat("MusicVol", volume);
 
         foreach (Sound soundScript in soundScripts)
         {
@@ -46,7 +46,7 @@ public class VolumeControl : MonoBehaviour
             {
                 Debug.Log(volume);
                 //soundScript.volumen = Mathf.Pow(10, volume / 20) + 0.2f;
-                soundScript.volumen = volume+0.1f;
+                //soundScript.volumen = volume+0.1f;
             }
         }
 

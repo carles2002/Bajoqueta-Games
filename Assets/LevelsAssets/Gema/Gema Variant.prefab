@@ -214,7 +214,7 @@ AudioSource:
   m_GameObject: {fileID: 8245149168592192732}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7722378233237649006, guid: 0ee524ab795db104eab0366a851901a1, type: 2}
   m_audioClip: {fileID: 8300000, guid: 24c44664845e74d4ebff9917af54eb35, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuienLoEmite: {fileID: 308932844}
-  volumen: 1
+  Sonido: {fileID: 8300000, guid: 24c44664845e74d4ebff9917af54eb35, type: 3}
 --- !u!4 &8730078169739812454 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: aaa390f06d41c314f91dbcc6057a9d40, type: 3}
