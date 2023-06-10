@@ -9,7 +9,7 @@ public class LevelSelection : MonoBehaviour
     public static LevelSelection instancia;
     public Button[] lvlButtons;
     public int desbloquearNiveles;
-    public int indicePrimerNivel = 1;
+    public int indicePrimerNivel = 2;
 
     private void Awake() {
         if( instancia == null)

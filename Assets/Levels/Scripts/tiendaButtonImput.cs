@@ -57,7 +57,7 @@ public class tiendaButtonImput : MonoBehaviour
                 {
                     Debug.Log("SALIDA");
 
-                    SceneManager.LoadScene(0);
+                    SceneManager.LoadScene(1);
 
 
                 }
