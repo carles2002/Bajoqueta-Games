@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using QuickType;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using TMPro;
@@ -34,6 +35,25 @@ public class tiendaButtonImput : MonoBehaviour
     private PolySkinElement polySelected;
     public Animator animator; // El animator que va a ejecutar el trigger
     private readonly string triggerName = "Rotate"; // El nombre del trigger que quieres ejecutar
+
+
+    public AudioClip clip;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // Si no hay AudioSource adjunto al objeto, lo agregamos.
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        audioSource.playOnAwake = false;
+        
+    }
+
+  
 
     private void Awake()
     {
@@ -125,7 +145,7 @@ public class tiendaButtonImput : MonoBehaviour
                 c5.transform.GetChild(0).gameObject.SetActive(true);
                 c5.transform.GetChild(1).gameObject.SetActive(false);
                 c5.transform.GetChild(2).gameObject.SetActive(false);
-
+               
 
                 switch (polySelected.SkinId)
                 {
@@ -189,6 +209,7 @@ public class tiendaButtonImput : MonoBehaviour
                         c5.transform.GetChild(2).gameObject.SetActive(false);
                         if (polySelected.SkinSelected == 1)
                         {
+                            
                             b5.GetComponent<MeshRenderer>().material = greenMaterial;
                             c5.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "EQUIPADO";
                         }
@@ -404,6 +425,7 @@ public class tiendaButtonImput : MonoBehaviour
                             c5.transform.GetChild(0).gameObject.SetActive(true);
                             c5.transform.GetChild(1).gameObject.SetActive(false);
                             c5.transform.GetChild(2).gameObject.SetActive(false);
+                            audioSource.PlayOneShot(clip);
 
                         }
                         else

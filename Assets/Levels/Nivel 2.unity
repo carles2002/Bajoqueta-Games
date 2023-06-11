@@ -18353,7 +18353,7 @@ MonoBehaviour:
   newAnimatorController: {fileID: 9100000, guid: 51c684e4dc66bda468811208c6d9e751, type: 2}
   detector: {fileID: 89309109}
   timeDetection: 0.5
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 6f4e42b8f83ce6049945311eda2f1c1c, type: 3}
 --- !u!65 &1660014219
 BoxCollider:
   m_ObjectHideFlags: 0
