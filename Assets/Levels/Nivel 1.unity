@@ -151,6 +151,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1077609039}
   - {fileID: 802207280}
   - {fileID: 1040807704}
   - {fileID: 1662760568}
@@ -616,7 +617,6 @@ MonoBehaviour:
   - {fileID: 1780057330}
   volumeBar: {fileID: 43562061}
   scrollbar: {fileID: 43562065}
-  difmusica: 0.3
   audioSourceMusic: {fileID: 639893421}
 --- !u!114 &43562065
 MonoBehaviour:
@@ -2641,7 +2641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4181144156964021855, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4181144156964021855, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
       propertyPath: m_LocalScale.y
@@ -2691,6 +2691,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4948232094188920148, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
+      propertyPath: QuienLoEmite
+      value: 
+      objectReference: {fileID: 1077609038}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
 --- !u!1001 &667714624
@@ -2722,7 +2726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4181144156964021855, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4181144156964021855, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
       propertyPath: m_LocalScale.y
@@ -2772,6 +2776,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4948232094188920148, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
+      propertyPath: QuienLoEmite
+      value: 
+      objectReference: {fileID: 1077609038}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
 --- !u!1001 &716057146
@@ -4404,7 +4412,7 @@ GameObject:
   - component: {fileID: 1077609039}
   - component: {fileID: 1077609038}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GemSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4513,13 +4521,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077609037}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 2086576}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1083925754
 GameObject:
@@ -4892,7 +4900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4181144156964021855, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4181144156964021855, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
       propertyPath: m_LocalScale.y
@@ -4942,6 +4950,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4948232094188920148, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
+      propertyPath: QuienLoEmite
+      value: 
+      objectReference: {fileID: 1077609038}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
 --- !u!1001 &1244631158
@@ -6607,7 +6619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4181144156964021855, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4181144156964021855, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
       propertyPath: m_LocalScale.y
@@ -7291,7 +7303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4181144156964021855, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4181144156964021855, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
       propertyPath: m_LocalScale.y
@@ -7341,6 +7353,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4948232094188920148, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
+      propertyPath: QuienLoEmite
+      value: 
+      objectReference: {fileID: 1077609038}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85c3678fcd0ec8b49af38c39967289dc, type: 3}
 --- !u!1001 &1758309690

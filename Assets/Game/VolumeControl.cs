@@ -5,14 +5,16 @@ using System.Collections.Generic;
 
 public class VolumeControl : MonoBehaviour
 {
-    public AudioMixer mixer;
+    //public AudioMixer mixer;
     public AudioSource audioSource;
-    public List<Sound> soundScripts;
+    //public List<Sound> soundScripts;
     public GameObject volumeBar;
     public Scrollbar scrollbar;
-    public float difmusica = 0.2f;
+    //public float difmusica = 0.2f;
 
+    public AudioSource audioSourceMaster; // Para la música de fondo.
     public AudioSource audioSourceMusic; // Para la música de fondo.
+    public AudioSource audioSourceGenms; // Para la las gemas
 
     // La clave que usaremos para almacenar y recuperar el valor del volumen en PlayerPrefs.
     private const string VolumeKey = "volume";
@@ -21,7 +23,7 @@ public class VolumeControl : MonoBehaviour
     {
         volumeBar.SetActive(false);
         // Al inicio, recuperamos el valor del volumen de PlayerPrefs y lo ajustamos.
-        float storedVolume = PlayerPrefs.GetFloat(VolumeKey, 0.5f); // Usamos 0.5 como valor predeterminado.
+        float storedVolume = PlayerPrefs.GetFloat(VolumeKey, 1f); // Usamos 0.8 como valor predeterminado.
         SetLevel(storedVolume);
         scrollbar.value = storedVolume;
     }
@@ -37,9 +39,10 @@ public class VolumeControl : MonoBehaviour
 
     public void SetLevel(float sliderValue)
     {
-        float volume = Mathf.Lerp(0f, 0.8f, sliderValue);
+        float volume = Mathf.Lerp(0f, 1f, sliderValue);
+        audioSourceMusic.volume = volume;
         //mixer.SetFloat("MusicVol", volume);
-
+        /*
         foreach (Sound soundScript in soundScripts)
         {
             if (soundScript != null)
@@ -49,10 +52,9 @@ public class VolumeControl : MonoBehaviour
                 //soundScript.volumen = volume+0.1f;
             }
         }
-
+        */
         
 
-            audioSourceMusic.volume = (volume - difmusica);
         
 
         // Guardamos el valor del volumen en PlayerPrefs para que podamos recuperarlo más tarde.
