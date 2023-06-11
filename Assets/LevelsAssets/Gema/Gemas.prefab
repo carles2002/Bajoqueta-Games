@@ -4910,6 +4910,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 4181144156964021855}
     m_Modifications:
     - target: {fileID: 308932843, guid: 744b1525687ff5c4da3de04ad51b7d18, type: 3}
+      propertyPath: Sonido
+      value: 
+      objectReference: {fileID: 8300000, guid: 24c44664845e74d4ebff9917af54eb35, type: 3}
+    - target: {fileID: 308932843, guid: 744b1525687ff5c4da3de04ad51b7d18, type: 3}
       propertyPath: volumen
       value: 1
       objectReference: {fileID: 0}

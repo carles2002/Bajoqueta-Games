@@ -20,6 +20,9 @@ public class PauseMenu : MonoBehaviour
 
     private int menuSceneName = 0; //Escena menu numero
 
+    public AudioClip clip;
+    private AudioSource audioSource;
+
 
 
     void Start()
@@ -28,6 +31,15 @@ public class PauseMenu : MonoBehaviour
         camera2.enabled = false;
         volumeBar.SetActive(true);
         SFXBar.SetActive(true);
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // Si no hay AudioSource adjunto al objeto, lo agregamos.
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        audioSource.playOnAwake = false;
     }
     
 
@@ -48,14 +60,17 @@ public class PauseMenu : MonoBehaviour
             {
                 if (hit.collider.gameObject == pauseObject)
                 {
+                    audioSource.PlayOneShot(clip);
                     TogglePause();
                 }
                 if (hit.collider.gameObject == resetObject)
                 {
+                    audioSource.PlayOneShot(clip);
                     reset();
                 }
                 if (hit.collider.gameObject == homeObject)
                 {
+                    audioSource.PlayOneShot(clip);
                     menu();
                 }
             }
