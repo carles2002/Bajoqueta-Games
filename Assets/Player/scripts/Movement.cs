@@ -23,6 +23,31 @@ public class Movement : MonoBehaviour
     public int contador = 0;
     public GameControl gameControl;
 
+    public AudioClip[] clips;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // Si no hay AudioSource adjunto al objeto, lo agregamos.
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        audioSource.playOnAwake = false;
+    }
+
+    IEnumerator PlayRandomWithDelay(float delay)
+    {
+        // Espera el número especificado de segundos
+        yield return new WaitForSeconds(delay);
+
+        // Selecciona un clip de audio aleatorio del array y lo reproduce
+        AudioClip clip = clips[UnityEngine.Random.Range(0, clips.Length)];
+        audioSource.PlayOneShot(clip);
+    }
+
 
     private void Awake()
     {
@@ -94,6 +119,10 @@ public class Movement : MonoBehaviour
     //Obtiene las direcciones necesarias, mueve y rota el objeto
     private IEnumerator RollToDirection(InputManager.Direction KeyDirection)
     {
+
+        // Selecciona un clip de audio aleatorio del array y lo reproduce
+        StartCoroutine(PlayRandomWithDelay(0.3f));
+
         // Actualiza la posición del pivote.
         Vector3 axis = GetAxis(KeyDirection);
         Vector3 directionVector = GetDirectionVector(KeyDirection);
