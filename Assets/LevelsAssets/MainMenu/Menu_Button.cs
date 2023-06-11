@@ -16,6 +16,10 @@ public class Menu_Button : MonoBehaviour
     // Asegúrate de que tu Trigger se llama "PolyJump" en tu Animator Controller
     private readonly string polyJumpTrigger = "PolyJump";
 
+
+    public AudioClip clip;
+    private AudioSource audioSource;
+
     private void Start()
     {
         // Recupera el componente Animator del objeto que quieres animar
@@ -24,7 +28,17 @@ public class Menu_Button : MonoBehaviour
             animator = PolyAnimate.GetComponent<Animator>();
             
         }
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // Si no hay AudioSource adjunto al objeto, lo agregamos.
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        audioSource.playOnAwake = false;
         
+
     }
 
     private void OnMouseUpAsButton()
@@ -35,11 +49,12 @@ public class Menu_Button : MonoBehaviour
             {
                 Debug.Log("LLEGADO");
                 animator.SetTrigger(polyJumpTrigger);
+                audioSource.PlayOneShot(clip);
             }
            
         }
 
-        // Inicia la corrutina para invocar el evento después de un retraso de 5 segundos
+        // Inicia la corrutina para invocar el evento después de un retraso de 1 segundos
         StartCoroutine(InvokeEventAfterDelay(1.0f));
     }
 

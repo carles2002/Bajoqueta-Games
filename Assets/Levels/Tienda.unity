@@ -3337,6 +3337,7 @@ MonoBehaviour:
   pts: {fileID: 2030800949}
   animator: {fileID: 1621818692}
   clip: {fileID: 8300000, guid: 3db606cb23354e348a5a5dc18eb97d4a, type: 3}
+  clip2: {fileID: 8300000, guid: 6aa6a858dc7157f42ba95347bfe7bffb, type: 3}
 --- !u!82 &1245120071
 AudioSource:
   m_ObjectHideFlags: 0

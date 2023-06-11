@@ -546,6 +546,10 @@ PrefabInstance:
       value: 0.45056072
       objectReference: {fileID: 0}
     - target: {fileID: 3061935784010685283, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6aa6a858dc7157f42ba95347bfe7bffb, type: 3}
+    - target: {fileID: 3061935784010685283, guid: c513ccd1b20d79a438bfc4910ee610cd, type: 3}
       propertyPath: SFXBar
       value: 
       objectReference: {fileID: 722205411}

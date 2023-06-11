@@ -38,6 +38,7 @@ public class tiendaButtonImput : MonoBehaviour
 
 
     public AudioClip clip;
+    public AudioClip clip2;
     private AudioSource audioSource;
 
     void Start()
@@ -192,6 +193,7 @@ public class tiendaButtonImput : MonoBehaviour
                 if (hit.collider.gameObject == b1)
                 {
                     Debug.Log("AQUI SE EJECUTA CÓDIGO PARA 1");
+                    audioSource.PlayOneShot(clip2);
                     polySelected = PolyDatabase[0];
                     actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinName;
                     actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinDescription;
@@ -230,6 +232,7 @@ public class tiendaButtonImput : MonoBehaviour
                 if (hit.collider.gameObject == b2)
                 {
                     Debug.Log("AQUI SE EJECUTA CÓDIGO PARA 2");
+                    audioSource.PlayOneShot(clip2);
                     polySelected = PolyDatabase[1];
                     actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinName;
                     actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinDescription;
@@ -267,6 +270,7 @@ public class tiendaButtonImput : MonoBehaviour
                 if (hit.collider.gameObject == b3)
                 {
                     Debug.Log("AQUI SE EJECUTA CÓDIGO PARA 3");
+                    audioSource.PlayOneShot(clip2);
                     polySelected = PolyDatabase[2];
                     actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinName;
                     actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinDescription;
@@ -304,6 +308,7 @@ public class tiendaButtonImput : MonoBehaviour
                 if (hit.collider.gameObject == b4)
                 {
                     Debug.Log("AQUI SE EJECUTA CÓDIGO PARA 4");
+                    audioSource.PlayOneShot(clip2);
                     polySelected = PolyDatabase[3];
                     actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinName;
                     actual.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinDescription;
@@ -341,6 +346,7 @@ public class tiendaButtonImput : MonoBehaviour
                 if (hit.collider.gameObject == b5)
                 {
                     Debug.Log("AQUI SE EJECUTA CÓDIGO PARA EQUIPADO");
+                    audioSource.PlayOneShot(clip2);
 
                     // Ejecuta el trigger del Animator
                     if (animator != null)
