@@ -5,17 +5,23 @@ using UnityEngine.Events;
 
 public class Jump : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     public GameObject objectToMove;
     public float objectMoveDistance = 1f;
     public RuntimeAnimatorController newAnimatorController;
-    public Movement movimientoPlayer;
+    private Movement movimientoPlayer;
 
     private bool isPlayerTouching = false;
 
     public GameObject detector;
 
     public float timeDetection = 1.5f;
+
+    private void LateUpdate()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        movimientoPlayer= player.GetComponent<Movement>();
+    }
 
     void OnTriggerEnter(Collider collision)
     {
