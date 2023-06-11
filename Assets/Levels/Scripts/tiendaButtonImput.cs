@@ -183,16 +183,16 @@ public class tiendaButtonImput : MonoBehaviour
 
     void Update()
     {
-        // Detección de clic en el objeto 3D
+        // Detecciï¿½n de clic en el objeto 3D
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = camera2.ScreenPointToRay(Input.mousePosition); // Usa la cámara1 en lugar de la cámara principal
+            Ray ray = camera2.ScreenPointToRay(Input.mousePosition); // Usa la cï¿½mara1 en lugar de la cï¿½mara principal
 
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
                 if (hit.collider.gameObject == b1)
                 {
-                    Debug.Log("AQUI SE EJECUTA CÓDIGO PARA 1");
+                    Debug.Log("AQUI SE EJECUTA Cï¿½DIGO PARA 1");
                     audioSource.PlayOneShot(clip2);
                     polySelected = PolyDatabase[0];
                     actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinName;
@@ -231,7 +231,7 @@ public class tiendaButtonImput : MonoBehaviour
                 }
                 if (hit.collider.gameObject == b2)
                 {
-                    Debug.Log("AQUI SE EJECUTA CÓDIGO PARA 2");
+                    Debug.Log("AQUI SE EJECUTA Cï¿½DIGO PARA 2");
                     audioSource.PlayOneShot(clip2);
                     polySelected = PolyDatabase[1];
                     actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinName;
@@ -269,7 +269,7 @@ public class tiendaButtonImput : MonoBehaviour
                 }
                 if (hit.collider.gameObject == b3)
                 {
-                    Debug.Log("AQUI SE EJECUTA CÓDIGO PARA 3");
+                    Debug.Log("AQUI SE EJECUTA Cï¿½DIGO PARA 3");
                     audioSource.PlayOneShot(clip2);
                     polySelected = PolyDatabase[2];
                     actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinName;
@@ -307,7 +307,7 @@ public class tiendaButtonImput : MonoBehaviour
                 }
                 if (hit.collider.gameObject == b4)
                 {
-                    Debug.Log("AQUI SE EJECUTA CÓDIGO PARA 4");
+                    Debug.Log("AQUI SE EJECUTA Cï¿½DIGO PARA 4");
                     audioSource.PlayOneShot(clip2);
                     polySelected = PolyDatabase[3];
                     actual.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = polySelected.SkinName;
@@ -345,7 +345,7 @@ public class tiendaButtonImput : MonoBehaviour
                 }
                 if (hit.collider.gameObject == b5)
                 {
-                    Debug.Log("AQUI SE EJECUTA CÓDIGO PARA EQUIPADO");
+                    Debug.Log("AQUI SE EJECUTA Cï¿½DIGO PARA EQUIPADO");
                     audioSource.PlayOneShot(clip2);
 
                     // Ejecuta el trigger del Animator
@@ -515,7 +515,9 @@ public class tiendaButtonImput : MonoBehaviour
                 {
                     Debug.Log("SALIDA");
 
-                    SceneManager.LoadScene(0);
+                    SceneManager.LoadScene(1);
+
+
                 }
             }
         }

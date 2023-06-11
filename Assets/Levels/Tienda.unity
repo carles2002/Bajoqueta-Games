@@ -2918,6 +2918,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 988731850}
     m_Modifications:
+    - target: {fileID: 829493421925706233, guid: 69b58f5535a494f458d00be63e60fc5d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -151.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 829493421925706233, guid: 69b58f5535a494f458d00be63e60fc5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -89.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7146408739162368914, guid: 69b58f5535a494f458d00be63e60fc5d, type: 3}
       propertyPath: m_Name
       value: Crossfade

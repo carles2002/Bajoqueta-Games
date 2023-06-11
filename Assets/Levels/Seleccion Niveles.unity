@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17823324, g: 0.22316593, b: 0.30522397, a: 1}
+  m_IndirectSpecularColor: {r: 0.1782331, g: 0.22316572, b: 0.30522323, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -322,7 +322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1257934558528024207, guid: 25ebc22aaa664824293a7fee37eaafd1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1495020384307677517, guid: 25ebc22aaa664824293a7fee37eaafd1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -332,10 +332,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeScene
       objectReference: {fileID: 0}
-    - target: {fileID: 1767195068302294791, guid: 25ebc22aaa664824293a7fee37eaafd1, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e0a8d5925353d504f9857b24d6df0114, type: 2}
+    - target: {fileID: 1495020384307677517, guid: 25ebc22aaa664824293a7fee37eaafd1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2010749626528459667, guid: 25ebc22aaa664824293a7fee37eaafd1, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -394,7 +394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7922170165981915740, guid: 25ebc22aaa664824293a7fee37eaafd1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8020069371283176101, guid: 25ebc22aaa664824293a7fee37eaafd1, type: 3}
       propertyPath: m_Name
@@ -410,7 +410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8517398551725697561, guid: 25ebc22aaa664824293a7fee37eaafd1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25ebc22aaa664824293a7fee37eaafd1, type: 3}

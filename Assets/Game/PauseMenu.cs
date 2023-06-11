@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
 
     private bool isPaused = false;
 
-    private int menuSceneName = 0; //Escena menu numero
+    private int menuSceneName = 1; //Escena menu numero
 
     public AudioClip clip;
     private AudioSource audioSource;

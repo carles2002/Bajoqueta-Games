@@ -250,7 +250,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuienLoEmite: {fileID: 4193231905260432367}
-  JukeBox: {fileID: 7513854944321338286, guid: cb91dbcf4cf2dfc46847f065ba41bd66, type: 3}
   volumen: 1
 --- !u!114 &9168683855181630724
 MonoBehaviour:
@@ -264,5 +263,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38532d7f2b871de449fcf18a3866a26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneLoad: 2
+  nextSceneLoad: 5
   animator: {fileID: 2406099150747848732}
