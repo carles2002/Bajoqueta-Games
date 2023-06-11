@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Jump2 : MonoBehaviour
 {
-    public GameObject player; // Agrega una variable pública para el objeto "Player"
+    private GameObject player; // Agrega una variable pública para el objeto "Player"
+    private Movement movimientoPlayer;
     public RuntimeAnimatorController newAnimatorController; // Agrega una variable pública para el nuevo AnimatorController
     public float yOffset = 2f; // Agrega una variable pública para la cantidad de unidades que el personaje se moverá hacia arriba
     public float platformYOffset = -1f; // Agrega una variable pública para la cantidad de unidades que la plataforma se moverá hacia abajo
-    public Movement movimientoPlayer;
 
+    private void LateUpdate()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        movimientoPlayer = player.GetComponent<Movement>();
+    }
 
     private void OnTriggerEnter(Collider collision)
     {

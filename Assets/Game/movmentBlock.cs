@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class movmentBlock : MonoBehaviour
 {
-    public GameObject player; // El objeto del jugador
-    public Movement playerMovementScript; // El script de movimiento del jugador
-    
+    private GameObject player; // El objeto del jugador
+    private Movement playerMovementScript; // El script de movimiento del jugador
+
+    private void LateUpdate()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerMovementScript = player.GetComponent<Movement>();
+    }
 
     void OnTriggerEnter(Collider other)
     {

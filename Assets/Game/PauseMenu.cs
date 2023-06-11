@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject homeObject;
 
     public GameObject volumeBar;
+    public GameObject SFXBar;
 
     public GameObject sceneLight;
     
@@ -26,8 +27,7 @@ public class PauseMenu : MonoBehaviour
         camera1.enabled = true;
         camera2.enabled = false;
         volumeBar.SetActive(true);
-
-
+        SFXBar.SetActive(true);
     }
     
 
@@ -84,6 +84,7 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 0;
             Debug.Log("PAUSE");
+            SFXBar.SetActive(true);
             volumeBar.SetActive(true);
             pauseObject.SetActive(true);
             resetObject.SetActive(true);
@@ -97,6 +98,7 @@ public class PauseMenu : MonoBehaviour
             camera1.enabled = true;
             camera2.enabled = false;
 
+            SFXBar.SetActive(false);
             volumeBar.SetActive(false);
 
             pauseObject.SetActive(false);
