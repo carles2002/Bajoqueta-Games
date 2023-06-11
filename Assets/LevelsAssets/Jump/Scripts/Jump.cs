@@ -17,6 +17,29 @@ public class Jump : MonoBehaviour
 
     public float timeDetection = 1.5f;
 
+    public AudioClip clip;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // Si no hay AudioSource adjunto al objeto, lo agregamos.
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        audioSource.playOnAwake = false;
+    }
+
+    IEnumerator PlayRandomWithDelay(float delay)
+    {
+        // Espera el número especificado de segundos
+        yield return new WaitForSeconds(delay);
+        
+        audioSource.PlayOneShot(clip);
+    }
+
     private void LateUpdate()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -70,6 +93,9 @@ public class Jump : MonoBehaviour
 
             Debug.Log("Entrado________________________");
 
+            //Reproducir sonido
+            StartCoroutine(PlayRandomWithDelay(0.3f));
+
             ChangeAnimatorController(playerAnimator);
             MoveObjectUp(objectToMove, objectMoveDistance);
         }
@@ -81,6 +107,7 @@ public class Jump : MonoBehaviour
         {
             SaveRotation();
             animator.runtimeAnimatorController = newAnimatorController;
+
         }
         else
         {
