@@ -878,18 +878,6 @@ MonoBehaviour:
   hoverIntensity: 3
   clickIntensity: 8
   fadeSpeed: 0.1
---- !u!114 &984732703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984732693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f36268a43c043142b63babd85187a3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &984732705
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1756,16 +1744,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 6aa6a858dc7157f42ba95347bfe7bffb, type: 3}
     - target: {fileID: 194422355032165064, guid: 6a9ae2ae0825b7a45816606abc9c393d, type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 194422355032165064, guid: 6a9ae2ae0825b7a45816606abc9c393d, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 984732703}
+      objectReference: {fileID: 8047848863345976082}
     - target: {fileID: 194422355032165064, guid: 6a9ae2ae0825b7a45816606abc9c393d, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DeletePlayerPrefabs
+      value: ChangeScene
       objectReference: {fileID: 0}
     - target: {fileID: 194422355032165064, guid: 6a9ae2ae0825b7a45816606abc9c393d, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DeletePlayerPrefs, Assembly-CSharp
+      value: SceneManaging, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 194422355032165064, guid: 6a9ae2ae0825b7a45816606abc9c393d, type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 194422355032165064, guid: 6a9ae2ae0825b7a45816606abc9c393d, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2025,6 +2021,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a9ae2ae0825b7a45816606abc9c393d, type: 3}
+--- !u!114 &8047848863345976082 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5149795060675898193, guid: 6a9ae2ae0825b7a45816606abc9c393d, type: 3}
+  m_PrefabInstance: {fileID: 8047848863345976081}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984732693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3234c6dc120324385215a5634e14ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9038622295564814472
 PrefabInstance:
   m_ObjectHideFlags: 0
