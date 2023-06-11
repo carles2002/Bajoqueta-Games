@@ -120,8 +120,7 @@ public class Movement : MonoBehaviour
     private IEnumerator RollToDirection(InputManager.Direction KeyDirection)
     {
 
-        // Selecciona un clip de audio aleatorio del array y lo reproduce
-        StartCoroutine(PlayRandomWithDelay(0.3f));
+        
 
         // Actualiza la posición del pivote.
         Vector3 axis = GetAxis(KeyDirection);
@@ -134,6 +133,9 @@ public class Movement : MonoBehaviour
         }
         if (!isRolling && IsWallInDirection(directionVector)==false)
         {
+            // Selecciona un clip de audio aleatorio del array y lo reproduce
+            StartCoroutine(PlayRandomWithDelay(0.3f));
+
             isRolling = true;
 
             float angle = 90f;
