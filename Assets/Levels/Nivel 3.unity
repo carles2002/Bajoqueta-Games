@@ -5808,8 +5808,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460278520}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 8.68, y: 2.653, z: 6.956}
-  m_LocalScale: {x: 0.18468, y: 1, z: 0.5187671}
+  m_LocalPosition: {x: 8.68, y: 2.653, z: 6.39}
+  m_LocalScale: {x: 0.18468, y: 1, z: 0.63955796}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1345125661}
@@ -12185,7 +12185,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590923496}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -29868,7 +29868,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4620302190380327334, guid: a928bbb3c0408f84095662869e96f155, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039167906197099432, guid: a928bbb3c0408f84095662869e96f155, type: 3}
+      propertyPath: m_Size.x
+      value: 2.289308
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039167906197099432, guid: a928bbb3c0408f84095662869e96f155, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5286355
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039167906197099432, guid: a928bbb3c0408f84095662869e96f155, type: 3}
+      propertyPath: m_Size.z
+      value: 1.4747187
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039167906197099432, guid: a928bbb3c0408f84095662869e96f155, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039167906197099432, guid: a928bbb3c0408f84095662869e96f155, type: 3}
+      propertyPath: m_Center.x
+      value: 15.873824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039167906197099432, guid: a928bbb3c0408f84095662869e96f155, type: 3}
+      propertyPath: m_Center.y
+      value: 0.8532288
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039167906197099432, guid: a928bbb3c0408f84095662869e96f155, type: 3}
+      propertyPath: m_Center.z
+      value: -6.282864
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039167906197099432, guid: a928bbb3c0408f84095662869e96f155, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a928bbb3c0408f84095662869e96f155, type: 3}

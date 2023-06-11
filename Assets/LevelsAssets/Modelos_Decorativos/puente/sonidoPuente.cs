@@ -10,12 +10,12 @@ public class sonidoPuente : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
+        if(audioSource == null)
         {
             // Si no hay AudioSource adjunto al objeto, lo agregamos.
             audioSource = gameObject.AddComponent<AudioSource>();
         }
-
+        
         audioSource.playOnAwake = false;
     }
 
