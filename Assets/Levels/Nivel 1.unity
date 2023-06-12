@@ -512,6 +512,7 @@ MonoBehaviour:
   coinSource: {fileID: 0}
   volumeBar: {fileID: 43562061}
   scrollbar: {fileID: 43562065}
+  IndiceEscenaAjustes: 3
   idBar: 0
   audioSource: {fileID: 639893421}
 --- !u!114 &43562065
@@ -3119,7 +3120,7 @@ AudioSource:
   m_GameObject: {fileID: 716352099}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 57cf9d9f7d418cc4a9e1cf0aa8916a4c, type: 2}
+  OutputAudioMixerGroup: {fileID: -7722378233237649006, guid: 0ee524ab795db104eab0366a851901a1, type: 2}
   m_audioClip: {fileID: 8300000, guid: 24c44664845e74d4ebff9917af54eb35, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -3221,6 +3222,7 @@ MonoBehaviour:
   coinSource: {fileID: 716352102}
   volumeBar: {fileID: 716352099}
   scrollbar: {fileID: 716352104}
+  IndiceEscenaAjustes: 3
   idBar: 1
   audioSource: {fileID: 1077609038}
 --- !u!114 &716352104

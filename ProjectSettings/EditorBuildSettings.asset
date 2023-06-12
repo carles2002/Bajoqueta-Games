@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Levels/Tienda.unity
     guid: b794667e83015a844b5be54f36978f61
   - enabled: 1
+    path: Assets/Levels/Ajustes.unity
+    guid: 37a73250769654f4d88e50f2ffd3d0ed
+  - enabled: 1
     path: Assets/Levels/Nivel 1.unity
     guid: 2bd766a5c09ee2c4f90cae453a3749bf
   - enabled: 1

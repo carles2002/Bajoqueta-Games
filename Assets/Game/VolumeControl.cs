@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class VolumeControl : MonoBehaviour
 {
@@ -10,10 +11,11 @@ public class VolumeControl : MonoBehaviour
     //public List<Sound> soundScripts;
     public GameObject volumeBar;
     public Scrollbar scrollbar;
+    public int IndiceEscenaAjustes = 3;
     public int idBar;
     //public float difmusica = 0.2f;
 
-    public AudioSource audioSource; // Para la música de fondo.
+    public AudioSource audioSource; // Para la mï¿½sica de fondo.
 
     // La clave que usaremos para almacenar y recuperar el valor del volumen en PlayerPrefs.
     private const string VolumeKey = "volume";
@@ -21,7 +23,8 @@ public class VolumeControl : MonoBehaviour
 
     private void Start()
     {
-        volumeBar.SetActive(false);
+        int thisScene = SceneManager.GetActiveScene().buildIndex;
+        if(thisScene != IndiceEscenaAjustes) {volumeBar.SetActive(false);}
         // Al inicio, recuperamos el valor del volumen de PlayerPrefs y lo ajustamos.
         float storedVolume = PlayerPrefs.GetFloat(VolumeKey, 1f);
         float storedSFX = PlayerPrefs.GetFloat(SFXKey, 1f);
@@ -62,7 +65,7 @@ public class VolumeControl : MonoBehaviour
             coinSource.volume = volume;
             PlayerPrefs.SetFloat(SFXKey, sliderValue);
         }
-        PlayerPrefs.Save(); // Asegúrate de llamar a Save() para guardar los cambios.
+        PlayerPrefs.Save(); // Asegï¿½rate de llamar a Save() para guardar los cambios.
         //mixer.SetFloat("MusicVol", volume);
         /*
         foreach (Sound soundScript in soundScripts)
@@ -79,6 +82,6 @@ public class VolumeControl : MonoBehaviour
 
 
 
-        // Guardamos el valor del volumen en PlayerPrefs para que podamos recuperarlo más tarde.
+        // Guardamos el valor del volumen en PlayerPrefs para que podamos recuperarlo mï¿½s tarde.
     }
 }
