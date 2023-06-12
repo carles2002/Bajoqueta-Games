@@ -12,12 +12,26 @@ public class BallBehavior : MonoBehaviour
     private GameObject player; // El objeto del jugador
     private Movement playerMovementScript; // El script de movimiento del jugador
 
+    public AudioClip[] clips;
+    private AudioSource audioSource;
+
 
     // Inicializar
     void Start()
     {
         Destroy(gameObject, lifeTime); // Destruye la bola después de cierto tiempo para limpiar la escena
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // Si no hay AudioSource adjunto al objeto, lo agregamos.
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        audioSource.playOnAwake = false;
     }
+   
+
+
 
     private void LateUpdate()
     {
@@ -30,7 +44,10 @@ public class BallBehavior : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("La bola ha golpeado al jugador!");
-            
+
+            // Selecciona un clip de audio aleatorio del array y lo reproduce
+            AudioClip clip = clips[UnityEngine.Random.Range(0, clips.Length)];
+            audioSource.PlayOneShot(clip);
 
             Rigidbody playerRb = collision.gameObject.GetComponent<Rigidbody>();
             if (playerRb != null)
