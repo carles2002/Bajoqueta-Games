@@ -130,7 +130,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6b083ace2eab2448035375da39f9c3, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuienLoEmite: {fileID: 4193231905260432367}
-  volumen: 1
+  Sonido: {fileID: 0}
 --- !u!114 &9168683855181630724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,5 +263,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38532d7f2b871de449fcf18a3866a26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneLoad: 5
+  nextSceneLoad: 7
   animator: {fileID: 2406099150747848732}

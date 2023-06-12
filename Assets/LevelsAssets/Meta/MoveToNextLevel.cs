@@ -23,7 +23,7 @@ public class MoveToNextLevel : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (SceneManager.GetActiveScene().buildIndex == 6) /* El numero es el último
+            if (SceneManager.GetActiveScene().buildIndex == 7) /* El numero es el último
                                                                  que tengas en Build Settings */
             {
                 //movimientoPlayer.gameControl.ChangeGameRunningState();
