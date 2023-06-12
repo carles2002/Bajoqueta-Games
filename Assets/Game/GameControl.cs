@@ -27,7 +27,7 @@ public class GameControl : MonoBehaviour
     {
         gameRunning = PlayerPrefs.GetInt("GameRunning", 0) == 1;
         gemas = PlayerPrefs.GetInt("Gems", 0);
-        PolyDatabase = PolySkin.FromJson(File.ReadAllText("Assets/Player/skins.json")).PolyDatabase;
+        PolyDatabase = PolySkin.FromJson(File.ReadAllText(Application.dataPath + "/StreamingAssets/skins.json")).PolyDatabase;
        
         for (int i = 0; i < PolyDatabase.Count; i++)
         {

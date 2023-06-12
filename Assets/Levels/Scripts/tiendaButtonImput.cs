@@ -71,7 +71,7 @@ public class tiendaButtonImput : MonoBehaviour
         contador = PlayerPrefs.GetInt("Gems", 0);
         pts.text = contador.ToString();
         //PolyDatabase = JsonConvert.DeserializeObject<Root>().polySkin; 
-        PolyJSON = PolySkin.FromJson(File.ReadAllText("Assets/Player/skins.json"));
+        PolyJSON = PolySkin.FromJson(File.ReadAllText(Application.dataPath + "/StreamingAssets/skins.json"));
         PolyDatabase = PolyJSON.PolyDatabase;
 
         for (int i = 0; i < PolyDatabase.Count; i++)
