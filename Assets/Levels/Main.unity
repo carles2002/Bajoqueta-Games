@@ -1317,6 +1317,11 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1373512944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4663087110934559321, guid: 6a9ae2ae0825b7a45816606abc9c393d, type: 3}
+  m_PrefabInstance: {fileID: 8047848863345976081}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1456913736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,6 +1748,18 @@ PrefabInstance:
       propertyPath: clip
       value: 
       objectReference: {fileID: 8300000, guid: 6aa6a858dc7157f42ba95347bfe7bffb, type: 3}
+    - target: {fileID: 194422355032165064, guid: 6a9ae2ae0825b7a45816606abc9c393d, type: 3}
+      propertyPath: isStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194422355032165064, guid: 6a9ae2ae0825b7a45816606abc9c393d, type: 3}
+      propertyPath: PolyAnimate
+      value: 
+      objectReference: {fileID: 244517003}
+    - target: {fileID: 194422355032165064, guid: 6a9ae2ae0825b7a45816606abc9c393d, type: 3}
+      propertyPath: ButtonAnimate
+      value: 
+      objectReference: {fileID: 1373512944}
     - target: {fileID: 194422355032165064, guid: 6a9ae2ae0825b7a45816606abc9c393d, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
