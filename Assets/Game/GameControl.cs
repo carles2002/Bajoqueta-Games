@@ -13,12 +13,14 @@ public class GameControl : MonoBehaviour
     private bool gameRunning = true;
     private int gemas = 0;
     private List<PolySkinElement> PolyDatabase;
+    private string skinsJSON; 
     public GameObject polys;
 
     private void SaveGame()
     {
         PlayerPrefs.SetInt("GameRunning", gameRunning ? 1 : 0);
         PlayerPrefs.SetInt("Gems", gemas);
+        PlayerPrefs.SetString("skinsJSON", skinsJSON);
         // Guarda aquí cualquier otra información del juego que necesites
         gameRunning = false;
     }
@@ -27,7 +29,8 @@ public class GameControl : MonoBehaviour
     {
         gameRunning = PlayerPrefs.GetInt("GameRunning", 0) == 1;
         gemas = PlayerPrefs.GetInt("Gems", 0);
-        PolyDatabase = PolySkin.FromJson(File.ReadAllText(Application.dataPath + "/StreamingAssets/skins.json")).PolyDatabase;
+        skinsJSON = PlayerPrefs.GetString("skinsJSON", "{\"polySkin\":[{\"skinID\":0,\"skinName\":\"Poly Enfadado\",\"skinDescription\":\"Poly ha tenido un mal dia, cuidado con el.\",\"skinPrice\":2,\"skinBuy\":0,\"skinSelected\":0},{\"skinID\":1,\"skinName\":\"Poly Alegre\",\"skinDescription\":\"Pon un Poly en tu vida\",\"skinPrice\":1,\"skinBuy\":1,\"skinSelected\":1},{\"skinID\":2,\"skinName\":\"Poly Caramelo\",\"skinDescription\":\"Yummy!\",\"skinPrice\":4,\"skinBuy\":0,\"skinSelected\":0},{\"skinID\":3,\"skinName\":\"Poly Sorprendido\",\"skinDescription\":\"Vaya, que habra visto?\",\"skinPrice\":3,\"skinBuy\":0,\"skinSelected\":0}]}");
+        PolyDatabase = PolySkin.FromJson(skinsJSON).PolyDatabase;
        
         for (int i = 0; i < PolyDatabase.Count; i++)
         {
