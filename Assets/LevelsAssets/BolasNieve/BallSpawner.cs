@@ -11,11 +11,14 @@ public class BallSpawner : MonoBehaviour
 
     private Transform playerTransform; // Ubicación del jugador
 
-    // Start es llamado antes del primer frame
-    void Start()
+    private void Update()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform; // Encuentra al jugador usando su etiqueta
+    }
+    private void Start()
+    {
         StartCoroutine(SpawnBalls()); // Inicia la corrutina de lanzamiento de bolas
+
     }
 
     IEnumerator SpawnBalls()
