@@ -30,6 +30,7 @@ public class tiendaButtonImput : MonoBehaviour
     private int contador = 0;
     public Text pts;
 
+    private string skinsJSON;
     private List<PolySkinElement> PolyDatabase;
     private PolySkin PolyJSON;
     private PolySkinElement polySelected;
@@ -63,15 +64,16 @@ public class tiendaButtonImput : MonoBehaviour
     private void OnDestroy()
     {
         PolyJSON.PolyDatabase = PolyDatabase;
-        File.WriteAllText("Assets/Player/skins.json", PolyJSON.ToJson()); 
+        skinsJSON = PolyJSON.ToJson();
+        PlayerPrefs.SetString("skinsJSON", skinsJSON);
     }
 
     private void Initialize()
     {
         contador = PlayerPrefs.GetInt("Gems", 0);
         pts.text = contador.ToString();
-        //PolyDatabase = JsonConvert.DeserializeObject<Root>().polySkin; 
-        PolyJSON = PolySkin.FromJson(File.ReadAllText(Application.dataPath + "/StreamingAssets/skins.json"));
+        skinsJSON = PlayerPrefs.GetString("skinsJSON", "{\"polySkin\":[{\"skinID\":0,\"skinName\":\"Poly Enfadado\",\"skinDescription\":\"Poly ha tenido un mal dia, cuidado con el.\",\"skinPrice\":2,\"skinBuy\":0,\"skinSelected\":0},{\"skinID\":1,\"skinName\":\"Poly Alegre\",\"skinDescription\":\"Pon un Poly en tu vida\",\"skinPrice\":1,\"skinBuy\":1,\"skinSelected\":1},{\"skinID\":2,\"skinName\":\"Poly Caramelo\",\"skinDescription\":\"Yummy!\",\"skinPrice\":4,\"skinBuy\":0,\"skinSelected\":0},{\"skinID\":3,\"skinName\":\"Poly Sorprendido\",\"skinDescription\":\"Vaya, que habra visto?\",\"skinPrice\":3,\"skinBuy\":0,\"skinSelected\":0}]}");
+        PolyJSON = PolySkin.FromJson(skinsJSON);
         PolyDatabase = PolyJSON.PolyDatabase;
 
         for (int i = 0; i < PolyDatabase.Count; i++)
