@@ -5,33 +5,26 @@ public class BallBehavior : MonoBehaviour
 {
     // Ajusta el tiempo de vida de la bola para evitar problemas de rendimiento
     public float lifeTime = 3f;
-    public float fX = 2f; // Fuerza que se aplicará en el eje X
-    public float fY = 0f; // Fuerza que se aplicará en el eje Y
-    public float fZ = 0f; // Fuerza que se aplicará en el eje Z
+    public float fX = 2f; // Fuerza que se aplicarï¿½ en el eje X
+    public float fY = 0f; // Fuerza que se aplicarï¿½ en el eje Y
+    public float fZ = 0f; // Fuerza que se aplicarï¿½ en el eje Z
 
     private GameObject player; // El objeto del jugador
     private Movement playerMovementScript; // El script de movimiento del jugador
 
-    public AudioClip[] clips;
+    public Sound sonido;
     private AudioSource audioSource;
+    private AudioClip audioClip;
 
 
     // Inicializar
     void Start()
     {
-        Destroy(gameObject, lifeTime); // Destruye la bola después de cierto tiempo para limpiar la escena
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            // Si no hay AudioSource adjunto al objeto, lo agregamos.
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
+        Destroy(gameObject, lifeTime); // Destruye la bola despuï¿½s de cierto tiempo para limpiar la escena
+        audioSource = sonido.GetComponent<AudioSource>();
+        audioClip = sonido.Sonido;
 
-        audioSource.playOnAwake = false;
     }
-   
-
-
 
     private void LateUpdate()
     {
@@ -46,8 +39,8 @@ public class BallBehavior : MonoBehaviour
             Debug.Log("La bola ha golpeado al jugador!");
 
             // Selecciona un clip de audio aleatorio del array y lo reproduce
-            AudioClip clip = clips[UnityEngine.Random.Range(0, clips.Length)];
-            audioSource.PlayOneShot(clip);
+            //AudioClip clip = clips[UnityEngine.Random.Range(0, clips.Length)];
+            sonido.EmitirSonido(audioSource,audioClip);
 
             Rigidbody playerRb = collision.gameObject.GetComponent<Rigidbody>();
             if (playerRb != null)
@@ -58,7 +51,7 @@ public class BallBehavior : MonoBehaviour
 
                 playerMovementScript.gameControl.ChangeGameRunningState(false);
 
-                // Inicia una Coroutine para reanudar el movimiento del jugador después de 1 segundo
+                // Inicia una Coroutine para reanudar el movimiento del jugador despuï¿½s de 1 segundo
                 StartCoroutine(ResumePlayerMovementAfterDelay(0.1f));
             }
         }
