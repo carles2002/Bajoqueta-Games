@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6264163886420281405}
   - component: {fileID: 4697063630817711291}
   - component: {fileID: 1027673713061267639}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cuby_Salvado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
