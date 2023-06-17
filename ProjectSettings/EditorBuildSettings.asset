@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Nivel 3.unity
     guid: 721a89f573ed8e7408376de50681da44
+  - enabled: 1
+    path: Assets/Levels/CinematicaFinal.unity
+    guid: 1aaf3cca78247754fadb2a6be6b1118f
   m_configObjects: {}
