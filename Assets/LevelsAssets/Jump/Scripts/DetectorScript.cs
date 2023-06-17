@@ -19,4 +19,5 @@ public class DetectorScript : MonoBehaviour
             jumpScript.PlayerDetected();
         }
     }
+    
 }

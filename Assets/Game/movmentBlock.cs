@@ -24,5 +24,10 @@ public class movmentBlock : MonoBehaviour
             playerMovementScript.gameControl.ChangeGameRunningState(false);
         }
     }
-   
+
+    public void Bloquear()
+    {
+        playerMovementScript.gameControl.ChangeGameRunningState(false);
+    }
+
 }
