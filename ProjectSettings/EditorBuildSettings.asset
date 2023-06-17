@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Levels/Main.unity
     guid: eeef7f781400302469ee1fcdb6b1e4f6
   - enabled: 1
-    path: Assets/Levels/Seleccion Niveles.unity
+    path: Assets/Levels/Seleccion Niveles PRUEBA.unity
     guid: 8263a4e6f1d4d4a4ba8eebd54987e701
   - enabled: 1
     path: Assets/Levels/Tienda.unity
