@@ -48,16 +48,21 @@ public class Jump : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("COLISION");
-        StartCoroutine(activateDetector(timeDetection));
-        // Verifica si el objeto en colisión es el Player
-        if (collision.gameObject == player)
+        if (!isPlayerTouching)
         {
-            isPlayerTouching = true;
-            Debug.Log(isPlayerTouching);
+            
+            Debug.Log("COLISION");
+            detector.SetActive(false);
+            StartCoroutine(activateDetector(timeDetection));
+            // Verifica si el objeto en colisión es el Player
+            if (collision.gameObject == player)
+            {
+                isPlayerTouching = true;
+                // Debug.Log(isPlayerTouching);
 
-            // Guarda la rotación cuando el jugador entra en colisión
-           
+                // Guarda la rotación cuando el jugador entra en colisión
+
+            }
         }
     }
 
@@ -88,6 +93,7 @@ public class Jump : MonoBehaviour
         {
             movimientoPlayer.gameControl.ChangeGameRunningState(false);
 
+
             Rigidbody playerRigidbody = player.GetComponent<Rigidbody>();
             Animator playerAnimator = player.GetComponent<Animator>();
 
@@ -98,6 +104,7 @@ public class Jump : MonoBehaviour
 
             ChangeAnimatorController(playerAnimator);
             MoveObjectUp(objectToMove, objectMoveDistance);
+            isPlayerTouching = false;
         }
     }
 
@@ -105,6 +112,7 @@ public class Jump : MonoBehaviour
     {
         if (newAnimatorController != null)
         {
+            detector.SetActive(false);
             SaveRotation();
             animator.runtimeAnimatorController = newAnimatorController;
 
@@ -130,13 +138,15 @@ public class Jump : MonoBehaviour
     private void SaveRotation()
     {
         Quaternion rotation = player.transform.rotation;
-        PlayerPrefs.SetFloat("PlayerRotationX", rotation.x);
-        PlayerPrefs.SetFloat("PlayerRotationY", rotation.y);
-        PlayerPrefs.SetFloat("PlayerRotationZ", rotation.z);
-        PlayerPrefs.SetFloat("PlayerRotationW", rotation.w);
+        PlayerPrefs.SetInt("PlayerRotationX", Mathf.RoundToInt(rotation.x));
+        PlayerPrefs.SetInt("PlayerRotationY", Mathf.RoundToInt(rotation.y));
+        PlayerPrefs.SetInt("PlayerRotationZ", Mathf.RoundToInt(rotation.z));
+        PlayerPrefs.SetInt("PlayerRotationW", Mathf.RoundToInt(rotation.w));
         PlayerPrefs.Save();
-        Debug.Log(PlayerPrefs.GetFloat("PlayerRotationX").ToString());
+        //Debug.Log(PlayerPrefs.GetInt("PlayerRotationX").ToString());
     }
+
+
 
     private void LoadRotation()
     {
