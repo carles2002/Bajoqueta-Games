@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class LevelSelection : MonoBehaviour
 {
     public static LevelSelection instancia;
-    public Button[] lvlButtons;
+    public GameObject[] lvlButtons;
+    public GameObject[] lvlLocks;
     public int desbloquearNiveles;
     public int indicePrimerNivel = 2;
 
@@ -24,11 +25,13 @@ public class LevelSelection : MonoBehaviour
         {
             for(int i=0; i < lvlButtons.Length; i++)
             {
-                lvlButtons[i].interactable = false;
+                lvlButtons[i].SetActive(false);
+                lvlLocks[i].SetActive(true);
             }
             for(int i=0; i < PlayerPrefs.GetInt("nivelesDesbloqueados", indicePrimerNivel); i++)
             {
-                lvlButtons[i].interactable = true;
+                lvlButtons[i].SetActive(true);
+                lvlLocks[i].SetActive(false);
             }
         }
     }
