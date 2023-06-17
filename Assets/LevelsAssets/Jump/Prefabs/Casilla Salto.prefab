@@ -147,8 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f06811b472e2fd4aa83c3bf4931fcae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerMovementScript: {fileID: 0}
 --- !u!1 &2926777028740168361
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,8 +291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f06811b472e2fd4aa83c3bf4931fcae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerMovementScript: {fileID: 0}
 --- !u!1 &3454694957711881889
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,8 +401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d69cadbcd28d634285909efb23e5742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerMovementScript: {fileID: 0}
 --- !u!1 &4487700683832270814
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,11 +511,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e4d04f57ef67d342bba9e7bc208cd3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   newAnimatorController: {fileID: 9100000, guid: ac75442218caa6145852f1eb88ca8b89, type: 2}
   yOffset: 1
   platformYOffset: -1
-  movimientoPlayer: {fileID: 0}
 --- !u!1 &5274626776251005447
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,8 +624,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f06811b472e2fd4aa83c3bf4931fcae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerMovementScript: {fileID: 0}
 --- !u!1 &6804051776936203823
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,13 +846,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89e6f87ea81381f49832de631afa23e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   objectToMove: {fileID: 4487700683832270814}
   objectMoveDistance: 1
   newAnimatorController: {fileID: 9100000, guid: 897c3bb9522a51541bc6d601737cbdea, type: 2}
-  movimientoPlayer: {fileID: 0}
   detector: {fileID: 6804051776936203823}
   timeDetection: 1
+  clip: {fileID: 0}
 --- !u!1001 &337815137742790465
 PrefabInstance:
   m_ObjectHideFlags: 0

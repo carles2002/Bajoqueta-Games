@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6022868702158755672}
   - component: {fileID: 8359476795789849129}
   - component: {fileID: 7179892273846038798}
+  - component: {fileID: 4555483757874432962}
   m_Layer: 8
   m_Name: BolaDeNieve
   m_TagString: Untagged
@@ -132,11 +133,7 @@ MonoBehaviour:
   fX: 7
   fY: 3
   fZ: 0
-  clips:
-  - {fileID: 8300000, guid: 0a7668c4635999d4fb5ce01ce07914ad, type: 3}
-  - {fileID: 8300000, guid: c17f14b8aa58b0941b098f79daa8d66f, type: 3}
-  - {fileID: 8300000, guid: 572c3ad3c4ec50045bc565240f09fdcb, type: 3}
-  - {fileID: 8300000, guid: ab04cd18d5ae98446926444148fa9651, type: 3}
+  sonido: {fileID: 4555483757874432962}
 --- !u!82 &7179892273846038798
 AudioSource:
   m_ObjectHideFlags: 0
@@ -147,7 +144,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7722378233237649006, guid: 0ee524ab795db104eab0366a851901a1, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5c006337f6284c3419c41f9810103a78, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -233,3 +230,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4555483757874432962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4630921339057025998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eedf2c39fcf2d34bb4eec391099aae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuienLoEmite: {fileID: 7179892273846038798}
+  Sonido: {fileID: 8300000, guid: 5c006337f6284c3419c41f9810103a78, type: 3}
+  segRetardo: 0

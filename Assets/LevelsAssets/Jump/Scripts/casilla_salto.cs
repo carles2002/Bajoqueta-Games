@@ -5,19 +5,17 @@ using UnityEngine;
 public class casilla_salto : MonoBehaviour
 {
     public Animator animator;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Sound sonido;
+    /*
     private void OnTriggerStay(Collider other)
     {
+        if (other.tag == "Player")
+        {
+            animator.SetBool("casilla_jump",true);
+        }
+    }
+    */
+    private void OnTriggerEnter(Collider other) {
         if (other.tag == "Player")
         {
             animator.SetBool("casilla_jump",true);
@@ -27,6 +25,7 @@ public class casilla_salto : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            sonido.EmitirSonidoConRetardo(sonido.QuienLoEmite,sonido.Sonido, sonido.segRetardo);
             animator.SetBool("casilla_jump", false);
         }
     }
