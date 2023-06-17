@@ -13266,7 +13266,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 546f081a68ab879478c17d8b45fb2951, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a0ef65e6cf97e64c90a9d5d9f0daa64, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18129,6 +18129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QuienLoEmite: {fileID: 1043356979}
   Sonido: {fileID: 8300000, guid: 95ea9be8ab74d82468baa61098c22078, type: 3}
+  segRetardo: 0
 --- !u!82 &1043356979
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18391,6 +18392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QuienLoEmite: {fileID: 1049960012}
   Sonido: {fileID: 8300000, guid: 95ea9be8ab74d82468baa61098c22078, type: 3}
+  segRetardo: 0
 --- !u!82 &1049960012
 AudioSource:
   m_ObjectHideFlags: 0
