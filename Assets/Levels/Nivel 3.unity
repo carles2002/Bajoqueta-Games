@@ -1894,11 +1894,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -9095457088196826488, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8917703946959959745, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8881452793964588722, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -1954,11 +1954,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8340761297947617223, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8287793789159973316, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8255923970991675621, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -1978,7 +1978,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: -8035806193671307624, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -7868095721264527869, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -1998,23 +1998,23 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: -7294790804817915298, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -6755632302942197516, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -6678823326531893167, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -6554458113972422046, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -6131274880062641608, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -5976775563885516101, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2026,11 +2026,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: -5873765931867575472, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -5771775702169988923, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -5631883081954788877, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2082,7 +2082,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: -5022981739037920059, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -4969749136252475458, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2094,15 +2094,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: -4906978144932614280, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -4522107923075891878, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -4517153456306329764, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -4128827661647463921, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2114,7 +2114,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: -3737579771603614125, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -3645184292538242521, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2126,23 +2126,23 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: -3582335469430298428, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -3580710622457394208, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -3027041292272248481, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -2995828229661691052, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -2855838555270071791, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -2544643906491807432, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2170,11 +2170,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: -2251219772124790437, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -2096920260533342776, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -1927089447128954562, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2186,7 +2186,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: -1210798455253701374, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -1089318086783861673, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2198,15 +2198,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: -348859713845243500, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -276993161317143686, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -80796838390250655, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 96408778374456322, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2218,11 +2218,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: 245314451905657346, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 431123510463300400, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Name
@@ -2234,7 +2234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1128123826090358887, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1249568225312828205, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2246,11 +2246,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: 1422220305328211524, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1502986102110970093, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1618309230396224538, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2270,11 +2270,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: 1946535146458512094, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2014376183552864694, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2223111793437937331, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2286,11 +2286,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: 2565714372243521245, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3021780583470790795, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3079895427210853902, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2302,7 +2302,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: 3198684473901935268, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3224710968982699700, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2354,7 +2354,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: 4098728977669718424, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4156787231252281393, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2374,7 +2374,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: 4517458020208746801, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4543392531124170427, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2450,7 +2450,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: 6331825011790971122, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6588939883213090192, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2462,11 +2462,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: 6608446386410023256, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6983005213476020176, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7124520233290480489, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2486,11 +2486,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: 7368150452140007808, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7465269770291914433, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7690359428881146943, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2510,7 +2510,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: 8413526355547119695, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8675853645117026923, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -2522,19 +2522,19 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 95203bf44ef38ab49809968e39fb2b7c, type: 2}
     - target: {fileID: 8704484798943859418, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8740720195774534858, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8753310052613211765, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8763226529483648470, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9174679596235007833, guid: 028bae7cc22194548929cab0ef55084f, type: 3}
       propertyPath: m_MotionVectors
@@ -12332,6 +12332,7 @@ MonoBehaviour:
   QuienLoEmite: {fileID: 607797917}
   SonidoGrieta: {fileID: 8300000, guid: 2f16c8750afe9404b977a77f9b3b64cd, type: 3}
   SonidoRomper: {fileID: 8300000, guid: b6047f8ef4f5c2945aef69ef26f23b8c, type: 3}
+  meta: {fileID: 1337600318}
 --- !u!4 &516393715
 Transform:
   m_ObjectHideFlags: 0
@@ -22774,6 +22775,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5903735056092722290, guid: d17526ad76ce7f4439b851a96a6ed6c1, type: 3}
   m_PrefabInstance: {fileID: 989986086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1337600318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7726215712922029101, guid: f5889a5bb453c4449a8609592b950aa1, type: 3}
+  m_PrefabInstance: {fileID: 430895658}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1339902180
 PrefabInstance:

@@ -17,6 +17,8 @@ public class Romper_Jaula : MonoBehaviour
     public AudioClip SonidoGrieta;
     public AudioClip SonidoRomper;
 
+    public GameObject meta;
+
 
 
     // Start is called before the first frame update
@@ -30,15 +32,17 @@ public class Romper_Jaula : MonoBehaviour
     }
     void Start()
     {
+        meta.SetActive(false);
         Veces_pulsado = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-      if(Veces_pulsado == 3) {
+        if (Veces_pulsado == 3)
+        {
             Break();
-      }
+        }
     }
     //activar la jaula normal y activar las piezas
     public void Break()
@@ -47,6 +51,7 @@ public class Romper_Jaula : MonoBehaviour
         Jaula_Pieza.SetActive(true);
         Cuby_Triste.SetActive(false);
         Cuby_Alegre.SetActive(true);
+        meta.SetActive(true);
     }
     public void Suma()
     {
