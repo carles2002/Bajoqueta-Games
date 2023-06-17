@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 3733577612016435925}
   - component: {fileID: 7114522271548044132}
   - component: {fileID: 1566845992389257399}
-  - component: {fileID: 5340795014670286099}
   m_Layer: 8
   m_Name: pCone2
   m_TagString: Untagged
@@ -118,20 +117,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5340795014670286099
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828438132063887162}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5065503977446733706, guid: 657ece6056bd9ca49b60502c8ed03cc6, type: 3}
 --- !u!1 &2731477157249485291
 GameObject:
   m_ObjectHideFlags: 0
