@@ -5,8 +5,10 @@ using UnityEngine;
 public class lvlMover : MonoBehaviour
 {
     public GameObject levelCarousel;
+    public GameObject levelZeroPosition; // La posición a la que se moverá el carrusel cuando esté en el nivel 0
     public int currentLevel = 0;
-    public float moveDistance = 5.0f; // La distancia que se moverá el carrusel de niveles
+    public float moveDistance = 10.0f; // La distancia que se moverá el carrusel de niveles
+    public float moveTime = 1.0f; // El tiempo que tardará en moverse el carrusel de niveles
 
     void Update()
     {
@@ -20,40 +22,55 @@ public class lvlMover : MonoBehaviour
                 if (hit.transform.name == "FI")
                 {
                     // Mover al nivel anterior
-                    MoveToPreviousLevel();
+                    StartCoroutine(MoveToPreviousLevel());
                 }
                 else if (hit.transform.name == "FD")
                 {
                     // Mover al siguiente nivel
-                    MoveToNextLevel();
+                    StartCoroutine(MoveToNextLevel());
                 }
             }
         }
     }
 
-
-    void MoveToPreviousLevel()
+    IEnumerator MoveToPreviousLevel()
     {
         // Comprueba si ya estamos en el primer nivel
         if (currentLevel > 0)
         {
-            // Mueve el carrusel de niveles hacia la derecha
-            levelCarousel.transform.Translate(Vector3.right * moveDistance);
+            Vector3 startPosition = levelCarousel.transform.position;
+            Vector3 targetPosition = (currentLevel == 1) ? levelZeroPosition.transform.position : startPosition + Vector3.right * moveDistance;
+            float elapsedTime = 0;
 
-            // Actualiza el nivel actual
+            while (elapsedTime < moveTime)
+            {
+                levelCarousel.transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / moveTime);
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            levelCarousel.transform.position = targetPosition;
             currentLevel--;
         }
     }
 
-    void MoveToNextLevel()
+    IEnumerator MoveToNextLevel()
     {
         // Comprueba si ya estamos en el último nivel
         if (currentLevel < levelCarousel.transform.childCount - 1)
         {
-            // Mueve el carrusel de niveles hacia la izquierda
-            levelCarousel.transform.Translate(Vector3.left * moveDistance);
+            Vector3 startPosition = levelCarousel.transform.position;
+            Vector3 targetPosition = startPosition + Vector3.left * moveDistance;
+            float elapsedTime = 0;
 
-            // Actualiza el nivel actual
+            while (elapsedTime < moveTime)
+            {
+                levelCarousel.transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / moveTime);
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            levelCarousel.transform.position = targetPosition;
             currentLevel++;
         }
     }
