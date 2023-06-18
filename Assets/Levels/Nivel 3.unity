@@ -19243,6 +19243,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 46204c4934b8f2546a415b5e2d550491, type: 3}
   m_PrefabInstance: {fileID: 1503063590}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &940119007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940119004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7118379da73577443a4ea224b3a2781c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bola: {fileID: 0}
+  animator: {fileID: 940119005}
+  time: 0
 --- !u!1001 &944520318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25154,7 +25169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 46204c4934b8f2546a415b5e2d550491, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 46204c4934b8f2546a415b5e2d550491, type: 3}
       propertyPath: m_LocalPosition.y

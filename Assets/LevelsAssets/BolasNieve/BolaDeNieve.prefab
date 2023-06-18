@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4555483757874432962}
   m_Layer: 8
   m_Name: BolaDeNieve
-  m_TagString: Untagged
+  m_TagString: bola
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
