@@ -16383,6 +16383,10 @@ PrefabInstance:
       propertyPath: playerMovementScript
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8053608604828905273, guid: d649620c9b2dc564d97c3309978ecd2b, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8349324135329505280, guid: d649620c9b2dc564d97c3309978ecd2b, type: 3}
       propertyPath: m_Name
       value: Respawn
@@ -19250,8 +19254,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735292840}
   m_LocalRotation: {x: 0.5012075, y: -0.5012076, z: -0.49878958, w: 0.49878958}
-  m_LocalPosition: {x: 4.375, y: 6.116, z: -1.098}
-  m_LocalScale: {x: 0.30138475, y: 1, z: 0.10124362}
+  m_LocalPosition: {x: 4.374, y: 6.116, z: -0.963}
+  m_LocalScale: {x: 0.53366196, y: 1.836, z: 0.10124362}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1639467967}
