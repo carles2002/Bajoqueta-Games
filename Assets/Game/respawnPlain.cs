@@ -6,6 +6,7 @@ public class respawnPlain : MonoBehaviour
 {
     public Transform cube;
     public GameControl runningState;
+    public ParticleSystem particleSystem;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,6 +16,9 @@ public class respawnPlain : MonoBehaviour
             Transform playerTransform = other.transform; // Obtén el componente Transform del objeto "Player"
             playerTransform.position = cube.position;
             playerTransform.rotation = Quaternion.Euler(0, 0, 0); // Establece la rotación del jugador en (0, 0, 0)
+
+            // Inicia el efecto de partículas
+            particleSystem.Play();
         }
     }
 }
