@@ -33486,7 +33486,7 @@ PrefabInstance:
     - target: {fileID: 3160497709776610524, guid: 974c8170f862a8546846899b30ef0ddb, type: 3}
       propertyPath: sonido
       value: 
-      objectReference: {fileID: 1049960011}
+      objectReference: {fileID: 0}
     - target: {fileID: 8510172551378277819, guid: 974c8170f862a8546846899b30ef0ddb, type: 3}
       propertyPath: m_Name
       value: Casilla Salto 2
