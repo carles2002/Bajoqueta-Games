@@ -24278,8 +24278,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8695872332218301378, guid: d649620c9b2dc564d97c3309978ecd2b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695872332218301378, guid: d649620c9b2dc564d97c3309978ecd2b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.82
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d649620c9b2dc564d97c3309978ecd2b, type: 3}
+--- !u!198 &1426651782 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8053608604828905273, guid: d649620c9b2dc564d97c3309978ecd2b, type: 3}
+  m_PrefabInstance: {fileID: 1426651781}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1428364232
 GameObject:
   m_ObjectHideFlags: 0
@@ -27139,6 +27152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cube: {fileID: 1898849820}
   runningState: {fileID: 2052702431}
+  particleSystem: {fileID: 1426651782}
 --- !u!64 &1668069257
 MeshCollider:
   m_ObjectHideFlags: 0
