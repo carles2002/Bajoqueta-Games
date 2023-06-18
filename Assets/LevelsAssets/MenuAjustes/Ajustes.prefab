@@ -1157,8 +1157,10 @@ MonoBehaviour:
   coinSource: {fileID: 0}
   volumeBar: {fileID: 1618873780974766980}
   scrollbar: {fileID: 6473623084414849242}
+  IndiceEscenaAjustes: 3
   idBar: 0
   audioSource: {fileID: 0}
+  Mezclador: {fileID: 24100000, guid: 0ee524ab795db104eab0366a851901a1, type: 2}
 --- !u!95 &4783485188094461177
 Animator:
   serializedVersion: 5
@@ -2304,8 +2306,10 @@ MonoBehaviour:
   coinSource: {fileID: 8546326225788456960}
   volumeBar: {fileID: 4734255247003064380}
   scrollbar: {fileID: 721417546402339588}
+  IndiceEscenaAjustes: 3
   idBar: 1
   audioSource: {fileID: 0}
+  Mezclador: {fileID: 24100000, guid: 0ee524ab795db104eab0366a851901a1, type: 2}
 --- !u!82 &8546326225788456960
 AudioSource:
   m_ObjectHideFlags: 0
