@@ -251,6 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QuienLoEmite: {fileID: 4193231905260432367}
   Sonido: {fileID: 0}
+  segRetardo: 0
 --- !u!114 &9168683855181630724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,5 +264,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38532d7f2b871de449fcf18a3866a26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneLoad: 7
+  nextSceneLoad: 8
   animator: {fileID: 2406099150747848732}

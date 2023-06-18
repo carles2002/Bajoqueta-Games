@@ -33,6 +33,10 @@ public class MoveToNextLevel : MonoBehaviour
                 animator.SetBool("pulsado", true);
                 StartCoroutine("CargarVueltaAlMenu");
             }
+            if (SceneManager.GetActiveScene().buildIndex == 7) /* cinematica */
+            {
+                SceneManager.LoadScene(8);
+            }
             else
             {
                 //Ir al siguiente nivel
