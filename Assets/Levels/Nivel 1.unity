@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1747430329}
-  m_IndirectSpecularColor: {r: 0.44977933, g: 0.49984705, b: 0.5756131, a: 1}
+  m_IndirectSpecularColor: {r: 0.44977975, g: 0.49984813, b: 0.575614, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -515,6 +515,7 @@ MonoBehaviour:
   IndiceEscenaAjustes: 3
   idBar: 0
   audioSource: {fileID: 639893421}
+  Mezclador: {fileID: 24100000, guid: 0ee524ab795db104eab0366a851901a1, type: 2}
 --- !u!114 &43562065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3230,6 +3231,7 @@ MonoBehaviour:
   IndiceEscenaAjustes: 3
   idBar: 1
   audioSource: {fileID: 1077609038}
+  Mezclador: {fileID: 24100000, guid: 0ee524ab795db104eab0366a851901a1, type: 2}
 --- !u!114 &716352104
 MonoBehaviour:
   m_ObjectHideFlags: 0

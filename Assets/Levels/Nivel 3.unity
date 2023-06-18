@@ -6717,6 +6717,7 @@ MonoBehaviour:
   IndiceEscenaAjustes: 3
   idBar: 0
   audioSource: {fileID: 1455007955}
+  Mezclador: {fileID: 24100000, guid: 0ee524ab795db104eab0366a851901a1, type: 2}
 --- !u!114 &457544110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16148,6 +16149,7 @@ MonoBehaviour:
   IndiceEscenaAjustes: 3
   idBar: 1
   audioSource: {fileID: 436177046}
+  Mezclador: {fileID: 24100000, guid: 0ee524ab795db104eab0366a851901a1, type: 2}
 --- !u!114 &722205416
 MonoBehaviour:
   m_ObjectHideFlags: 0

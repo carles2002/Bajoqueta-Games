@@ -16,6 +16,7 @@ public class VolumeControl : MonoBehaviour
     //public float difmusica = 0.2f;
 
     public AudioSource audioSource; // Para la m�sica de fondo.
+    public AudioMixer Mezclador;
 
     // La clave que usaremos para almacenar y recuperar el valor del volumen en PlayerPrefs.
     private const string VolumeKey = "volume";
@@ -58,11 +59,13 @@ public class VolumeControl : MonoBehaviour
         audioSource.volume = volume;
         if (idBar == 0)
         {
+            Mezclador.SetFloat("Musica",sliderValue);
             PlayerPrefs.SetFloat(VolumeKey, sliderValue);
         }
         else if (idBar == 1)
         {
             coinSource.volume = volume;
+            Mezclador.SetFloat("SFX",sliderValue);
             PlayerPrefs.SetFloat(SFXKey, sliderValue);
         }
         PlayerPrefs.Save(); // Aseg�rate de llamar a Save() para guardar los cambios.

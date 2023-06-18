@@ -17,6 +17,10 @@ public class MusicController : MonoBehaviour
   //---------------------------------------------------------------------------------------------------------------
   private void Awake()
   {
+    float volume = PlayerPrefs.GetFloat("volume");
+    AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+    audioSource.volume = volume;
+
     if (instance_Music == null)
     {
       instance_Music = this;
