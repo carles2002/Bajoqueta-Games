@@ -5157,6 +5157,7 @@ GameObject:
   - component: {fileID: 316441580}
   - component: {fileID: 316441579}
   - component: {fileID: 316441578}
+  - component: {fileID: 316441582}
   m_Layer: 8
   m_Name: Muro
   m_TagString: Untagged
@@ -5237,12 +5238,25 @@ Transform:
   m_GameObject: {fileID: 316441577}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 5.45, y: 1.96, z: 4}
-  m_LocalScale: {x: 0.19000001, y: 1, z: 0.89}
+  m_LocalScale: {x: 0.19000001, y: 1, z: 1.112411}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1345125661}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!65 &316441582
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316441577}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000002, y: 2.2204466e-16, z: 10.184175}
+  m_Center: {x: 0, y: 0, z: 0.092086874}
 --- !u!1 &323690678
 GameObject:
   m_ObjectHideFlags: 0
@@ -17304,6 +17318,7 @@ GameObject:
   - component: {fileID: 797969540}
   - component: {fileID: 797969539}
   - component: {fileID: 797969538}
+  - component: {fileID: 797969541}
   m_Layer: 8
   m_Name: Muro (3)
   m_TagString: Untagged
@@ -17390,6 +17405,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797969536}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &797969541
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797969536}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000002, y: 2.2204466e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &799786712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29262,6 +29290,7 @@ GameObject:
   - component: {fileID: 1861017565}
   - component: {fileID: 1861017564}
   - component: {fileID: 1861017563}
+  - component: {fileID: 1861017566}
   m_Layer: 8
   m_Name: Muro (2)
   m_TagString: Untagged
@@ -29348,6 +29377,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861017561}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1861017566
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861017561}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000002, y: 2.2204466e-16, z: 10.000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1867385483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31007,6 +31049,7 @@ GameObject:
   - component: {fileID: 1983987091}
   - component: {fileID: 1983987090}
   - component: {fileID: 1983987089}
+  - component: {fileID: 1983987092}
   m_Layer: 8
   m_Name: Muro (1)
   m_TagString: Untagged
@@ -31093,6 +31136,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983987087}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1983987092
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983987087}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000002, y: 2.2204466e-16, z: 10.000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1987672650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2890268621558738193, guid: 37764059c3a02fa4fbf2ba0a5763a21d, type: 3}
@@ -32286,6 +32342,10 @@ PrefabInstance:
     - target: {fileID: 902134108781748032, guid: a1bd1c607f19c2540a4d7b22d4b9d572, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566845992389257399, guid: a1bd1c607f19c2540a4d7b22d4b9d572, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1bd1c607f19c2540a4d7b22d4b9d572, type: 3}
