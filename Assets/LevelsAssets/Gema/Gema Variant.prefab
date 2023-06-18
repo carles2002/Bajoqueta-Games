@@ -315,6 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QuienLoEmite: {fileID: 308932844}
   Sonido: {fileID: 8300000, guid: 24c44664845e74d4ebff9917af54eb35, type: 3}
+  segRetardo: 0
 --- !u!4 &8730078169739812454 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: aaa390f06d41c314f91dbcc6057a9d40, type: 3}
