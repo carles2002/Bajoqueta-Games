@@ -4666,6 +4666,7 @@ MonoBehaviour:
   cube: {fileID: 1724624558}
   runningState: {fileID: 1384044513}
   particleSystem: {fileID: 8349324137027767979}
+  clip: {fileID: 8300000, guid: 75398c76e7bea4246bdd9ad80e2eee95, type: 3}
 --- !u!64 &1044804446
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10593,7 +10594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8349324135329505284, guid: d649620c9b2dc564d97c3309978ecd2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 2.431
       objectReference: {fileID: 0}
     - target: {fileID: 8349324135329505284, guid: d649620c9b2dc564d97c3309978ecd2b, type: 3}
       propertyPath: m_LocalPosition.z

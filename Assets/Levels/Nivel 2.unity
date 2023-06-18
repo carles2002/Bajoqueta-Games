@@ -18660,6 +18660,7 @@ MonoBehaviour:
   cube: {fileID: 1898849820}
   runningState: {fileID: 1136306601}
   particleSystem: {fileID: 1426651782}
+  clip: {fileID: 8300000, guid: 75398c76e7bea4246bdd9ad80e2eee95, type: 3}
 --- !u!64 &1668069257
 MeshCollider:
   m_ObjectHideFlags: 0
